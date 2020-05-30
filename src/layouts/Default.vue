@@ -1,51 +1,62 @@
 <template>
-  <div class="layout">
-    <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about/">About</g-link>
-        <g-link class="nav__link" to="/blog/">Blog</g-link>
-      </nav>
-    </header>
-    <slot/>
-  </div>
+  <v-app>
+    <v-navigation-drawer app permanent class="sideber">
+      <v-list dense>
+        <g-link to="/">
+          <v-list-item link>
+            <v-list-item-icon>
+              <v-icon>mdi-home</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title>Home</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </g-link>
+      </v-list>
+      <v-list dense>
+        <g-link to="/blog/">
+          <v-list-item link>
+            <v-list-item-icon>
+              <v-icon>mdi-post</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title>Blog</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </g-link>
+      </v-list>
+      <v-list dense>
+        <g-link to="/about/">
+          <v-list-item link>
+            <v-list-item-icon>
+              <v-icon>mdi-account</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title>About</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </g-link>
+      </v-list>
+    </v-navigation-drawer>
+
+    <v-app-bar app class="header">
+      <!-- -->
+    </v-app-bar>
+
+    <v-content>
+      <!-- your code here -->
+      <v-container fluid>
+        <slot />
+      </v-container>
+    </v-content>
+    <v-footer app>
+    <!-- -->
+    </v-footer>
+  </v-app>
 </template>
 
-<static-query>
-query {
-  metadata {
-    siteName
-  }
-}
-</static-query>
-
-<style>
-body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  margin:0;
-  padding:0;
-  line-height: 1.5;
-}
-
-.layout {
-  max-width: 760px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
-}
-
-.nav__link {
-  margin-left: 20px;
+<style lang="scss" scoped>
+a {
+  text-decoration: none;
 }
 </style>
