@@ -22,46 +22,36 @@
 
       <v-divider></v-divider>
       <v-list dense>
-        <g-link to="/">
-          <v-list-item link>
-            <v-list-item-icon>
-              <v-icon>mdi-home</v-icon>
-            </v-list-item-icon>
-            <v-list-item-content>
-              <v-list-item-title>Home</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </g-link>
-      </v-list>
-      <v-list dense>
-        <g-link to="/blog/">
-          <v-list-item link>
-            <v-list-item-icon>
-              <v-icon>mdi-post</v-icon>
-            </v-list-item-icon>
-            <v-list-item-content>
-              <v-list-item-title>Blog</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </g-link>
-      </v-list>
-      <v-list dense>
-        <g-link to="/about/">
-          <v-list-item link>
-            <v-list-item-icon>
-              <v-icon>mdi-account</v-icon>
-            </v-list-item-icon>
-            <v-list-item-content>
-              <v-list-item-title>About</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </g-link>
+        <v-list-item link to="/">
+          <v-list-item-icon>
+            <v-icon>mdi-home</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title>Home</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item link to="/blog/">
+          <v-list-item-icon>
+            <v-icon>mdi-post</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title>Blog</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item link to="/about/">
+          <v-list-item-icon>
+            <v-icon>mdi-account</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title>About</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
       </v-list>
     </v-navigation-drawer>
 
     <v-content>
       <!-- your code here -->
-      <v-container fluid>
+      <v-container fluid style="margin-bottom: 300px">
         <slot />
       </v-container>
       <v-footer
@@ -97,10 +87,10 @@
           <v-card-text class="white--text pt-0 d-md-none">
             <v-list>
               <v-list-item>
-                  <g-image
-                    src="https://avatars2.githubusercontent.com/u/45279563"
-                    style="width: auto;height:54px"
-                  />
+                <g-image
+                  src="https://avatars2.githubusercontent.com/u/45279563"
+                  style="width: auto;height:54px"
+                />
                 <v-list-item-content>
                   <v-list-item-title class="title"
                     >sterashima78</v-list-item-title

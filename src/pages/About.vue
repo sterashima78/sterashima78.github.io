@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <div style="margin-bottom: 300px">
+    <div>
 <h1>About me</h1>
     <div class="d-none d-md-flex align-center">
       <v-avatar class="profile" color="grey" size="64">
