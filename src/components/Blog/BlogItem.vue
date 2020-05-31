@@ -38,7 +38,7 @@ export default {
 
   > .card {
       width: 100%;
-    max-width: 25rem;
+    max-width: 20rem;
   }
 }
 .date {
