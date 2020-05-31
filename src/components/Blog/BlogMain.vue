@@ -33,11 +33,11 @@ export default {
   > .container {
     flex-wrap: wrap;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
   }
 }
 .blog-item {
-  margin: 15px;
+  margin-bottom: 15px;
 }
 </style>
