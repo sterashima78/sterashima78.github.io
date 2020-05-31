@@ -93,15 +93,15 @@
             </v-btn>
           </v-card-text>
 
-          <v-card-text class="white--text pt-0">
+          <v-card-text class="white--text pt-0 d-md-none">
             <v-list>
               <v-list-item>
-                           <v-list-item-avater>
-                <g-image
-                  src="https://avatars2.githubusercontent.com/u/45279563"
-                  style="width: auto;height:54px" 
-                />
-              </v-list-item-avater>
+                <v-list-item-avater>
+                  <g-image
+                    src="https://avatars2.githubusercontent.com/u/45279563"
+                    style="width: auto;height:54px"
+                  />
+                </v-list-item-avater>
                 <v-list-item-content>
                   <v-list-item-title class="title"
                     >sterashima78</v-list-item-title
