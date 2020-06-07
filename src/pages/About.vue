@@ -33,7 +33,7 @@
         </v-list-item>
       </v-list> -->
       <h2>作ったもの</h2>
-      <div class="d-flex">
+      <div class="d-flex flex-wrap justify-center">
         <v-card
           style="width: 15em; margin: 1em;"
           href="https://github.com/sterashima78/vue-webpage-builder"
