@@ -4,9 +4,9 @@
       <v-img
         class="white--text align-end"
         height="200px"
-        src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+        :src="post.image"
       >
-        <v-card-title>
+        <v-card-title style="background: rgba(0, 0, 0, 0.3);">
           <h2>
             {{ post.title }}
           </h2>

@@ -29,6 +29,6 @@ module.exports = {
   }
 ],
   templates: {
-    BlogPost: '/blog/:year/:month/:day/:title'
+    BlogPost: '/blog/:year/:month/:day/:slug'
   }
 }
