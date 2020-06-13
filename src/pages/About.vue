@@ -34,39 +34,29 @@
       </v-list> -->
       <h2>作ったもの</h2>
       <div class="d-flex flex-wrap justify-center">
-        <v-card
-          style="width: 15em; margin: 1em;"
-          href="https://github.com/sterashima78/vue-webpage-builder"
-          hover
+        <PortfolioItem
+          herf="https://github.com/sterashima78/vue-webpage-builder"
+          img-src="https://raw.githubusercontent.com/sterashima78/vue-webpage-builder/master/docs/.vuepress/public/logo.png"
         >
-          <g-image
-            src="https://raw.githubusercontent.com/sterashima78/vue-webpage-builder/master/docs/.vuepress/public/logo.png"
-            style="width: 15em"
-          />
-          <v-card-title>
-            Vue Webpage Builder
-          </v-card-title>
-        </v-card>
-        <v-card
-          style="width: 15em; margin: 1em;"
-          href="https://github.com/sterashima78/vue3-minesweeper"
-          hover
+          Vue Webpage Builder
+        </PortfolioItem>
+        <PortfolioItem
+          herf="https://github.com/sterashima78/vue3-minesweeper"
+          img-src="https://user-images.githubusercontent.com/45279563/83960403-6bddab80-a8c3-11ea-80b9-942cec38d6d7.gif"
         >
-          <g-image
-            src="https://user-images.githubusercontent.com/45279563/83960403-6bddab80-a8c3-11ea-80b9-942cec38d6d7.gif"
-            style="width: 15em"
-          />
-          <v-card-title>
-            Vue 3 で作ったマインスイーパ
-          </v-card-title>
-        </v-card>
+          Vue 3 マインスイーパ
+        </PortfolioItem>
       </div>
     </div>
   </Layout>
 </template>
 
 <script>
+import PortfolioItem from "../components/About/PortfolioItem.vue";
 export default {
+  components: {
+    PortfolioItem,
+  },
   metaInfo: {
     title: "About me",
   },

@@ -26,6 +26,8 @@ module.exports = {
     options: {
       id: 'UA-96186429-4'
     }
+  },{
+    use: 'gridsome-plugin-typescript',
   }
 ],
   templates: {
