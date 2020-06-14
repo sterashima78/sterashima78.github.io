@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <BlogMain :posts="$page.tag.belongsTo.edges.map(({ node }) => node)">
-      <h1>Tag: {{ $page.tag.title }}</h1>
+      Tag: {{ $page.tag.title }}
     </BlogMain>
   </Layout>
 </template>
