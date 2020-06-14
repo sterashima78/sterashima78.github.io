@@ -1,12 +1,12 @@
 <template>
   <div class="blog-main">
-    <h1>Blog</h1>
+    <h1><slot>Blog</slot></h1>
     <v-container fluid class="container">
       <BlogItem
         class="blog-item"
         v-for="post in posts"
         :key="post.id"
-        :post="post.node"
+        :post="post"
       />
     </v-container>
   </div>

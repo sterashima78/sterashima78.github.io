@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <BlogMain :posts="$page.allBlogPost.edges" />
+    <BlogMain :posts="$page.allBlogPost.edges.map(({ node }) => node)" />
   </Layout>
 </template>
 
@@ -13,7 +13,9 @@
           title
           date (format: "YYYY年MM月DD日 HH:mm:ss")
           description
-          tags
+          tags {
+            title
+          },
           path,
           image
         }

@@ -20,7 +20,12 @@
     <div class="contents">
       <div class="tags">
         Tags:
-        <v-chip v-for="tag in $page.blogPost.tags" :key="tag">{{ tag }}</v-chip>
+        <v-chip
+          v-for="tag in $page.blogPost.tags"
+          :key="tag.title"
+          v-text="tag.title"
+          :href="`/blog/tags/${tag.title}`"
+        />
       </div>
       <div v-html="$page.blogPost.content" />
     </div>
@@ -35,7 +40,9 @@ query MarkdownPost ($path: String!) {
     content,
     image,
     description,
-    tags
+    tags {
+      title
+    }
   }
 }
 </page-query>

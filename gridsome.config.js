@@ -20,6 +20,12 @@ module.exports = {
       options: {
         path: "blog/**/*.md",
         typeName: "BlogPost",
+        refs: {
+          tags: {
+            typeName: "Tag",
+            create: true,
+          },
+        },
       },
     },
     {
@@ -34,5 +40,6 @@ module.exports = {
   ],
   templates: {
     BlogPost: "/blog/:year/:month/:day/:slug",
+    Tag: "/blog/tags/:id",
   },
 };
