@@ -7,9 +7,7 @@ slug: why-use-monads
 image: http://adit.io/imgs/functors/context.png
 ---
 
-サムネイルは以下から拝借した。
-
-http://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html
+サムネイルは[ここ](http://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html)から拝借した。
 
 ## 一通り書き終わった後のはじめに
 
