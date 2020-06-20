@@ -56,7 +56,7 @@ module.exports = {
         icon: 'src/assets/favicon.png',
         shortName: 'sterashima78\'s website',              // Optional
         description: 'sterashima78\'s website',// Optional
-        lang: 'ja-JP',                      // Optional
+        lang: 'ja',                      // Optional
         dir: 'auto',                        // Optional
         maskableIcon: true,                 // Optional
 

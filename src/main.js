@@ -4,6 +4,7 @@ import "vuetify/dist/vuetify.min.css";
 import "prismjs/themes/prism.css";
 // eslint-disable-next-line
 export default function (Vue, { appOptions, head }) {
+  head.htmlAttrs = { lang: 'ja' }
   head.link.push({
     rel: "stylesheet",
     href:
