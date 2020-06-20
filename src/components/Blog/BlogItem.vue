@@ -24,15 +24,16 @@
     </v-card>
   </g-link>
 </template>
-<script>
-export default {
+<script lang="ts">
+import Vue, { PropType } from "vue";
+export default Vue.extend({
   props: {
     post: {
-      type: Object,
-      default: () => ({}),
+      type: Object as PropType<any>,
+      default: (): any => ({}),
     },
   },
-};
+});
 </script>
 <style lang="scss" scoped>
 .post-item {

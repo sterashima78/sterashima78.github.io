@@ -129,8 +129,9 @@
     </v-footer>
   </v-app>
 </template>
-<script>
-export default {
+<script lang="ts">
+import Vue, { PropType } from "vue";
+export default Vue.extend({
   data: () => ({
     isSmall: false,
     isXSmall: false,
@@ -144,7 +145,7 @@ export default {
       this.isXSmall = window.innerWidth <= 600;
     },
   },
-};
+});
 </script>
 <style lang="scss" scoped>
 a {

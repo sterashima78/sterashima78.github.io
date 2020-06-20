@@ -11,19 +11,20 @@
     </v-container>
   </div>
 </template>
-<script>
-import BlogItem from "./BlogItem";
-export default {
+<script lang="ts">
+import Vue, { PropType } from "vue";
+import BlogItem from "./BlogItem.vue";
+export default Vue.extend({
   props: {
     posts: {
-      type: Array,
-      default: () => [],
+      type: Array as PropType<any[]>,
+      default: (): any[] => [],
     },
   },
   components: {
     BlogItem,
   },
-};
+});
 </script>
 <style lang="scss" scoped>
 .blog-main {

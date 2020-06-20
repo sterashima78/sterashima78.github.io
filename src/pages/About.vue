@@ -53,14 +53,15 @@
 
 <script>
 import PortfolioItem from "../components/About/PortfolioItem.vue";
-export default {
+import Vue, { PropType } from "vue";
+export default Vue.extend({
   components: {
     PortfolioItem,
   },
   metaInfo: {
     title: "About me",
   },
-};
+});
 </script>
 <style lang="scss" scoped>
 h2 {

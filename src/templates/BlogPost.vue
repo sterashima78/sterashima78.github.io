@@ -48,7 +48,8 @@ query MarkdownPost ($path: String!) {
 </page-query>
 
 <script>
-export default {};
+import Vue from "vue";
+export default Vue.extend({});
 </script>
 <style lang="scss">
 .hero {

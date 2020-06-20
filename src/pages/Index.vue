@@ -49,11 +49,12 @@
 </template>
 
 <script>
-export default {
+import Vue, { PropType } from "vue";
+export default Vue.extend({
   metaInfo: {
     title: "Top",
   },
-};
+});
 </script>
 
 <style>
