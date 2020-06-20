@@ -81,8 +81,8 @@ prettier でフォーマットするようにしたいので、入れる。
 $ npm i -D eslint-config-prettier eslint-plugin-prettier prettier
 ```
 
-`.eslintrc` の `extends` の最後に `prettier` を追加する。
-あと、 `plugins` にも追加
+`.eslintrc` の `extends` の最後に `prettier/vue` を追加する。
+あと、 `plugins` に `prettier` を追加
 
 ## npm タスクに追加
 
@@ -94,4 +94,26 @@ $ npm i -D eslint-config-prettier eslint-plugin-prettier prettier
 
 ```bash
 npm run lint
+```
+
+## VSCode の設定
+
+以下の設定を追加する
+
+```
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "[typescript]": {
+    "editor.formatOnSave": false
+  },
+  "[vue]": {
+    "editor.formatOnSave": false
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 ```
