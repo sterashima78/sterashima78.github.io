@@ -49,7 +49,7 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-content>
+    <v-main>
       <!-- your code here -->
       <v-container fluid style="margin-bottom: 300px;">
         <slot />
@@ -108,7 +108,7 @@
           </v-card-text>
         </v-card>
       </v-footer>
-    </v-content>
+    </v-main>
     <v-footer
       fixed
       v-if="isXSmall"

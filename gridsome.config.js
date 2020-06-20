@@ -37,6 +37,40 @@ module.exports = {
     {
       use: "gridsome-plugin-typescript",
     },
+    {
+      use: 'gridsome-plugin-pwa',
+      options: {
+        // Service Worker Options
+        disableServiceWorker: false,
+        serviceWorkerPath: 'service-worker.js',
+        cachedFileTypes: 'css,png,jpg,jpeg,svg,gif,woff2,woff,ttf',
+
+        // Manifest Options (https://developer.mozilla.org/en-US/docs/Web/Manifest)
+        // manifestPath: 'manifest.json',
+        title: 'sterashima78',
+        startUrl: '/',
+        display: 'standalone',
+        statusBarStyle: 'default',
+        themeColor: '#666600',
+        backgroundColor: '#ffffff',
+        icon: 'src/assets/favicon.png',
+        shortName: 'sterashima78\'s website',              // Optional
+        description: 'sterashima78\'s website',// Optional
+        lang: 'ja-JP',                      // Optional
+        dir: 'auto',                        // Optional
+        maskableIcon: true,                 // Optional
+
+        // Standard Meta Tags
+        svgFavicon: 'favicon.png',          // Optional. Requires favicon.ico fallback
+
+        // Microsoft Windows Meta Tags
+        msTileColor: '#666600',             // Optional
+
+        // Apple MacOS Meta Tags
+        appleMaskIcon: 'favicon.png',       // Optional
+        appleMaskIconColor: '#666600',      // Optional
+      }
+    }
   ],
   templates: {
     BlogPost: "/blog/:year/:month/:day/:slug",
