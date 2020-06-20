@@ -53,7 +53,7 @@
 
 <script>
 import PortfolioItem from "../components/About/PortfolioItem.vue";
-import Vue, { PropType } from "vue";
+import Vue from "vue";
 export default Vue.extend({
   components: {
     PortfolioItem,

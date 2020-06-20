@@ -79,11 +79,11 @@ export default Vue.extend({});
   h4,
   h5,
   h6 {
-    padding: 1em 0;
+    padding: 0.75em 0;
     border-left: 0.675rem solid #b3d4fc;
     padding-left: 0.675rem;
     padding-right: 0.675rem;
-    margin: 2rem 0;
+    margin: 1.5rem 0;
   }
 }
 </style>

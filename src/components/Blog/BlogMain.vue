@@ -17,7 +17,9 @@ import BlogItem from "./BlogItem.vue";
 export default Vue.extend({
   props: {
     posts: {
+      // eslint-disable-next-line
       type: Array as PropType<any[]>,
+      // eslint-disable-next-line
       default: (): any[] => [],
     },
   },

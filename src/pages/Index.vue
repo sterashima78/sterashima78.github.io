@@ -5,7 +5,7 @@
         <v-avatar class="profile" color="grey" size="128">
           <g-image src="https://avatars2.githubusercontent.com/u/45279563" />
         </v-avatar>
-        <v-list style="text-align: center">
+        <v-list style="text-align: center;">
           <v-list-item>
             <v-list-item-content>
               <v-list-item-title class="title">sterashima78</v-list-item-title>
@@ -15,13 +15,13 @@
           <v-list-item>
             <v-list-item-content class="d-flex flex-row justify-center">
               <v-flex class="d-flex flex-row justify-center align-center">
-                <g-link to="/blog/" style="text-align: center">
+                <g-link to="/blog/" style="text-align: center;">
                   <v-icon>mdi-post</v-icon><br />
-                  <span style="color:black">Blog</span>
+                  <span style="color: black;">Blog</span>
                 </g-link>
-                <g-link to="/about/" style="text-align: center">
+                <g-link to="/about/" style="text-align: center;">
                   <v-icon>mdi-account</v-icon><br />
-                  <span style="color:black">About</span>
+                  <span style="color: black;">About</span>
                 </g-link>
               </v-flex>
             </v-list-item-content>
@@ -37,7 +37,10 @@
                   <v-icon size="24px">mdi-github</v-icon>
                 </v-btn>
                 <a href="https://qiita.com/sterashima78" target="_blank">
-                  <g-image style="width: auto;height:24px" src="/qiita.png" />
+                  <g-image
+                    style="width: auto; height: 24px;"
+                    src="/qiita.png"
+                  />
                 </a>
               </v-flex>
             </v-list-item-content>
@@ -49,7 +52,7 @@
 </template>
 
 <script>
-import Vue, { PropType } from "vue";
+import Vue from "vue";
 export default Vue.extend({
   metaInfo: {
     title: "Top",

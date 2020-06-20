@@ -51,7 +51,7 @@
 
     <v-content>
       <!-- your code here -->
-      <v-container fluid style="margin-bottom: 300px">
+      <v-container fluid style="margin-bottom: 300px;">
         <slot />
       </v-container>
       <v-footer
@@ -80,7 +80,7 @@
               text
               target="_blank"
             >
-              <g-image style="width: auto;height:24px" src="/qiita.png" />
+              <g-image style="width: auto; height: 24px;" src="/qiita.png" />
             </v-btn>
           </v-card-text>
 
@@ -89,7 +89,7 @@
               <v-list-item>
                 <g-image
                   src="https://avatars2.githubusercontent.com/u/45279563"
-                  style="width: auto;height:54px"
+                  style="width: auto; height: 54px;"
                 />
                 <v-list-item-content>
                   <v-list-item-title class="title"
@@ -112,25 +112,25 @@
     <v-footer
       fixed
       v-if="isXSmall"
-      style="display:flex;justify-content: space-around;"
+      style="display: flex; justify-content: space-around;"
     >
       <g-link to="/" style="text-align: center;">
         <v-icon>mdi-home</v-icon><br />
-        <span style="color:black">Home</span>
+        <span style="color: black;">Home</span>
       </g-link>
-      <g-link to="/blog/" style="text-align: center">
+      <g-link to="/blog/" style="text-align: center;">
         <v-icon>mdi-post</v-icon><br />
-        <span style="color:black">Blog</span>
+        <span style="color: black;">Blog</span>
       </g-link>
-      <g-link to="/about/" style="text-align: center">
+      <g-link to="/about/" style="text-align: center;">
         <v-icon>mdi-account</v-icon><br />
-        <span style="color:black">About</span>
+        <span style="color: black;">About</span>
       </g-link>
     </v-footer>
   </v-app>
 </template>
 <script lang="ts">
-import Vue, { PropType } from "vue";
+import Vue from "vue";
 export default Vue.extend({
   data: () => ({
     isSmall: false,

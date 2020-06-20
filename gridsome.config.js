@@ -3,7 +3,7 @@
 
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
-
+// eslint-disable-next-line
 module.exports = {
   siteName: "sterashima78",
   transformers: {

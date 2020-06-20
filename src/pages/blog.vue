@@ -26,7 +26,7 @@
 
 <script>
 import BlogMain from "../components/Blog/BlogMain";
-import Vue, { PropType } from "vue";
+import Vue from "vue";
 export default Vue.extend({
   components: {
     BlogMain,

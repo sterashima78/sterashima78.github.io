@@ -29,7 +29,9 @@ import Vue, { PropType } from "vue";
 export default Vue.extend({
   props: {
     post: {
+      // eslint-disable-next-line
       type: Object as PropType<any>,
+      // eslint-disable-next-line
       default: (): any => ({}),
     },
   },
@@ -40,7 +42,7 @@ export default Vue.extend({
   text-decoration: none;
 
   > .card {
-    width: 100%;
+    width: 20rem;
     max-width: 20rem;
   }
 }
