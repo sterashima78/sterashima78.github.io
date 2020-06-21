@@ -2,7 +2,7 @@
 title: "オブジェクト指向UIデザイン──使いやすいソフトウェアの原理"
 date: 2020-06-21 11:00:00
 description: "オブジェクト指向UIデザイン──使いやすいソフトウェアの原理の読書メモ"
-tags: ["book"]
+tags: ["読書メモ"]
 slug: ooui-book
 image: https://user-images.githubusercontent.com/45279563/85214521-0b606b00-b3a7-11ea-9df6-7ef422647e6a.jpg
 ---
