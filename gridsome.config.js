@@ -28,8 +28,7 @@ module.exports = {
         },
       },
       templates: {
-        BlogPost: "/blog/:year/:month/:day/:title",
-        Tag: "/blog/tags/:id",
+        BlogPost: "/blog/:year/:month/:day/:title"
       }
     },
     {
@@ -75,5 +74,8 @@ module.exports = {
         appleMaskIconColor: '#666600',      // Optional
       }
     }
-  ]
+  ],
+  templates: {
+    Tag: "/blog/tags/:id",
+  },
 };
