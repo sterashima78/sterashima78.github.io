@@ -1,5 +1,5 @@
 ---
-title: Gridsome に Tag 機能を入れる
+title: "Gridsome に Tag 機能を入れる"
 date: 2020-06-14 11:00:00
 description: "Gridsomeに Tag 機能を入れた"
 tags: ["vue", "gridsome"]

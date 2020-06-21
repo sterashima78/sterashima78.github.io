@@ -27,6 +27,10 @@ module.exports = {
           },
         },
       },
+      templates: {
+        BlogPost: "/blog/:year/:month/:day/:title",
+        Tag: "/blog/tags/:id",
+      }
     },
     {
       use: "@gridsome/plugin-google-analytics",
@@ -71,9 +75,5 @@ module.exports = {
         appleMaskIconColor: '#666600',      // Optional
       }
     }
-  ],
-  templates: {
-    BlogPost: "/blog/:year/:month/:day/:slug",
-    Tag: "/blog/tags/:id",
-  },
+  ]
 };

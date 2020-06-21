@@ -1,5 +1,5 @@
 ---
-title: Gridsome で PWA 対応する
+title: "Gridsome で PWA 対応する"
 date: 2020-06-20 20:30:00
 description: "Gridsome で PWA の対応をする手順"
 tags: ["PWA", "gridsome"]

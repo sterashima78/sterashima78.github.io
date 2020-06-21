@@ -1,5 +1,5 @@
 ---
-title: Gridsome に ESLint を入れる
+title: "Gridsome に ESLint を入れる"
 date: 2020-06-20 12:00:00
 description: "Gridsomeプロジェクトに ESLint を導入する"
 tags: ["vue", "gridsome", "Typescript", "ESLint"]

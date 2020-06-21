@@ -1,5 +1,5 @@
 ---
-title: Gridsome に Typescript を入れる
+title: "Gridsome に Typescript を入れる"
 date: 2020-06-13 17:00:00
 description: "Gridsomeプロジェクトに Typescriot を導入する"
 tags: ["vue", "gridsome", "Typescript"]

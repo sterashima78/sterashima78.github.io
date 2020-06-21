@@ -1,8 +1,8 @@
 ---
-title: Vue 3触った
+title: "Vue 3触った"
 date: 2020-06-07 14:00:00
 description: "Vue 3 でマインスイーパを作った"
-tags: ['vue', 'vue3', 'fp-ts', 'Typescript']
+tags: ["vue", "vue3", "fp-ts", "Typescript"]
 slug: minesweeper-vue3
 image: https://user-images.githubusercontent.com/45279563/83960403-6bddab80-a8c3-11ea-80b9-942cec38d6d7.gif
 ---
@@ -14,6 +14,7 @@ Vue 3 をそろそろ触ってみたくなった。
 明らかに Suspense とか使いどころなさそうだったけど、普通に作ってはまるところがないかとかが知りたかったので特に気にしないことにした。
 
 作ったものはこれ。
+
 - 動くもの: https://sterashima78.github.io/vue3-minesweeper/
 - GitHub: https://github.com/sterashima78/vue3-minesweeper
 
@@ -45,8 +46,8 @@ Vue 3 をそろそろ触ってみたくなった。
 ただ、 `composition-api` になってからの `Vue` アプリケーションの書き方はだいたい固まってきて、
 
 - `domain` 以下に一連の値の型、それの変換関数を書く
-    - この時状態に相当する値を更新するような関数はカリー化して、最後の引数に状態をもらって、更新された新しい状態を返すようにする
-    - 複数の状態変更を経て意味のある変更になる場合は `flow` や `pipe` でつないで新しい関数を定義
+  - この時状態に相当する値を更新するような関数はカリー化して、最後の引数に状態をもらって、更新された新しい状態を返すようにする
+  - 複数の状態変更を経て意味のある変更になる場合は `flow` や `pipe` でつないで新しい関数を定義
 - `composition` では状態の定義・状態変更関数の定義・イベントハンドラ (ライフサイクルを含む) の設定を定義する
 - `component` では依存の解決・注入を行う
 
