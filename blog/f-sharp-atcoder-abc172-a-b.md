@@ -1,6 +1,6 @@
 ---
 title: "F#を始めたから ABC172 やった"
-date: 2020-06-27 11:00:00
+date: 2020-06-28 18:30:00
 description: "F# で ABC172 やったけど A と Bしか解けなかった"
 tags: ["F#", "AtCoder"]
 slug: f-sharp-atcoder-abc172-a-b
