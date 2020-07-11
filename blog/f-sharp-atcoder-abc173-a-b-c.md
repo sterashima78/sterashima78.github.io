@@ -2,7 +2,7 @@
 title: "F# で解く ABC173"
 date: 2020-07-06 21:45:00
 description: "F# で ABC173 やったけど A と B と C しか解けなかった"
-tags: ["F#", "AtCoder"]
+tags: ["f-sharp", "AtCoder"]
 slug: f-sharp-atcoder-abc173-a-b-c
 image: https://user-images.githubusercontent.com/45279563/85910711-756f8900-b85b-11ea-8bd3-df0e8745aa27.png
 ---

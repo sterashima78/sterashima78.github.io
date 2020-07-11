@@ -2,7 +2,7 @@
 title: "F#を始める"
 date: 2020-06-27 11:00:00
 description: "F#を始めるための手順をまとめた"
-tags: ["F#", "VSCode"]
+tags: ["f-sharp", "VSCode"]
 slug: start-f-sharp
 image: https://user-images.githubusercontent.com/45279563/85910711-756f8900-b85b-11ea-8bd3-df0e8745aa27.png
 ---

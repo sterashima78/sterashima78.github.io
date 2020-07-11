@@ -2,7 +2,7 @@
 title: "F#を始めたから SPA 作りたい 1"
 date: 2020-06-28 19:30:00
 description: "F# と Bolero で SPA を作る。テンプレートプロジェクトを動かすまで。"
-tags: ["F#", "SPA", "Bolero"]
+tags: ["f-sharp", "SPA", "Bolero"]
 slug: f-sharp-SPA
 image: https://user-images.githubusercontent.com/45279563/85910711-756f8900-b85b-11ea-8bd3-df0e8745aa27.png
 ---

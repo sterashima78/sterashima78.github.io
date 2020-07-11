@@ -2,7 +2,7 @@
 title: "F#を始めたから ABC172 やった"
 date: 2020-06-28 18:30:00
 description: "F# で ABC172 やったけど A と Bしか解けなかった"
-tags: ["F#", "AtCoder"]
+tags: ["f-sharp", "AtCoder"]
 slug: f-sharp-atcoder-abc172-a-b
 image: https://user-images.githubusercontent.com/45279563/85910711-756f8900-b85b-11ea-8bd3-df0e8745aa27.png
 ---
