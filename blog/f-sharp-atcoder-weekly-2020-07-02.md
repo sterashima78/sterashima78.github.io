@@ -1,6 +1,6 @@
 ---
 title: "今週 F# で解いた AtCoder Problems 7月2週目"
-date: 2020-07-11 16:00
+date: 2020-07-11 16:00:00
 description: "今週 F# で解いた AtCoder Problems を振り返る"
 tags: ["f-sharp", "AtCoder"]
 slug: f-sharp-atcoder-weekly-2020-07-02
