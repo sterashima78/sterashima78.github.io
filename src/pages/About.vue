@@ -15,6 +15,11 @@
           </v-list-item>
         </v-list>
       </div>
+      <h2>スキル</h2>
+      <p>言語もライブラリもツールもごちゃまぜ</p>
+      <div style="height: 70vh">
+        <TechGraph />
+      </div>
       <h2>作ったもの</h2>
       <div class="d-flex flex-wrap justify-center">
         <PortfolioItem
@@ -328,13 +333,19 @@
                 >イベント</v-chip
               ></v-card-title
             >
-            <v-card-text>大学院修士 修了</v-card-text>
+            <v-card-text>明治大学大学院 農学研究科 生命科学専攻 修了</v-card-text>
           </v-card>
         </v-timeline-item>
         <v-timeline-item>
           <v-card class="elevation-2">
             <v-card-title>2016/10<v-chip x-small>資格</v-chip></v-card-title>
             <v-card-text>基本情報技術者</v-card-text>
+          </v-card>
+        </v-timeline-item>
+        <v-timeline-item>
+          <v-card class="elevation-2">
+            <v-card-title>2015/03<v-chip x-small>イベント</v-chip></v-card-title>
+            <v-card-text>明治大学 農学部 生命科学科 卒業</v-card-text>
           </v-card>
         </v-timeline-item>
       </v-timeline>
@@ -344,10 +355,12 @@
 
 <script>
 import PortfolioItem from "../components/About/PortfolioItem.vue";
+import TechGraph from "../components/About/TechGraph.vue";
 import Vue from "vue";
 export default Vue.extend({
   components: {
     PortfolioItem,
+    TechGraph
   },
   metaInfo: {
     title: "About me",
