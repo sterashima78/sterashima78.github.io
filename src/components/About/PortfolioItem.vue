@@ -1,5 +1,5 @@
 <template>
-  <v-card class="portfolio-item" :href="href" hover>
+  <v-card class="portfolio-item" :href="link" hover>
     <g-image class="img" :src="imgSrc" style="width: 15em" />
     <v-card-title>
       <slot />
@@ -10,7 +10,7 @@
 import Vue, { PropType } from "vue";
 export default Vue.extend({
   props: {
-    href: {
+    link: {
       type: String as PropType<string>,
       default: "",
     },
@@ -19,6 +19,12 @@ export default Vue.extend({
       default: "",
     },
   },
+  // methods: {
+  //   link(href: string) {
+  //     console.log(this.href, href)
+  //     window.open(href)
+  //   }
+  // }
 });
 </script>
 <style lang="scss" scoped>
