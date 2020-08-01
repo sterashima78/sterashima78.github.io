@@ -79,14 +79,14 @@
               text
               target="_blank"
             >
-              <v-img style="width: auto; height: 24px;" src="/qiita.png" />
+              <img style="width: auto; height: 24px;" src="/qiita.png" />
             </v-btn>
           </v-card-text>
 
           <v-card-text class="white--text pt-0 d-md-none">
             <v-list>
               <v-list-item>
-                <v-img
+                <img
                   src="https://avatars2.githubusercontent.com/u/45279563"
                   style="width: auto; height: 54px;"
                 />
