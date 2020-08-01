@@ -1,8 +1,8 @@
 ---
-title: "F# で解く ABC173"
+title: 'F# で解く ABC173'
 date: 2020-07-06 21:45:00
-description: "F# で ABC173 やったけど A と B と C しか解けなかった"
-tags: ["f-sharp", "AtCoder"]
+description: 'F# で ABC173 やったけど A と B と C しか解けなかった'
+tags: ['f-sharp', 'AtCoder']
 slug: f-sharp-atcoder-abc173-a-b-c
 image: https://user-images.githubusercontent.com/45279563/85910711-756f8900-b85b-11ea-8bd3-df0e8745aa27.png
 ---
@@ -17,7 +17,7 @@ ABC173 に参加した。どうやって書くといいかで結構悩んで結�
 
 [問題はこちら](https://atcoder.jp/contests/abc173/tasks/abc173_a)
 
-```
+```fsharp
 stdin.ReadLine()
 |> int
 |> fun x -> x % 1000
@@ -31,7 +31,7 @@ stdin.ReadLine()
 
 [問題はこちら](https://atcoder.jp/contests/abc173/tasks/abc173_b)
 
-```
+```fsharp
 let rec solve (ac, wa, tle, re) list =
   match list with
   | "AC"::xx -> solve (ac + 1, wa, tle, re) xx
@@ -54,7 +54,7 @@ let numOfAns = stdin.ReadLine() |> int
 
 [問題はこちら](https://atcoder.jp/contests/abc173/tasks/abc173_c)
 
-```
+```fsharp
 let [| h; w; k |] = stdin.ReadLine().Split(" ") |> Array.map int
 
 let f =

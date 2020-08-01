@@ -48,7 +48,7 @@ stdin.ReadLine()
 
 [問題はこちら](https://atcoder.jp/contests/m-solutions2020/tasks/m_solutions2020_b)
 
-```
+```fsharp
 let rec solve red green blue rest =
     match rest with
     | 0 -> if red < green && green < blue then "Yes" else "No"
@@ -72,7 +72,7 @@ stdin.ReadLine()
 
 [問題はこちら](https://atcoder.jp/contests/m-solutions2020/tasks/m_solutions2020_c)
 
-```
+```fsharp
 let rec solve pairs ans (arr: int []) =
     match pairs with
     | [] -> ans
@@ -102,7 +102,7 @@ index で参照するのが気持ち悪くてなんかいい方法がないか�
 
 [問題はこちら](https://atcoder.jp/contests/m-solutions2020/tasks/m_solutions2020_d)
 
-```
+```fsharp
 let rec gain money fList =
     match fList with
     | [] -> money

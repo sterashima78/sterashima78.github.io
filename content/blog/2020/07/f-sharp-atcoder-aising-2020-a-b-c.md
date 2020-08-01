@@ -1,8 +1,8 @@
 ---
-title: "F# で解く エイジングプログラミングコンテスト 2020"
+title: 'F# で解く エイジングプログラミングコンテスト 2020'
 date: 2020-07-12 10:45:00
-description: "F# で エイジングプログラミングコンテスト 2020 やったけど A と B と C しか解けなかった"
-tags: ["f-sharp", "AtCoder"]
+description: 'F# で エイジングプログラミングコンテスト 2020 やったけど A と B と C しか解けなかった'
+tags: ['f-sharp', 'AtCoder']
 slug: f-sharp-atcoder-aising-2020-a-b-c
 image: https://user-images.githubusercontent.com/45279563/85910711-756f8900-b85b-11ea-8bd3-df0e8745aa27.png
 ---
@@ -17,7 +17,7 @@ image: https://user-images.githubusercontent.com/45279563/85910711-756f8900-b85b
 
 [問題はこちら](https://atcoder.jp/contests/aising2020/tasks/aising2020_a)
 
-```
+```fsharp
 let [| l; r; d |] = stdin.ReadLine().Split(" ") |> Array.map int
 [l..r]
 |> List.filter (fun x -> x % d = 0)
@@ -31,7 +31,7 @@ let [| l; r; d |] = stdin.ReadLine().Split(" ") |> Array.map int
 
 [問題はこちら](https://atcoder.jp/contests/aising2020/tasks/aising2020_b)
 
-```
+```fsharp
 stdin.ReadLine()
 stdin.ReadLine().Split(" ")
 |> Array.map int
@@ -47,7 +47,7 @@ stdin.ReadLine().Split(" ")
 
 [問題はこちら](https://atcoder.jp/contests/aising2020/tasks/aising2020_c)
 
-```
+```fsharp
 let calc (x, y, z) = x * x + y * y + z * z + x * y + y * z + z * x
 
 let count (x, y, z) =

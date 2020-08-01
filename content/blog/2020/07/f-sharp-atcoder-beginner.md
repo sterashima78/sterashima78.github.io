@@ -1,8 +1,8 @@
 ---
-title: "F# で AtCoder Beginners Selection 解いた"
+title: 'F# で AtCoder Beginners Selection 解いた'
 date: 2020-07-05 20:15:00
-description: "F# で AtCoder Beginners Selection 解いたので回答例を載せる"
-tags: ["f-sharp", "AtCoder"]
+description: 'F# で AtCoder Beginners Selection 解いたので回答例を載せる'
+tags: ['f-sharp', 'AtCoder']
 slug: f-sharp-atcoder-beginner
 image: https://user-images.githubusercontent.com/45279563/85910711-756f8900-b85b-11ea-8bd3-df0e8745aa27.png
 ---
@@ -19,7 +19,7 @@ F# の練習のために [AtCoder の Beginners Selection](https://atcoder.jp/co
 
 [問題はこちら](https://atcoder.jp/contests/abs/tasks/practice_1)
 
-```
+```fsharp
 Array.append [| stdin.ReadLine() |] (stdin.ReadLine().Split(' '))
 |> Array.map int
 |> Array.reduce (+)
@@ -34,7 +34,7 @@ Array.append [| stdin.ReadLine() |] (stdin.ReadLine().Split(' '))
 
 [問題はこちら](https://atcoder.jp/contests/abs/tasks/abc086_a)
 
-```
+```fsharp
 stdin.ReadLine().Split(" ")
 |> Array.map int
 |> Array.reduce (*)
@@ -50,7 +50,7 @@ stdin.ReadLine().Split(" ")
 
 [問題はこちら](https://atcoder.jp/contests/abs/tasks/abc081_a)
 
-```
+```fsharp
 stdin.ReadLine().ToCharArray()
 |> Array.map (string >> int)
 |> Array.reduce (+)
@@ -59,7 +59,7 @@ stdin.ReadLine().ToCharArray()
 
 最初は以下のように書いていて、
 
-```
+```fsharp
 |> Array.map string
 |> Array.map int
 ```
@@ -74,7 +74,7 @@ stdin.ReadLine().ToCharArray()
 
 [問題はこちら](https://atcoder.jp/contests/abs/tasks/abc081_b)
 
-```
+```fsharp
 stdin.ReadLine()
 
 let isEvenAll arr =
@@ -105,7 +105,7 @@ stdin.ReadLine().Split(" ")
 
 [問題はこちら](https://atcoder.jp/contests/abs/tasks/abc087_b)
 
-```
+```fsharp
 let c500 = stdin.ReadLine() |> int
 let c100 = stdin.ReadLine() |> int
 let c50 = stdin.ReadLine() |> int
@@ -127,7 +127,7 @@ let ans = stdin.ReadLine() |> int
 
 [問題はこちら](https://atcoder.jp/contests/abs/tasks/abc083_b)
 
-```
+```fsharp
 let [| n; a; b |] =
     stdin.ReadLine().Split(" ") |> Array.map int
 
@@ -153,7 +153,7 @@ let isSumOfEachNumInnerRange under upper num =
 
 [問題はこちら](https://atcoder.jp/contests/abs/tasks/abc088_b)
 
-```
+```fsharp
 stdin.ReadLine()
 let rec toDiff tList fList =
   match fList with
@@ -176,7 +176,7 @@ stdin.ReadLine().Split(" ")
 
 [問題はこちら](https://atcoder.jp/contests/abs/tasks/abc085_b)
 
-```
+```fsharp
 let rec uniq tList fList =
   match fList with
     | x::y::z -> if x = y then uniq tList (y::z) else uniq (x::tList) (y::z)
@@ -201,7 +201,7 @@ C 問題。
 
 [問題はこちら](https://atcoder.jp/contests/abs/tasks/abc085_c)
 
-```
+```fsharp
 let [| n; sum |] = stdin.ReadLine().Split(" ") |> Array.map int
 
 seq {
@@ -228,7 +228,7 @@ Option が返ってくる `head` がわからずに `Seq.tryFind (fun _ -> true)
 
 [問題はこちら](https://atcoder.jp/contests/abs/tasks/arc065_a)
 
-```
+```fsharp
 let rec solve str =
   match str with
   | "d"::"r"::"e"::"a"::"m"::"e"::"r"::x -> if solve x = "YES" then "YES" else solve ("e"::"r"::x)
@@ -253,7 +253,7 @@ Haskell って String が char のリストだったはずだから、もっと�
 
 [問題はこちら](https://atcoder.jp/contests/abs/tasks/arc089_a)
 
-```
+```fsharp
 let isMovable (t1, x1, y1) (t2, x2, y2) =
   let t = t2 - t1
   let dist = abs (x1 - x2) + abs (y1 - y2)

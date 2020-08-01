@@ -1,8 +1,8 @@
 ---
-title: "今週 F# で解いた AtCoder Problems 7月2週目"
+title: '今週 F# で解いた AtCoder Problems 7月2週目'
 date: 2020-07-11 16:00:00
-description: "今週 F# で解いた AtCoder Problems を振り返る"
-tags: ["f-sharp", "AtCoder"]
+description: '今週 F# で解いた AtCoder Problems を振り返る'
+tags: ['f-sharp', 'AtCoder']
 slug: f-sharp-atcoder-weekly-2020-07-02
 image: https://user-images.githubusercontent.com/45279563/85910711-756f8900-b85b-11ea-8bd3-df0e8745aa27.png
 ---
@@ -19,7 +19,7 @@ AtCoder Problems を始めた。今週は Training で Easy を 11 問解いた�
 
 [問題](https://atcoder.jp/contests/abc139/tasks/abc139_b)
 
-```
+```fsharp
 let [| A; B |] = stdin.ReadLine().Split(" ") |> Array.map int
 
 let rec solve rest num =
@@ -37,7 +37,7 @@ let rec solve rest num =
 
 [問題](https://atcoder.jp/contests/abc156/tasks/abc156_c)
 
-```
+```fsharp
 stdin.ReadLine()
 let nums = stdin.ReadLine().Split(" ") |> Array.map double
 let point =
@@ -98,21 +98,7 @@ point の計算をメモして `(x - point)` を算出する関数を定義し�
 
 [問題](https://atcoder.jp/contests/code-festival-2016-qualb/tasks/codefestival_2016_qualB_b)
 
-let rec solve tList all b fList =
-match fList with
-| 'a'::l -> if all > 0 then solve ("Yes"::tList) (all - 1) b l else solve ("No"::tList) all b l
-| 'b'::l -> if all > 0 && b > 0 then solve ("Yes"::tList) (all - 1) (b - 1) l else solve ("No"::tList) all (b - 1) l
-| _::l -> solve ("No"::tList) all b l
-| [] -> tList
-let [| _; a; b |] = stdin.ReadLine().Split(" ") |> Array.map int
-
-stdin.ReadLine().ToCharArray()
-|> Array.toList
-|> solve [] (a + b) b
-|> List.rev
-|> List.map (printfn "%s")
-
-```
+```fsharp
 let rec solve tList all b fList =
   match fList with
   | 'a'::l -> if all > 0 then solve ("Yes"::tList) (all - 1) b l else solve ("No"::tList) all b l
@@ -134,7 +120,7 @@ stdin.ReadLine().ToCharArray()
 
 [問題](https://atcoder.jp/contests/sumitrust2019/tasks/sumitb2019_b)
 
-```
+```fsharp
 let after = stdin.ReadLine() |> int
 
 after
@@ -157,7 +143,7 @@ after
 
 [問題](https://atcoder.jp/contests/abc121/tasks/abc121_b)
 
-```
+```fsharp
 let [| n; m; c; |] = stdin.ReadLine().Split(" ") |> Array.map int
 let B = stdin.ReadLine().Split(" ") |> Array.map int |> Array.toList
 [1 .. n]
@@ -182,7 +168,7 @@ let B = stdin.ReadLine().Split(" ") |> Array.map int |> Array.toList
 
 [問題](https://atcoder.jp/contests/panasonic2020/tasks/panasonic2020_b)
 
-```
+```fsharp
 let [| h; w |] = stdin.ReadLine().Split(" ") |> Array.map int64
 
 let ans =
@@ -207,7 +193,7 @@ ans |> printfn "%d"
 
 [問題](https://atcoder.jp/contests/abc157/tasks/abc157_b)
 
-```
+```fsharp
 let rec mark marked list nums =
   match list with
   | [] -> marked
@@ -258,7 +244,7 @@ let n = stdin.ReadLine() |> int
 
 [問題](https://atcoder.jp/contests/abc086/tasks/abc086_b)
 
-```
+```fsharp
 let rec solve num target =
   if num * num > target then
     "No"
@@ -283,7 +269,7 @@ stdin.ReadLine().Split(" ") |> String.concat "" |> int |> solve 1 |> printfn "%s
 
 [問題](https://atcoder.jp/contests/abc074/tasks/abc074_b)
 
-```
+```fsharp
 stdin.ReadLine()
 let K = stdin.ReadLine() |> int
 
@@ -300,7 +286,7 @@ stdin.ReadLine().Split(" ")
 
 [問題](https://atcoder.jp/contests/abc088/tasks/abc088_b)
 
-```
+```fsharp
 let rec solve (a, b) list =
   match list with
   | [] -> a - b
@@ -324,7 +310,7 @@ stdin.ReadLine().Split(" ")
 
 [問題](https://atcoder.jp/contests/abc068/tasks/abc068_b)
 
-```
+```fsharp
 let rec solve num upper =
   if num * 2 <= upper then
     solve (num * 2) upper
