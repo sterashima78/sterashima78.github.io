@@ -29,6 +29,23 @@
       </div>
       <nuxt-content :document="post" />
     </div>
+    <v-divider style="margin: 20px 0;"></v-divider>
+    <div style="display: flex; justify-content: space-around;">
+      <div>
+        <nuxt-link
+          v-if="!!next"
+          :to="next.path.replace(/\//g, '-').replace('-blog-', '/blog/')"
+          >&lt; {{ next ? next.title : '' }}</nuxt-link
+        >
+      </div>
+      <div>
+        <nuxt-link
+          v-if="!!prev"
+          :to="prev.path.replace(/\//g, '-').replace('-blog-', '/blog/')"
+          >{{ prev ? prev.title : '' }} &gt;</nuxt-link
+        >
+      </div>
+    </div>
   </Layout>
 </template>
 
@@ -43,7 +60,12 @@ export default Vue.extend({
         },
       })
       .fetch()
-    return { post: post[0] }
+    const [prev, next] = await $content('blog', { deep: true })
+      .only(['title', 'path'])
+      .sortBy('date')
+      .surround(post[0].slug)
+      .fetch()
+    return { post: post[0], prev, next }
   },
 })
 </script>
