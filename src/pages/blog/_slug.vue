@@ -36,8 +36,12 @@
 import Vue from 'vue'
 export default Vue.extend({
   async asyncData({ $content, params }) {
-    const post = await $content(`blog`)
-      .where({ path: { $eq: `/blog/${params.slug}` } })
+    const post = await $content(`blog`, { deep: true })
+      .where({
+        path: {
+          $eq: `/blog/${params.slug.replace(/(\d{4})-(\d{2})-/, '$1/$2/')}`,
+        },
+      })
       .fetch()
     return { post: post[0] }
   },

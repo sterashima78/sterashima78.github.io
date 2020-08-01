@@ -106,7 +106,11 @@ export default {
         .filter((v, i, arr) => arr.indexOf(v) <= i)
         .map((i) => `/blog/tags/${i}`)
       return files
-        .map((file) => (file.path === '/index' ? '/' : file.path))
+        .map((file) =>
+          file.path === '/index'
+            ? '/'
+            : file.path.replace(/\//g, '-').replace('-blog-', '/blog/')
+        )
         .concat(tags)
     },
   },

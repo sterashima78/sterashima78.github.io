@@ -1,5 +1,8 @@
 <template>
-  <nuxt-link :to="post.path" class="post-item">
+  <nuxt-link
+    :to="post.path.replace(/\//g, '-').replace('-blog-', '/blog/')"
+    class="post-item"
+  >
     <v-card ripple outlined hover class="card">
       <v-img class="white--text align-end" height="200px" :src="post.image">
         <v-card-title style="background: rgba(0, 0, 0, 0.3);">
