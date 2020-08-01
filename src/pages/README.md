@@ -1,5 +1,6 @@
-Pages are usually used for normal pages or for listing items from a GraphQL collection.
-Add .vue files here to create pages. For example **About.vue** will be **site.com/about**.
-Learn more about pages: https://gridsome.org/docs/pages/
+# PAGES
 
-You can delete this file.
+This directory contains your Application Views and Routes.
+The framework reads all the `*.vue` files inside this directory and creates the router of your application.
+
+More information about the usage of this directory in [the documentation](https://nuxtjs.org/guide/routing).
