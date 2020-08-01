@@ -4,7 +4,7 @@
       <h1>About me</h1>
       <div class="d-flex align-center">
         <v-avatar class="profile" color="grey" size="64">
-          <g-image src="https://avatars2.githubusercontent.com/u/45279563" />
+          <v-img src="https://avatars2.githubusercontent.com/u/45279563" />
         </v-avatar>
         <v-list>
           <v-list-item>
@@ -17,7 +17,7 @@
       </div>
       <h2>スキル</h2>
       <p>言語もライブラリもツールもごちゃまぜ</p>
-      <div style="height: 70vh">
+      <div style="height: 70vh;">
         <TechGraph />
       </div>
       <h2>作ったもの</h2>
@@ -46,14 +46,16 @@
         <v-timeline-item>
           <v-card class="elevation-2">
             <v-card-title
-              >2019/07 - 現在 <v-chip x-small color="red" text-color="white"
+              >2019/07 - 現在
+              <v-chip x-small color="red" text-color="white"
                 >業務</v-chip
               ></v-card-title
             >
             <v-card-text>
               <h4>ECサイトのフロントエンドアーキテクチャ刷新</h4>
               <p>
-                使用技術: HTML, SCSS, Typescript, Vue, jest, GitHub, GitHub Actions, Cypress, Storybook, Docker
+                使用技術: HTML, SCSS, Typescript, Vue, jest, GitHub, GitHub
+                Actions, Cypress, Storybook, Docker
               </p>
               <p>
                 刷新のための方針策定、チームリード、業務改善など幅広く活動してる
@@ -95,7 +97,8 @@
               <p>
                 入社前に作られたアプリケーションの瑕疵対応と機能追加の案件だった。
                 かなり厳しい案件だったらしく、スパゲッティなコードを追いかけながらバグの原因調査と対応をした。
-                ユニットテストもなかったので、関連部分の試験を書きながら TDD で実装をした。
+                ユニットテストもなかったので、関連部分の試験を書きながら TDD
+                で実装をした。
               </p>
             </v-card-text>
           </v-card>
@@ -110,15 +113,16 @@
             <v-card-text>
               <h4>PHPレガシーアプリケーションのマイグレーション</h4>
               <p>
-                使用技術: Ubuntu 16.04, HTML, CSS, JavaScript, PHP, ZendFramework,
-                PHPStan, Redmine, GitLab, Jenkins, PHPUnit
+                使用技術: Ubuntu 16.04, HTML, CSS, JavaScript, PHP,
+                ZendFramework, PHPStan, Redmine, GitLab, Jenkins, PHPUnit
               </p>
               <p>
                 担当作業: 方針検討, 実装, 単体試験
               </p>
               <p>
-                テストがない ZendFramework 1 と 2 のアプリケーションを ZendFramework 3 へマイグレーションするという仕事。
-                PHPStan で静的解析をしつつユニットテストを作りながらマイグレーションをするような方針を策定した。
+                テストがない ZendFramework 1 と 2 のアプリケーションを
+                ZendFramework 3 へマイグレーションするという仕事。 PHPStan
+                で静的解析をしつつユニットテストを作りながらマイグレーションをするような方針を策定した。
               </p>
             </v-card-text>
           </v-card>
@@ -333,7 +337,9 @@
                 >イベント</v-chip
               ></v-card-title
             >
-            <v-card-text>明治大学大学院 農学研究科 生命科学専攻 修了</v-card-text>
+            <v-card-text
+              >明治大学大学院 農学研究科 生命科学専攻 修了</v-card-text
+            >
           </v-card>
         </v-timeline-item>
         <v-timeline-item>
@@ -344,7 +350,9 @@
         </v-timeline-item>
         <v-timeline-item>
           <v-card class="elevation-2">
-            <v-card-title>2015/03<v-chip x-small>イベント</v-chip></v-card-title>
+            <v-card-title
+              >2015/03<v-chip x-small>イベント</v-chip></v-card-title
+            >
             <v-card-text>明治大学 農学部 生命科学科 卒業</v-card-text>
           </v-card>
         </v-timeline-item>
@@ -354,18 +362,18 @@
 </template>
 
 <script>
-import PortfolioItem from "../components/About/PortfolioItem.vue";
-import TechGraph from "../components/About/TechGraph.vue";
-import Vue from "vue";
+import Vue from 'vue'
+import PortfolioItem from '../components/PortfolioItem.vue'
+import TechGraph from '../components/TechGraph.vue'
 export default Vue.extend({
   components: {
     PortfolioItem,
-    TechGraph
+    TechGraph,
   },
   metaInfo: {
-    title: "About me",
+    title: 'About me',
   },
-});
+})
 </script>
 <style lang="scss" scoped>
 h2 {

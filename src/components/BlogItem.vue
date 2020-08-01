@@ -1,5 +1,5 @@
 <template>
-  <g-link :to="post.path" class="post-item">
+  <nuxt-link :to="post.path" class="post-item">
     <v-card ripple outlined hover class="card">
       <v-img class="white--text align-end" height="200px" :src="post.image">
         <v-card-title style="background: rgba(0, 0, 0, 0.3);">
@@ -11,10 +11,10 @@
       <v-card-text>
         <v-chip
           v-for="tag in post.tags"
-          :key="tag.title"
-          v-text="tag.title"
-          :href="`/blog/tags/${tag.title}`"
-          @click.stop="() => false"
+          :key="tag"
+          :href="`/blog/tags/${tag}`"
+          @click.stop
+          v-text="tag"
         />
       </v-card-text>
       <v-card-text>
@@ -22,10 +22,10 @@
         <small class="date">{{ post.date }}</small>
       </v-card-text>
     </v-card>
-  </g-link>
+  </nuxt-link>
 </template>
 <script lang="ts">
-import Vue, { PropType } from "vue";
+import Vue, { PropType } from 'vue'
 export default Vue.extend({
   props: {
     post: {
@@ -35,7 +35,7 @@ export default Vue.extend({
       default: (): any => ({}),
     },
   },
-});
+})
 </script>
 <style lang="scss" scoped>
 .post-item {

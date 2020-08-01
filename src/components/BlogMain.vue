@@ -3,18 +3,21 @@
     <h1><slot>Blog</slot></h1>
     <v-container fluid class="container">
       <BlogItem
-        class="blog-item"
         v-for="post in posts"
         :key="post.id"
+        class="blog-item"
         :post="post"
       />
     </v-container>
   </div>
 </template>
 <script lang="ts">
-import Vue, { PropType } from "vue";
-import BlogItem from "./BlogItem.vue";
+import Vue, { PropType } from 'vue'
+import BlogItem from './BlogItem.vue'
 export default Vue.extend({
+  components: {
+    BlogItem,
+  },
   props: {
     posts: {
       // eslint-disable-next-line
@@ -23,10 +26,7 @@ export default Vue.extend({
       default: (): any[] => [],
     },
   },
-  components: {
-    BlogItem,
-  },
-});
+})
 </script>
 <style lang="scss" scoped>
 .blog-main {

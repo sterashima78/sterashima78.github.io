@@ -1,18 +1,18 @@
 <template>
   <Layout>
-    <v-img class="hero" :src="$page.blogPost.image">
+    <v-img class="hero" :src="post.image">
       <v-row align="center" justify="center">
         <v-col
           class="text-center"
           cols="12"
-          style="color:white;background: rgba(0 ,0, 0, 0.5)"
+          style="color: white; background: rgba(0, 0, 0, 0.5);"
         >
           <h1 class="display-1 font-weight-thin mb-4">
-            {{ $page.blogPost.title }}
+            {{ post.title }}
           </h1>
           <h4 class="subheading">
-            {{ $page.blogPost.description }} <br />
-            <small>{{ $page.blogPost.date }}</small>
+            {{ post.description }} <br />
+            <small>{{ post.date }}</small>
           </h4>
         </v-col>
       </v-row>
@@ -21,35 +21,27 @@
       <div class="tags">
         Tags:
         <v-chip
-          v-for="tag in $page.blogPost.tags"
-          :key="tag.title"
-          v-text="tag.title"
-          :href="`/blog/tags/${tag.title}`"
+          v-for="tag in post.tags"
+          :key="tag"
+          :href="`/blog/tags/${tag}`"
+          v-text="tag"
         />
       </div>
-      <div v-html="$page.blogPost.content" />
+      <nuxt-content :document="post" />
     </div>
   </Layout>
 </template>
 
-<page-query>
-query MarkdownPost ($path: String!) {
-  blogPost (path: $path) {
-    title
-    date (format: "YYYY年MM月DD日 HH:mm:ss")
-    content,
-    image,
-    description,
-    tags {
-      title
-    }
-  }
-}
-</page-query>
-
 <script>
-import Vue from "vue";
-export default Vue.extend({});
+import Vue from 'vue'
+export default Vue.extend({
+  async asyncData({ $content, params }) {
+    const post = await $content(`blog`)
+      .where({ path: { $eq: `/blog/${params.slug}` } })
+      .fetch()
+    return { post: post[0] }
+  },
+})
 </script>
 <style lang="scss">
 .hero {
@@ -68,6 +60,10 @@ export default Vue.extend({});
   }
   pre {
     margin: 1em 0;
+    > code {
+      background-color: unset;
+      padding: 0;
+    }
   }
   p,
   li {

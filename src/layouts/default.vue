@@ -8,7 +8,7 @@
     >
       <div class="d-none d-md-flex align-center">
         <v-avatar class="profile" color="grey" size="64">
-          <g-image src="https://avatars2.githubusercontent.com/u/45279563" />
+          <v-img src="https://avatars2.githubusercontent.com/u/45279563" />
         </v-avatar>
         <v-list>
           <v-list-item>
@@ -50,14 +50,13 @@
     </v-navigation-drawer>
 
     <v-main>
-      <!-- your code here -->
       <v-container fluid style="margin-bottom: 300px;">
-        <slot />
+        <nuxt />
       </v-container>
       <v-footer
         absolute
         :style="{ 'margin-bottom': isXSmall ? '62px' : '0px' }"
-        style="padding: 0px;"
+        style="padding: 0;"
       >
         <v-card
           flat
@@ -80,14 +79,14 @@
               text
               target="_blank"
             >
-              <g-image style="width: auto; height: 24px;" src="/qiita.png" />
+              <v-img style="width: auto; height: 24px;" src="/qiita.png" />
             </v-btn>
           </v-card-text>
 
           <v-card-text class="white--text pt-0 d-md-none">
             <v-list>
               <v-list-item>
-                <g-image
+                <v-img
                   src="https://avatars2.githubusercontent.com/u/45279563"
                   style="width: auto; height: 54px;"
                 />
@@ -110,42 +109,42 @@
       </v-footer>
     </v-main>
     <v-footer
-      fixed
       v-if="isXSmall"
+      fixed
       style="display: flex; justify-content: space-around;"
     >
-      <g-link to="/" style="text-align: center;">
+      <nuxt-link to="/" style="text-align: center;">
         <v-icon>mdi-home</v-icon><br />
         <span style="color: black;">Home</span>
-      </g-link>
-      <g-link to="/blog/" style="text-align: center;">
+      </nuxt-link>
+      <nuxt-link to="/blog/" style="text-align: center;">
         <v-icon>mdi-post</v-icon><br />
         <span style="color: black;">Blog</span>
-      </g-link>
-      <g-link to="/about/" style="text-align: center;">
+      </nuxt-link>
+      <nuxt-link to="/about/" style="text-align: center;">
         <v-icon>mdi-account</v-icon><br />
         <span style="color: black;">About</span>
-      </g-link>
+      </nuxt-link>
     </v-footer>
   </v-app>
 </template>
 <script lang="ts">
-import Vue from "vue";
+import Vue from 'vue'
 export default Vue.extend({
   data: () => ({
     isSmall: false,
     isXSmall: false,
   }),
   mounted() {
-    this.onResize();
+    this.onResize()
   },
   methods: {
     onResize() {
-      this.isSmall = window.innerWidth <= 960;
-      this.isXSmall = window.innerWidth <= 600;
+      this.isSmall = window.innerWidth <= 960
+      this.isXSmall = window.innerWidth <= 600
     },
   },
-});
+})
 </script>
 <style lang="scss" scoped>
 a {

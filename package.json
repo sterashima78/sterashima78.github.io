@@ -1,37 +1,57 @@
 {
   "name": "sterashima78.github.io",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "gridsome build",
-    "develop": "gridsome develop",
-    "explore": "gridsome explore",
-    "lint": "eslint src --ext 'ts,vue,js'"
+    "dev": "nuxt-ts",
+    "build": "nuxt-ts generate",
+    "serve": "nuxt-ts serve",
+    "preserve": "npm run build",
+    "generate": "nuxt-ts generate",
+    "lint:js": "eslint --ext .ta,.js,.vue --ignore-path .gitignore .",
+    "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore",
+    "lint": "npm run lint:js && npm run lint:style",
+    "test": "jest"
+  },
+  "lint-staged": {
+    "*.{js,vue}": "eslint",
+    "*.{css,vue}": "stylelint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "dependencies": {
-    "@gridsome/plugin-google-analytics": "^0.1.1",
-    "@gridsome/remark-prismjs": "^0.3.0",
-    "@gridsome/source-filesystem": "^0.6.2",
-    "@gridsome/transformer-remark": "^0.6.0",
-    "gridsome": "^0.7.17",
-    "gridsome-plugin-pwa": "0.0.18",
-    "vuetify": "^2.3.1"
+    "@nuxt/content": "^1.5.0",
+    "@nuxt/typescript-runtime": "^1.0.0",
+    "@nuxtjs/pwa": "^3.0.0-beta.20",
+    "nuxt": "^2.14.0"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^3.3.0",
-    "@typescript-eslint/parser": "^3.3.0",
-    "eslint": "^7.3.0",
-    "eslint-config-airbnb-base": "^14.2.0",
+    "@nuxt/types": "^2.14.0",
+    "@nuxt/typescript-build": "^2.0.2",
+    "@nuxtjs/eslint-config": "^3.1.0",
+    "@nuxtjs/eslint-config-typescript": "^3.0.0",
+    "@nuxtjs/eslint-module": "^2.0.0",
+    "@nuxtjs/stylelint-module": "^4.0.0",
+    "@nuxtjs/vuetify": "^1.11.2",
+    "@vue/test-utils": "^1.0.3",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.1.0",
+    "eslint": "^7.5.0",
     "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-nuxt": "^1.0.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-vue": "^6.2.2",
-    "gridsome-plugin-typescript": "^0.4.0",
-    "node-sass": "^4.14.1",
+    "husky": "^4.2.5",
+    "jest": "^26.1.0",
+    "lint-staged": "^10.2.11",
     "prettier": "^2.0.5",
-    "sass-loader": "^7.3.1",
-    "ts-loader": "^7.0.5",
-    "typescript": "^3.9.5",
-    "vue-eslint-parser": "^7.1.0",
-    "webpack-merge": "^4.2.2"
+    "stylelint": "^13.6.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^20.0.0",
+    "ts-jest": "^26.1.3",
+    "vue-jest": "^3.0.4"
   }
 }

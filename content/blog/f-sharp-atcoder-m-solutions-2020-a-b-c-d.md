@@ -1,8 +1,8 @@
 ---
-title: "F# で解く M-SOLUTIONS プロコンオープン 2020"
+title: 'F# で解く M-SOLUTIONS プロコンオープン 2020'
 date: 2020-07-26 10:45:00
-description: "F# で M-SOLUTIONS プロコンオープン 2020 やったけど A - D しか解けなかった"
-tags: ["f-sharp", "AtCoder"]
+description: 'F# で M-SOLUTIONS プロコンオープン 2020 やったけど A - D しか解けなかった'
+tags: ['f-sharp', 'AtCoder']
 slug: f-sharp-atcoder-m-solutions-2020-a-b-c-d
 image: https://user-images.githubusercontent.com/45279563/85910711-756f8900-b85b-11ea-8bd3-df0e8745aa27.png
 ---
@@ -17,7 +17,7 @@ M-SOLUTIONS プロコンオープン 2020 に参加した。今回は A, B, C �
 
 [問題はこちら](https://atcoder.jp/contests/m-solutions2020/tasks/m_solutions2020_a)
 
-```
+```fsharp
 let solve i =
   if i <= 599 then
     8
@@ -70,7 +70,7 @@ stdin.ReadLine()
 
 ## C
 
-[問題はこちら]https://atcoder.jp/contests/m-solutions2020/tasks/m_solutions2020_c)
+[問題はこちら](https://atcoder.jp/contests/m-solutions2020/tasks/m_solutions2020_c)
 
 ```
 let rec solve pairs ans (arr: int []) =
@@ -100,7 +100,7 @@ index で参照するのが気持ち悪くてなんかいい方法がないか�
 
 ## D
 
-[問題はこちら]https://atcoder.jp/contests/m-solutions2020/tasks/m_solutions2020_d)
+[問題はこちら](https://atcoder.jp/contests/m-solutions2020/tasks/m_solutions2020_d)
 
 ```
 let rec gain money fList =

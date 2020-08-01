@@ -42,11 +42,11 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
-import TechGraphMark from "./TechGraphMark.vue";
+import TechGraphMark from './TechGraphMark.vue'
 export default Vue.extend({
   components: {
-    TechGraphMark
-  }
+    TechGraphMark,
+  },
 })
 </script>
 <style lang="scss" scoped>

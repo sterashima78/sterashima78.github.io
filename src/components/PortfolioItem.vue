@@ -1,22 +1,22 @@
 <template>
   <v-card class="portfolio-item" :href="link" hover>
-    <g-image class="img" :src="imgSrc" style="width: 15em" />
+    <v-img class="img" :src="imgSrc" style="width: 15em;" />
     <v-card-title>
       <slot />
     </v-card-title>
   </v-card>
 </template>
 <script lang="ts">
-import Vue, { PropType } from "vue";
+import Vue, { PropType } from 'vue'
 export default Vue.extend({
   props: {
     link: {
       type: String as PropType<string>,
-      default: "",
+      default: '',
     },
     imgSrc: {
       type: String as PropType<string>,
-      default: "",
+      default: '',
     },
   },
   // methods: {
@@ -25,7 +25,7 @@ export default Vue.extend({
   //     window.open(href)
   //   }
   // }
-});
+})
 </script>
 <style lang="scss" scoped>
 .portfolio-item {
