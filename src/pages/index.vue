@@ -36,7 +36,7 @@
                 <v-icon size="24px">mdi-github</v-icon>
               </v-btn>
               <a href="https://qiita.com/sterashima78" target="_blank">
-                <v-img style="width: auto; height: 24px;" src="/qiita.png" />
+                <v-img style="width: 90px; height: 24px;" src="/qiita.png" />
               </a>
             </v-flex>
           </v-list-item-content>
