@@ -10,11 +10,8 @@ $ npm install
 $ npm run dev
 
 # build for production and launch server
-$ npm run build
-$ npm run start
+$ npm run serve
 
 # generate static project
-$ npm run generate
+$ npm run build
 ```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
