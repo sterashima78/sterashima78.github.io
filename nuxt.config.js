@@ -55,6 +55,8 @@ export default {
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
     '@nuxtjs/vuetify',
+    '@nuxtjs/tailwindcss',
+    'nuxt-composition-api',
   ],
   /*
    ** Nuxt.js modules
@@ -98,6 +100,7 @@ export default {
    */
   build: {},
   generate: {
+    interval: 2000,
     async routes() {
       const { $content } = require('@nuxt/content')
       const files = await $content().only(['path', 'tags']).fetch()

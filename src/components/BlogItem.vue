@@ -3,28 +3,28 @@
     :to="post.path.replace(/\//g, '-').replace('-blog-', '/blog/')"
     class="post-item"
   >
-    <v-card ripple outlined hover class="card">
+    <div class="rounded border-black shadow card">
       <v-img class="white--text align-end" height="200px" :src="post.image">
-        <v-card-title style="background: rgba(0, 0, 0, 0.3);">
-          <h2>
-            {{ post.title }}
-          </h2>
-        </v-card-title>
+        <h2
+          class="font-bold text-xl leading-relaxed bg-black bg-opacity-75 p-2"
+          v-text="post.title"
+        />
       </v-img>
-      <v-card-text>
-        <v-chip
+      <div class="m-2">
+        <t-chip
           v-for="tag in post.tags"
           :key="tag"
-          :href="`/blog/tags/${tag}`"
-          @click.stop
+          :to="`/blog/tags/${tag}`"
+          color="teal"
+          text-color="white"
           v-text="tag"
         />
-      </v-card-text>
-      <v-card-text>
+      </div>
+      <div class="p-2">
         <p>{{ post.description }}</p>
         <small class="date">{{ post.date }}</small>
-      </v-card-text>
-    </v-card>
+      </div>
+    </div>
   </nuxt-link>
 </template>
 <script lang="ts">
@@ -43,7 +43,7 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .post-item {
   text-decoration: none;
-
+  color: black;
   > .card {
     width: 20rem;
     max-width: 20rem;

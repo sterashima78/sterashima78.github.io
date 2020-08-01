@@ -1,36 +1,33 @@
 <template>
-  <Layout>
-    <v-img class="hero" :src="post.image">
-      <v-row align="center" justify="center">
-        <v-col
-          class="text-center"
-          cols="12"
-          style="color: white; background: rgba(0, 0, 0, 0.5);"
-        >
-          <h1 class="display-1 font-weight-thin mb-4">
-            {{ post.title }}
-          </h1>
-          <h4 class="subheading">
-            {{ post.description }} <br />
-            <small>{{ post.date }}</small>
-          </h4>
-        </v-col>
-      </v-row>
+  <div class="divide-y divide-gray-400">
+    <v-img class="hero relative" :src="post.image">
+      <div
+        class="bg-black bg-opacity-75 p-2 text-white text-center absolute bottom-0 inset-x-0"
+      >
+        <h1 class="text-2xl font-bold">
+          {{ post.title }}
+        </h1>
+        <h4 class="text-sm">
+          {{ post.description }} <br />
+          <small>{{ post.date }}</small>
+        </h4>
+      </div>
     </v-img>
     <div class="contents">
       <div class="tags">
         Tags:
-        <v-chip
+        <t-chip
           v-for="tag in post.tags"
           :key="tag"
-          :href="`/blog/tags/${tag}`"
+          :to="`/blog/tags/${tag}`"
+          color="teal"
+          text-color="white"
           v-text="tag"
         />
       </div>
       <nuxt-content :document="post" />
     </div>
-    <v-divider style="margin: 20px 0;"></v-divider>
-    <div style="display: flex; justify-content: space-around;">
+    <div class="pt-8" style="display: flex; justify-content: space-around;">
       <div>
         <nuxt-link
           v-if="!!next"
@@ -46,7 +43,7 @@
         >
       </div>
     </div>
-  </Layout>
+  </div>
 </template>
 
 <script>
