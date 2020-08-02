@@ -1,6 +1,6 @@
 <template>
   <div class="divide-y divide-gray-400">
-    <v-img class="hero relative" :src="post.image">
+    <div class="relative bg-no-repeat bg-center bg-cover" :style="style">
       <div
         class="bg-black bg-opacity-75 p-2 text-white text-center absolute bottom-0 inset-x-0"
       >
@@ -12,7 +12,7 @@
           <small>{{ post.date }}</small>
         </h4>
       </div>
-    </v-img>
+    </div>
     <div class="contents">
       <div class="tags">
         Tags:
@@ -62,14 +62,19 @@ export default Vue.extend({
       .sortBy('date')
       .surround(post[0].slug)
       .fetch()
-    return { post: post[0], prev, next }
+    return {
+      post: post[0],
+      prev,
+      next,
+      style: {
+        height: '15em',
+        'background-image': `url(${post[0].image})`,
+      },
+    }
   },
 })
 </script>
 <style lang="scss">
-.hero {
-  height: 15em;
-}
 .contents {
   > .tags {
     margin: 1em 0;

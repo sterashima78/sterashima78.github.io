@@ -1,10 +1,12 @@
 <template>
   <Layout>
-    <h1>Tags</h1>
-    <v-chip
+    <h1 class="text-2xl font-bold">Tags</h1>
+    <t-chip
       v-for="tag in tags"
       :key="tag"
       :to="`/blog/tags/${tag}`"
+      color="teal"
+      text-color="white"
       v-text="tag"
     />
   </Layout>

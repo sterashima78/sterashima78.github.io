@@ -4,12 +4,12 @@
     class="post-item"
   >
     <div class="rounded border-black shadow card">
-      <v-img class="white--text align-end" height="200px" :src="post.image">
+      <div class="relative bg-no-repeat bg-center bg-cover" :style="style">
         <h2
-          class="font-bold text-xl leading-relaxed bg-black bg-opacity-75 p-2"
+          class="absolute bottom-0 inset-x-0 font-bold text-xl text-white leading-relaxed bg-black bg-opacity-75 p-2"
           v-text="post.title"
         />
-      </v-img>
+      </div>
       <div class="m-2">
         <t-chip
           v-for="tag in post.tags"
@@ -36,6 +36,14 @@ export default Vue.extend({
       type: Object as PropType<any>,
       // eslint-disable-next-line
       default: (): any => ({}),
+    },
+  },
+  computed: {
+    style(): any {
+      return {
+        height: '200px',
+        'background-image': `url(${this.post.image})`,
+      }
     },
   },
 })
