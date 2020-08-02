@@ -1,6 +1,8 @@
 <template>
   <div class="mark" :style="{ left: `${x}%`, top: `${100 - y}%` }">
-    <v-chip x-small color="primary">{{ text }}</v-chip>
+    <t-chip style="font-size: 0.5rem;" color="blue" text-color="white">{{
+      text
+    }}</t-chip>
   </div>
 </template>
 <script lang="ts">
