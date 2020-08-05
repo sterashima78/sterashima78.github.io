@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>About me</h1>
+    <h1 class="text-3xl font-bold">About me</h1>
     <div class="flex content-center">
       <t-avatar size="64px" />
       <div class="flex flex-col content-center justify-center">
@@ -8,12 +8,12 @@
         <p class="leading-none text-sm">Frontend Engineer</p>
       </div>
     </div>
-    <h2>スキル</h2>
+    <h2 class="text-2xl font-bold">スキル</h2>
     <p>言語もライブラリもツールもごちゃまぜ</p>
-    <div style="height: 70vh;">
+    <div style="height: 70vh;" class="m-2">
       <TechGraph />
     </div>
-    <h2>作ったもの</h2>
+    <h2 class="text-2xl font-bold">作ったもの</h2>
     <div class="flex flex-wrap justify-center">
       <PortfolioItem
         v-for="a in product"
@@ -23,7 +23,7 @@
         >{{ a.name }}</PortfolioItem
       >
     </div>
-    <h2>経歴</h2>
+    <h2 class="text-2xl font-bold">経歴</h2>
     <div class="timeline">
       <div class="item">
         <div class="time-point"></div>

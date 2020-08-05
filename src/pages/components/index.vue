@@ -1,10 +1,11 @@
 <template>
-  <nuxt-content :document="page" />
+  <div class="w-100">
+    <nuxt-content :document="page" />
+  </div>
 </template>
 <script lang="ts">
 import Vue from 'vue'
 export default Vue.extend({
-  layout: 'plain',
   async asyncData({ $content }) {
     const page = await $content('components').fetch()
     return {
