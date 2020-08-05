@@ -1,5 +1,5 @@
 <template>
-  <div class="container min-h-screen h-screen">
+  <div class="min-h-screen h-screen">
     <nuxt />
   </div>
 </template>

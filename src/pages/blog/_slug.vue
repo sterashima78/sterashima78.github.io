@@ -1,6 +1,6 @@
 <template>
   <div class="divide-y divide-gray-400">
-    <div class="relative bg-no-repeat bg-center bg-cover" :style="style">
+    <div class="relative bg-no-repeat bg-center" :style="style">
       <div
         class="bg-black bg-opacity-75 p-2 text-white text-center absolute bottom-0 inset-x-0"
       >
@@ -27,7 +27,7 @@
       </div>
       <nuxt-content :document="post" />
     </div>
-    <div class="pt-8" style="display: flex; justify-content: space-around;">
+    <div class="flex pt-8" style="justify-content: space-around;">
       <div>
         <nuxt-link
           v-if="!!next"
@@ -84,7 +84,9 @@ export default Vue.extend({
     margin-bottom: 1em;
   }
   code {
-    box-shadow: none !important;
+    @apply text-red-400;
+    @apply bg-gray-200;
+    @apply px-1;
   }
   pre {
     margin: 1em 0;
@@ -92,6 +94,9 @@ export default Vue.extend({
       background-color: unset;
       padding: 0;
     }
+  }
+  p {
+    @apply p-1;
   }
   p,
   li {
