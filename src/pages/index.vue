@@ -1,58 +1,73 @@
 <template>
-  <v-flex class="d-flex align-center">
-    <v-flex class="d-flex flex-column align-center justify-center">
-      <v-avatar class="profile" color="grey" size="128">
-        <v-img src="https://avatars2.githubusercontent.com/u/45279563" />
-      </v-avatar>
-      <v-list style="text-align: center;">
-        <v-list-item>
-          <v-list-item-content>
-            <v-list-item-title class="title">sterashima78</v-list-item-title>
-            <v-list-item-subtitle>Frontend Engineer</v-list-item-subtitle>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item>
-          <v-list-item-content class="d-flex flex-row justify-center">
-            <v-flex class="d-flex flex-row justify-center align-center">
-              <nuxt-link to="/blog/" style="text-align: center;">
-                <v-icon>mdi-post</v-icon><br />
-                <span style="color: black;">Blog</span>
-              </nuxt-link>
-              <nuxt-link to="/about/" style="text-align: center;">
-                <v-icon>mdi-account</v-icon><br />
-                <span style="color: black;">About</span>
-              </nuxt-link>
-            </v-flex>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item>
-          <v-list-item-content class="d-flex flex-row justify-center">
-            <v-flex class="d-flex flex-row justify-center align-center">
-              <v-btn
-                icon
-                target="_blank"
-                href="https://github.com/sterashima78"
-              >
-                <v-icon size="24px">mdi-github</v-icon>
-              </v-btn>
-              <a href="https://qiita.com/sterashima78" target="_blank">
-                <img style="width: auto; height: 24px;" src="/qiita.png" />
-              </a>
-            </v-flex>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-flex>
-  </v-flex>
+  <div class="flex justify-center items-center flex-col h-full flex-grow">
+    <div
+      class="rounded-full border-grey border m-2 bg-contain bg-center avatar"
+    ></div>
+    <div class="text-center">
+      <p class="font-bold leading-none mb-1 text-xl">sterashima78</p>
+      <p class="leading-none text-sm">Frontend Engineer</p>
+    </div>
+    <div class="mt-4">
+      <div class="flex content-center justify-center">
+        <nuxt-link to="/blog/">
+          <div class="flex content-center flex-col justify-center text-center">
+            <div class="flex justify-center">
+              <svg height="24px" width="24px">
+                <path :d="mdiPost" />
+              </svg>
+            </div>
+            <span>Blog</span>
+          </div>
+        </nuxt-link>
+        <nuxt-link to="/about/">
+          <div class="flex content-center flex-col justify-center text-center">
+            <div class="flex justify-center">
+              <svg height="24px" width="24px">
+                <path :d="mdiAccount" />
+              </svg>
+            </div>
+            <span>About</span>
+          </div>
+        </nuxt-link>
+      </div>
+    </div>
+    <div class="mt-4">
+      <div class="flex content-center justify-center">
+        <a icon target="_blank" href="https://github.com/sterashima78">
+          <span role="img">
+            <svg height="24px" width="24px">
+              <path :d="mdiGithub" />
+            </svg>
+          </span>
+        </a>
+        <a href="https://qiita.com/sterashima78" target="_blank" class="block">
+          <img style="width: auto; height: 24px;" src="/qiita.png" />
+        </a>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
+import { mdiPost, mdiAccount, mdiGithub } from '@mdi/js'
 import Vue from 'vue'
 export default Vue.extend({
-  layout: 'home',
+  layout: 'plain',
+  asyncData() {
+    return {
+      mdiPost,
+      mdiAccount,
+      mdiGithub,
+    }
+  },
 })
 </script>
 <style>
+.avatar {
+  height: 128px;
+  width: 128px;
+  background-image: url(https://avatars2.githubusercontent.com/u/45279563);
+}
 a {
   margin: 0 0.5rem;
   text-decoration: none;

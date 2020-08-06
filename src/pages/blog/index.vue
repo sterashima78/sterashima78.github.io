@@ -1,7 +1,5 @@
 <template>
-  <Layout>
-    <BlogMain :posts="posts" />
-  </Layout>
+  <BlogMain :posts="posts" />
 </template>
 
 <script>

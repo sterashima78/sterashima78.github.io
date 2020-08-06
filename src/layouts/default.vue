@@ -1,153 +1,157 @@
 <template>
-  <v-app v-resize="onResize">
-    <v-navigation-drawer
-      :app="!isXSmall"
-      permanent
-      class="d-none d-sm-flex"
-      :mini-variant="isSmall"
-    >
-      <div class="d-none d-md-flex align-center">
-        <v-avatar class="profile" color="grey" size="64">
-          <v-img src="https://avatars2.githubusercontent.com/u/45279563" />
-        </v-avatar>
-        <v-list>
-          <v-list-item>
-            <v-list-item-content>
-              <v-list-item-title class="title">sterashima78</v-list-item-title>
-              <v-list-item-subtitle>Frontend Engineer</v-list-item-subtitle>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list>
+  <div class="flex min-h-screen">
+    <div class="hidden sm:flex flex-col border-r-2 sm:w-16 md:w-64">
+      <div class="m-4 hidden md:flex items-center text-black">
+        <t-avatar size="64px" />
+        <div class="text-center">
+          <p class="font-bold leading-none mb-1 text-xl">sterashima78</p>
+          <p class="leading-none text-sm">Frontend Engineer</p>
+        </div>
       </div>
 
-      <v-divider></v-divider>
-      <v-list dense>
-        <v-list-item link to="/">
-          <v-list-item-icon>
-            <v-icon>mdi-home</v-icon>
-          </v-list-item-icon>
-          <v-list-item-content>
-            <v-list-item-title>Home</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item link to="/blog/">
-          <v-list-item-icon>
-            <v-icon>mdi-post</v-icon>
-          </v-list-item-icon>
-          <v-list-item-content>
-            <v-list-item-title>Blog</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item link to="/about/">
-          <v-list-item-icon>
-            <v-icon>mdi-account</v-icon>
-          </v-list-item-icon>
-          <v-list-item-content>
-            <v-list-item-title>About</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
+      <hr />
+      <div>
+        <nuxt-link to="/" class="block p-4 m-0 hover:bg-gray-200">
+          <div class="flex content-center">
+            <svg height="24px" width="24px">
+              <path :d="mdiHome" />
+            </svg>
+            <span class="text-black md:inline-block pl-3 sm:hidden">Home</span>
+          </div>
+        </nuxt-link>
+        <nuxt-link to="/blog/" class="block p-4 m-0 hover:bg-gray-200">
+          <div class="flex content-center">
+            <svg height="24px" width="24px">
+              <path :d="mdiPost" />
+            </svg>
+            <span class="text-black md:inline-block pl-3 sm:hidden">Blog</span>
+          </div>
+        </nuxt-link>
+        <nuxt-link to="/about/" class="block p-4 m-0 hover:bg-gray-200">
+          <div class="flex content-center">
+            <svg height="24px" width="24px">
+              <path :d="mdiAccount" />
+            </svg>
+            <span class="text-black md:inline-block pl-3 sm:hidden">About</span>
+          </div>
+        </nuxt-link>
+        <!-- <nuxt-link to="/components/" class="block p-4 m-0 hover:bg-gray-200">
+          <div class="flex content-center">
+            <svg height="24px" width="24px">
+              <path :d="mdiCodeTags" />
+            </svg>
+            <span class="text-black md:inline-block pl-3 sm:hidden"
+              >Components</span
+            >
+          </div>
+        </nuxt-link> -->
+      </div>
+    </div>
 
-    <v-main>
-      <v-container fluid style="margin-bottom: 300px;">
+    <main class="flex-grow flex flex-col justify-between">
+      <div class="p-2">
         <nuxt />
-      </v-container>
-      <v-footer
-        absolute
-        :style="{ 'margin-bottom': isXSmall ? '62px' : '0px' }"
-        style="padding: 0;"
-      >
-        <v-card
-          flat
-          tile
-          style="width: 100%;"
-          class="indigo lighten-1 white--text text-center"
-        >
-          <v-card-text>
-            <v-btn
-              class="mx-4 white--text"
+      </div>
+      <div class="p-0 w-100 mb-16 sm:mb-0">
+        <div class="w-100 text-white bg-indigo-500 text-center">
+          <div class="flex content-center justify-center p-2 pt-4">
+            <a
               icon
               target="_blank"
               href="https://github.com/sterashima78"
+              class="bg-white"
             >
-              <v-icon size="24px">mdi-github</v-icon>
-            </v-btn>
-            <v-btn
-              class="mx-4 white--text"
+              <span role="img">
+                <svg height="24px" width="24px">
+                  <path :d="mdiGithub" />
+                </svg>
+              </span>
+            </a>
+            <a
               href="https://qiita.com/sterashima78"
-              text
               target="_blank"
+              class="block"
             >
               <img style="width: auto; height: 24px;" src="/qiita.png" />
-            </v-btn>
-          </v-card-text>
+            </a>
+          </div>
 
-          <v-card-text class="white--text pt-0 d-md-none">
-            <v-list>
-              <v-list-item>
-                <img
-                  src="https://avatars2.githubusercontent.com/u/45279563"
-                  style="width: auto; height: 54px;"
-                />
-                <v-list-item-content>
-                  <v-list-item-title class="title"
-                    >sterashima78</v-list-item-title
-                  >
-                  <v-list-item-subtitle>Frontend Engineer</v-list-item-subtitle>
-                </v-list-item-content>
-              </v-list-item>
-            </v-list>
-          </v-card-text>
+          <div class="m-4 md:hidden flex items-center bg-gray-100 text-black">
+            <t-avatar size="64px" />
+            <div class="text-center">
+              <p class="font-bold leading-none mb-1 text-xl">sterashima78</p>
+              <p class="leading-none text-sm">Frontend Engineer</p>
+            </div>
+          </div>
 
-          <v-divider></v-divider>
-
-          <v-card-text class="white--text">
+          <hr />
+          <div class="text-white w-full p-2">
             &copy; 2020 — <strong>Terashima Shin</strong>
-          </v-card-text>
-        </v-card>
-      </v-footer>
-    </v-main>
-    <v-footer
-      v-if="isXSmall"
-      fixed
-      style="display: flex; justify-content: space-around;"
+          </div>
+        </div>
+      </div>
+    </main>
+    <div
+      class="fixed bottom-0 w-full flex justify-around sm:hidden p-2 bg-gray-300 z-50"
     >
-      <nuxt-link to="/" style="text-align: center;">
-        <v-icon>mdi-home</v-icon><br />
-        <span style="color: black;">Home</span>
+      <nuxt-link to="/" style="text-align: center;" class="inline-block">
+        <div class="flex content-center flex-col justify-center text-center">
+          <div class="flex justify-center">
+            <svg height="24px" width="24px">
+              <path :d="mdiHome" />
+            </svg>
+          </div>
+          <span class="text-black">Home</span>
+        </div>
       </nuxt-link>
-      <nuxt-link to="/blog/" style="text-align: center;">
-        <v-icon>mdi-post</v-icon><br />
-        <span style="color: black;">Blog</span>
+      <nuxt-link to="/blog/" style="text-align: center;" class="inline-block">
+        <div class="flex content-center flex-col justify-center text-center">
+          <div class="flex justify-center">
+            <svg height="24px" width="24px">
+              <path :d="mdiPost" />
+            </svg>
+          </div>
+          <span class="text-black">Blog</span>
+        </div>
       </nuxt-link>
-      <nuxt-link to="/about/" style="text-align: center;">
-        <v-icon>mdi-account</v-icon><br />
-        <span style="color: black;">About</span>
+      <nuxt-link to="/about/" style="text-align: center;" class="inline-block">
+        <div class="flex content-center flex-col justify-center text-center">
+          <div class="flex justify-center">
+            <svg height="24px" width="24px">
+              <path :d="mdiAccount" />
+            </svg>
+          </div>
+          <span class="text-black">About</span>
+        </div>
       </nuxt-link>
-    </v-footer>
-  </v-app>
+    </div>
+  </div>
 </template>
 <script lang="ts">
+import { mdiPost, mdiAccount, mdiGithub, mdiHome, mdiCodeTags } from '@mdi/js'
+
 import Vue from 'vue'
 export default Vue.extend({
   data: () => ({
-    isSmall: false,
-    isXSmall: false,
+    mdiHome,
+    mdiPost,
+    mdiAccount,
+    mdiGithub,
+    mdiCodeTags,
   }),
-  mounted() {
-    this.onResize()
-  },
-  methods: {
-    onResize() {
-      this.isSmall = window.innerWidth <= 960
-      this.isXSmall = window.innerWidth <= 600
-    },
-  },
 })
 </script>
 <style lang="scss" scoped>
 a {
   text-decoration: none;
+}
+main {
+  max-width: 100vw;
+  @media (min-width: 640px) {
+    max-width: calc(100vw - 5em);
+  }
+  @media (min-width: 768px) {
+    max-width: calc(100vw - 16em);
+  }
 }
 </style>

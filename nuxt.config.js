@@ -54,7 +54,8 @@ export default {
     '@nuxt/typescript-build',
     // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
-    '@nuxtjs/vuetify',
+    '@nuxtjs/tailwindcss',
+    'nuxt-composition-api',
   ],
   /*
    ** Nuxt.js modules
@@ -72,35 +73,15 @@ export default {
     dir: path.join(__dirname, 'content'),
   },
   /*
-   ** vuetify module configuration
-   ** https://github.com/nuxt-community/vuetify-module
-   */
-  vuetify: {
-    // customVariables: ['~/assets/variables.scss'],
-    // theme: {
-    //   dark: true,
-    //   themes: {
-    //     dark: {
-    //       primary: colors.blue.darken2,
-    //       accent: colors.grey.darken3,
-    //       secondary: colors.amber.darken3,
-    //       info: colors.teal.lighten1,
-    //       warning: colors.amber.base,
-    //       error: colors.deepOrange.accent4,
-    //       success: colors.green.accent3,
-    //     },
-    //   },
-    // },
-  },
-  /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
   build: {},
   generate: {
+    interval: 2000,
     async routes() {
       const { $content } = require('@nuxt/content')
-      const files = await $content().only(['path', 'tags']).fetch()
+      const files = await $content('blog').only(['path', 'tags']).fetch()
       const tags = files
         .flatMap((file) => file.tags)
         .filter((v, i, arr) => arr.indexOf(v) <= i)

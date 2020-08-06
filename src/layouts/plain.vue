@@ -1,7 +1,7 @@
 <template>
-  <v-app>
+  <div class="min-h-screen h-screen">
     <nuxt />
-  </v-app>
+  </div>
 </template>
 
 <script lang="ts">

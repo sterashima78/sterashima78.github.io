@@ -1,14 +1,14 @@
 <template>
   <div class="blog-main">
-    <h1><slot>Blog</slot></h1>
-    <v-container fluid class="container">
+    <h1 class="text-3xl font-bold"><slot>Blog</slot></h1>
+    <div class="container">
       <BlogItem
         v-for="post in posts"
         :key="post.id"
         class="blog-item"
         :post="post"
       />
-    </v-container>
+    </div>
   </div>
 </template>
 <script lang="ts">

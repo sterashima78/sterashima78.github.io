@@ -1,7 +1,5 @@
 <template>
-  <Layout>
-    <BlogMain :posts="posts">Tag: {{ title }}</BlogMain>
-  </Layout>
+  <BlogMain :posts="posts">Tag: {{ title }}</BlogMain>
 </template>
 
 <script>
