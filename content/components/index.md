@@ -18,8 +18,8 @@
 <t-chip color="teal" text-color="white">colored</t-chip>
 
 <t-chip to="http://github.com" color="red" text-color="white"
-  >link to github</t-chip
->
+  >link to github
+</t-chip>
 ```
 
 ### Card

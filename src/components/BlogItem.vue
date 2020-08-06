@@ -38,13 +38,32 @@ export default Vue.extend({
       default: (): any => ({}),
     },
   },
+  data() {
+    return {
+      loaded: false,
+    }
+  },
   computed: {
     style(): any {
+      const bg = this.loaded
+        ? { 'background-image': `url(${this.post.image})` }
+        : {}
       return {
         height: '200px',
-        'background-image': `url(${this.post.image})`,
+        ...bg,
       }
     },
+  },
+  mounted() {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          this.loaded = true
+          io.unobserve(entry.target)
+        }
+      })
+    })
+    io.observe(this.$el)
   },
 })
 </script>

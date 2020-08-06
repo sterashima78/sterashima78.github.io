@@ -15,16 +15,14 @@ export default Vue.extend({
 })
 </script>
 <style lang="scss" scoped>
-/* purgecss ignore current */
 .nuxt-content {
-  /* purgecss ignore current */
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    font-weight: bold;
+    @apply font-bold;
   }
 }
 </style>

@@ -21,6 +21,16 @@ module.exports = {
     ],
     options: {
       whitelistPatternsChildren: [/^nuxt-content$/],
+      whitelist: [
+        'text-black',
+        'text-white',
+        'bg-red-700',
+        'bg-red-500',
+        'bg-teal-700',
+        'bg-teal-500',
+        'bg-blue-700',
+        'bg-blue-500',
+      ],
     },
   },
 }

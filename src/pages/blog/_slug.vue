@@ -113,6 +113,16 @@ export default Vue.extend({
     padding-left: 0.675rem;
     padding-right: 0.675rem;
     margin: 1.5rem 0;
+    @apply font-bold;
+  }
+  h1 {
+    @apply text-3xl;
+  }
+  h2 {
+    @apply text-2xl;
+  }
+  h3 {
+    @apply text-xl;
   }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex min-h-screen container">
+  <div class="flex min-h-screen">
     <div class="hidden sm:flex flex-col border-r-2 sm:w-16 md:w-64">
       <div class="m-4 hidden md:flex items-center text-black">
         <t-avatar size="64px" />
@@ -35,7 +35,7 @@
             <span class="text-black md:inline-block pl-3 sm:hidden">About</span>
           </div>
         </nuxt-link>
-        <nuxt-link to="/components/" class="block p-4 m-0 hover:bg-gray-200">
+        <!-- <nuxt-link to="/components/" class="block p-4 m-0 hover:bg-gray-200">
           <div class="flex content-center">
             <svg height="24px" width="24px">
               <path :d="mdiCodeTags" />
@@ -44,7 +44,7 @@
               >Components</span
             >
           </div>
-        </nuxt-link>
+        </nuxt-link> -->
       </div>
     </div>
 
@@ -146,7 +146,7 @@ a {
   text-decoration: none;
 }
 main {
-  max-width: calc(100vw - 1.5em);
+  max-width: 100vw;
   @media (min-width: 640px) {
     max-width: calc(100vw - 5em);
   }

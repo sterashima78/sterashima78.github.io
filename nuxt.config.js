@@ -81,7 +81,7 @@ export default {
     interval: 2000,
     async routes() {
       const { $content } = require('@nuxt/content')
-      const files = await $content().only(['path', 'tags']).fetch()
+      const files = await $content('blog').only(['path', 'tags']).fetch()
       const tags = files
         .flatMap((file) => file.tags)
         .filter((v, i, arr) => arr.indexOf(v) <= i)
