@@ -1,10 +1,9 @@
 ---
-title: "Gridsome に ESLint を入れる"
+title: 'Gridsome に ESLint を入れる'
 date: 2020-06-20 12:00:00
-description: "Gridsomeプロジェクトに ESLint を導入する"
-tags: ["vue", "gridsome", "Typescript", "ESLint"]
-slug: gridsome-typescript-eslint
-image: https://user-images.githubusercontent.com/45279563/85189623-93813a80-b2eb-11ea-9b57-d6a6b66d3e5b.png
+description: 'Gridsomeプロジェクトに ESLint を導入する'
+tags: ['vue', 'gridsome', 'Typescript', 'ESLint']
+image: https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_200,w_320,y_0/v1596863021/blog/eslint
 ---
 
 ## はじめに

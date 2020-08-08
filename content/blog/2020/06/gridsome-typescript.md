@@ -1,10 +1,9 @@
 ---
-title: "Gridsome に Typescript を入れる"
+title: 'Gridsome に Typescript を入れる'
 date: 2020-06-13 17:00:00
-description: "Gridsomeプロジェクトに Typescriot を導入する"
-tags: ["vue", "gridsome", "Typescript"]
-slug: gridsome-typescript
-image: https://user-images.githubusercontent.com/45279563/84564522-4eb24c80-ad9d-11ea-95e1-10c32711c54c.png
+description: 'Gridsomeプロジェクトに Typescriot を導入する'
+tags: ['vue', 'gridsome', 'Typescript']
+image: https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_200,w_320,y_0/v1596862948/blog/typescript
 ---
 
 後々のことを考えて Gridsome プロジェクトに Typescript を導入しておこうと思った。

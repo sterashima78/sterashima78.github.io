@@ -4,7 +4,7 @@ date: 2020-07-05 20:15:00
 description: 'F# で AtCoder Beginners Selection 解いたので回答例を載せる'
 tags: ['f-sharp', 'AtCoder']
 slug: f-sharp-atcoder-beginner
-image: https://user-images.githubusercontent.com/45279563/85910711-756f8900-b85b-11ea-8bd3-df0e8745aa27.png
+image: https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_200,w_320/v1596859521/blog/fsharp
 ---
 
 ## はじめに

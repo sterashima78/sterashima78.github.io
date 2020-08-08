@@ -1,10 +1,9 @@
 ---
-title: "F#を始める"
+title: 'F#を始める'
 date: 2020-06-27 11:00:00
-description: "F#を始めるための手順をまとめた"
-tags: ["f-sharp", "VSCode"]
-slug: start-f-sharp
-image: https://user-images.githubusercontent.com/45279563/85910711-756f8900-b85b-11ea-8bd3-df0e8745aa27.png
+description: 'F#を始めるための手順をまとめた'
+tags: ['f-sharp', 'VSCode']
+image: https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_200,w_320/v1596859521/blog/fsharp
 ---
 
 ## はじめに

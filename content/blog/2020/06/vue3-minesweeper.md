@@ -1,10 +1,10 @@
 ---
-title: "Vue 3触った"
+title: 'Vue 3触った'
 date: 2020-06-07 14:00:00
-description: "Vue 3 でマインスイーパを作った"
-tags: ["vue", "vue3", "fp-ts", "Typescript"]
+description: 'Vue 3 でマインスイーパを作った'
+tags: ['vue', 'vue3', 'fp-ts', 'Typescript']
 slug: minesweeper-vue3
-image: https://user-images.githubusercontent.com/45279563/83960403-6bddab80-a8c3-11ea-80b9-942cec38d6d7.gif
+image: https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_200,w_320,y_0/v1596863191/blog/mine-sweeper
 ---
 
 Vue 3 をそろそろ触ってみたくなった。

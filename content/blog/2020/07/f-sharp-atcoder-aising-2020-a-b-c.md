@@ -4,7 +4,7 @@ date: 2020-07-12 10:45:00
 description: 'F# で エイジングプログラミングコンテスト 2020 やったけど A と B と C しか解けなかった'
 tags: ['f-sharp', 'AtCoder']
 slug: f-sharp-atcoder-aising-2020-a-b-c
-image: https://user-images.githubusercontent.com/45279563/85910711-756f8900-b85b-11ea-8bd3-df0e8745aa27.png
+image: https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_200,w_320/v1596859521/blog/fsharp
 ---
 
 ## はじめに

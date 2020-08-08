@@ -1,10 +1,9 @@
 ---
-title: "Gridsome に Tag 機能を入れる"
+title: 'Gridsome に Tag 機能を入れる'
 date: 2020-06-14 11:00:00
-description: "Gridsomeに Tag 機能を入れた"
-tags: ["vue", "gridsome"]
-slug: gridsome-tag
-image: https://user-images.githubusercontent.com/45279563/84583282-dea1d600-ae31-11ea-88bd-05a9e4d2828b.png
+description: 'Gridsomeに Tag 機能を入れた'
+tags: ['vue', 'gridsome']
+image: https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_200,w_320,y_0/v1596862801/blog/tag
 ---
 
 ### はじめに

@@ -74,7 +74,12 @@
               target="_blank"
               class="block"
             >
-              <img alt="qiita" height="24" width="64" src="/qiita.png" />
+              <img
+                alt="qiita"
+                height="24"
+                width="63"
+                src="https://res.cloudinary.com/sterashima78/image/upload/c_scale,w_63,h_24/v1596864705/blog/qiita.png"
+              />
             </a>
           </div>
 

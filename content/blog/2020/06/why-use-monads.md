@@ -1,10 +1,9 @@
 ---
-title: "なんでモナドを使うのか"
+title: 'なんでモナドを使うのか'
 date: 2020-06-15 21:00:00
-description: "モナドとは何かの前になんでモナドでなにができるのかを考えるべき"
-tags: ["monads"]
-slug: why-use-monads
-image: http://adit.io/imgs/functors/context.png
+description: 'モナドとは何かの前になんでモナドでなにができるのかを考えるべき'
+tags: ['monads']
+image: https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_200,w_320,y_0/v1596863357/blog/monads
 ---
 
 サムネイルは[ここ](http://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html)から拝借した。

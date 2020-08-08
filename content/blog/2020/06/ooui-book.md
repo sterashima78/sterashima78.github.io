@@ -1,10 +1,9 @@
 ---
-title: "オブジェクト指向UIデザイン──使いやすいソフトウェアの原理"
+title: 'オブジェクト指向UIデザイン──使いやすいソフトウェアの原理'
 date: 2020-06-21 11:00:00
-description: "オブジェクト指向UIデザイン──使いやすいソフトウェアの原理の読書メモ"
-tags: ["読書メモ"]
-slug: ooui-book
-image: https://user-images.githubusercontent.com/45279563/85214521-0b606b00-b3a7-11ea-9df6-7ef422647e6a.jpg
+description: 'オブジェクト指向UIデザイン──使いやすいソフトウェアの原理の読書メモ'
+tags: ['読書メモ']
+image: https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_200,w_320,y_0/v1596863102/blog/ooui-book
 ---
 
 [オブジェクト指向 UI デザイン ── 使いやすいソフトウェアの原理](https://amzn.to/3ek68hH) を読んだ。

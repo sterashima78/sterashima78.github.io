@@ -1,10 +1,10 @@
 ---
-title: "ブログを作った"
-slug: "start-blog"
+title: 'ブログを作った'
+slug: 'start-blog'
 date: 2020-06-07 10:00:00
-description: "ブログサイト作ったので技術をまとめる"
-tags: ["vue", "gridsome", "vuetify"]
-image: https://user-images.githubusercontent.com/45279563/83960758-697d5080-a8c7-11ea-808e-5e4650d7ca7a.png
+description: 'ブログサイト作ったので技術をまとめる'
+tags: ['vue', 'gridsome', 'vuetify']
+image: https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_200,w_320/v1596862359/blog/gridsome
 ---
 
 Gridsome を触りたくて、Web サイトを作ってみることにした。

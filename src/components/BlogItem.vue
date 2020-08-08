@@ -2,9 +2,10 @@
   <nuxt-link
     :to="post.path.replace(/\//g, '-').replace('-blog-', '/blog/')"
     class="post-item"
+    style="width: 20em; height: 340px;"
   >
     <div class="rounded border-black shadow card">
-      <div class="relative bg-no-repeat bg-center bg-cover" :style="style">
+      <div class="relative bg-no-repeat bg-center" :style="style">
         <h2
           class="absolute bottom-0 inset-x-0 font-bold text-xl text-white leading-relaxed bg-black bg-opacity-75 p-2"
           v-text="post.title"
@@ -41,12 +42,13 @@ export default Vue.extend({
   data() {
     return {
       loaded: false,
+      ext: 'png',
     }
   },
   computed: {
     style(): any {
       const bg = this.loaded
-        ? { 'background-image': `url(${this.post.image})` }
+        ? { 'background-image': `url(${this.post.image}.${this.ext})` }
         : {}
       return {
         height: '200px',
@@ -71,9 +73,5 @@ export default Vue.extend({
 .post-item {
   text-decoration: none;
   color: black;
-  > .card {
-    width: 20rem;
-    max-width: 20rem;
-  }
 }
 </style>

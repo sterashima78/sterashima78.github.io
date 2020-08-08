@@ -28,9 +28,8 @@ export default defineComponent({
     const classes = computed(() => {
       const color = props.color || 'white'
       const textColor = props.textColor || 'black'
-      return 'shadow rounded-full border-black leading-relax inline-block px-2 font-bold'.concat(
-        tag.value === 'span' ? ' ' : ` bg-${color}-700 `,
-        `bg-${color}-600 `,
+      return 'shadow rounded-full border-black leading-relax inline-block px-2 font-bold '.concat(
+        `bg-${color}-700 `,
         `text-${textColor}`
       )
     })

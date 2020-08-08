@@ -1,10 +1,13 @@
 product:
+  - name: このサイト
+    link: https://github.com/sterashima78/sterashima78.github.io
+    src: https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_240,w_240/v1596863610/blog/github-user-image.png
   - name: Vue Webpage Builder
     link: https://github.com/sterashima78/vue-webpage-builder
-    src: https://raw.githubusercontent.com/sterashima78/vue-webpage-builder/master/docs/.vuepress/public/logo.png
+    src: https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_240,w_240/v1596865679/blog/vue-webpage-builder.png
   - name: Vue 3 マインスイーパ
     link: https://github.com/sterashima78/vue3-minesweeper
-    src: https://user-images.githubusercontent.com/45279563/83960403-6bddab80-a8c3-11ea-80b9-942cec38d6d7.gif
+    src: https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_240,w_240/v1596863191/blog/mine-sweeper.gif
   - name: F# で解いた AtCoderr
     link: https://github.com/sterashima78/atcoder-f-sharp
-    src: https://user-images.githubusercontent.com/45279563/85910711-756f8900-b85b-11ea-8bd3-df0e8745aa27.png
+    src: https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_240,w_240/v1596859521/blog/fsharp.png

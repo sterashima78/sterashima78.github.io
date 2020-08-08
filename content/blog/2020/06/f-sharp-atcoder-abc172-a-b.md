@@ -1,10 +1,9 @@
 ---
-title: "F#を始めたから ABC172 やった"
+title: 'F#を始めたから ABC172 やった'
 date: 2020-06-28 18:30:00
-description: "F# で ABC172 やったけど A と Bしか解けなかった"
-tags: ["f-sharp", "AtCoder"]
-slug: f-sharp-atcoder-abc172-a-b
-image: https://user-images.githubusercontent.com/45279563/85910711-756f8900-b85b-11ea-8bd3-df0e8745aa27.png
+description: 'F# で ABC172 やったけど A と Bしか解けなかった'
+tags: ['f-sharp', 'AtCoder']
+image: https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_200,w_320/v1596859521/blog/fsharp
 ---
 
 ## はじめに

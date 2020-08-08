@@ -3,7 +3,7 @@ title: 'このサイトを Nuxt に移行した'
 date: 2020-08-01 16:45:00
 description: 'Gridsome で作っていたサイトを Nuxt に移行しました'
 tags: ['vue', 'nuxt', 'Typescript']
-image: https://user-images.githubusercontent.com/45279563/89096905-2e098900-d415-11ea-9237-8ef38a377d0a.png
+image: https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_200,w_320/v1596859591/blog/nuxt
 ---
 
 ## はじめに

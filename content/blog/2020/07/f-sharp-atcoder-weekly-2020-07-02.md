@@ -4,7 +4,7 @@ date: 2020-07-11 16:00:00
 description: '今週 F# で解いた AtCoder Problems を振り返る'
 tags: ['f-sharp', 'AtCoder']
 slug: f-sharp-atcoder-weekly-2020-07-02
-image: https://user-images.githubusercontent.com/45279563/85910711-756f8900-b85b-11ea-8bd3-df0e8745aa27.png
+image: https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_200,w_320/v1596859521/blog/fsharp
 ---
 
 今週 F# で解いた AtCoder Problems 7 月 2 週目を振り返る

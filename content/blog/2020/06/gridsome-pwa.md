@@ -1,10 +1,9 @@
 ---
-title: "Gridsome で PWA 対応する"
+title: 'Gridsome で PWA 対応する'
 date: 2020-06-20 20:30:00
-description: "Gridsome で PWA の対応をする手順"
-tags: ["PWA", "gridsome"]
-slug: gridsome-pwa
-image: https://user-images.githubusercontent.com/3104648/28351989-7f68389e-6c4b-11e7-9bf2-e9fcd4977e7a.png
+description: 'Gridsome で PWA の対応をする手順'
+tags: ['PWA', 'gridsome']
+image: https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_200,w_320,y_0/v1596862537/blog/pwa
 ---
 
 ### はじめに

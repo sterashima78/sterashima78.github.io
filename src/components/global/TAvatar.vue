@@ -27,6 +27,6 @@ export default defineComponent({
 </script>
 <style lang="scss" scoped>
 .avatar {
-  background-image: url(https://avatars2.githubusercontent.com/u/45279563);
+  background-image: url('https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_128,w_128/v1596863610/blog/github-user-image.png');
 }
 </style>
