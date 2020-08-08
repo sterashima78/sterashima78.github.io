@@ -22,7 +22,7 @@
       </div>
       <div class="p-2">
         <p>{{ post.description }}</p>
-        <small class="date">{{ post.date }}</small>
+        <small>{{ post.date }}</small>
       </div>
     </div>
   </nuxt-link>
@@ -75,8 +75,5 @@ export default Vue.extend({
     width: 20rem;
     max-width: 20rem;
   }
-}
-.date {
-  color: grey;
 }
 </style>

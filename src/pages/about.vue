@@ -35,9 +35,9 @@
             </span>
           </p>
           <div class="text-sm">
-            <h4 class="font-bold">
+            <h3 class="font-bold">
               ECサイトのフロントエンドアーキテクチャ刷新
-            </h4>
+            </h3>
             <p>
               使用技術: HTML, SCSS, Typescript, Vue, jest, GitHub, GitHub
               Actions, Cypress, Storybook, Docker
@@ -86,9 +86,9 @@
             </span>
           </p>
           <div class="text-sm">
-            <h4 class="font-bold">
+            <h3 class="font-bold">
               CakePHP3アプリケーションの機能追加・バグ修正
-            </h4>
+            </h3>
             <p>
               使用技術: HTML, CSS, JavaScript, PHP, CakePHP3, PHPUnit
             </p>
@@ -114,9 +114,9 @@
             </span>
           </p>
           <div class="text-sm">
-            <h4 class="font-bold">
+            <h3 class="font-bold">
               PHPレガシーアプリケーションのマイグレーション
-            </h4>
+            </h3>
             <p>
               使用技術: Ubuntu 16.04, HTML, CSS, JavaScript, PHP, ZendFramework,
               PHPStan, Redmine, GitLab, Jenkins, PHPUnit
@@ -142,9 +142,9 @@
             </span>
           </p>
           <div class="text-sm">
-            <h4 class="font-bold">
+            <h3 class="font-bold">
               深層学習モデルの Webアプリケーション化
-            </h4>
+            </h3>
             <p>
               使用技術: Ubuntu 16.04, HTML, CSS, JavaScript, Python, Flask,
               BootStrap, Keras, TensorFlow
@@ -176,9 +176,9 @@
             </span>
           </p>
           <div class="text-sm">
-            <h4 class="font-bold">
+            <h3 class="font-bold">
               遺伝⼦機能解析 Webアプリケーション開発
-            </h4>
+            </h3>
             <p>
               使用技術: CentOS7, HTML, CSS, JavaScript, TypeScript, Java,
               SpringBoot, Vue, Nuxt, Vuetify, MySQL, Apache, GitLab, Jenkins,
@@ -210,9 +210,9 @@
             </span>
           </p>
           <div class="text-sm">
-            <h4 class="font-bold">
+            <h3 class="font-bold">
               監査⼯程と監査で得られた情報を管理するシステムの構築
-            </h4>
+            </h3>
             <p>
               使用技術: CentOS7, HTML, CSS, JavaScript, Java, SpringBoot, Vue,
               PostgreSQL, Apache, GitLab, Jenkins, Redmine, Docker
@@ -244,9 +244,9 @@
             </span>
           </p>
           <div class="text-sm">
-            <h4 class="font-bold">
+            <h3 class="font-bold">
               大学の研究で構築した遺伝子データベースの機能拡張(2)
-            </h4>
+            </h3>
             <p>
               使用技術: CentOS7, HTML, CSS, JavaScript, PHP, Slim, Vue, MySQL,
               Vagrant, Fabric, Jenkins, GitBucket
@@ -268,9 +268,9 @@
             </span>
           </p>
           <div class="text-sm">
-            <h4 class="font-bold">
+            <h3 class="font-bold">
               大学の研究で構築した遺伝子データベースの機能拡張(1)
-            </h4>
+            </h3>
             <p>
               使用技術: CentOS7, HTML, CSS, JavaScript, PHP, Slim, Vue, MySQL,
               Vagrant, Fabric, Jenkins, GitBucket
@@ -311,9 +311,9 @@
             </span>
           </p>
           <div class="text-sm">
-            <h4 class="font-bold">
+            <h3 class="font-bold">
               官公庁向のデータ解析システムリプレース
-            </h4>
+            </h3>
             <p>仕様技術: RHEL7, Perl, PostgreSQL</p>
             <p>担当作業: 詳細設計, 実装, 単体テスト</p>
             <p>

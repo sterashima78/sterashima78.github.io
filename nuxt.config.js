@@ -1,5 +1,4 @@
 import path from 'path'
-// import colors from 'vuetify/es5/util/colors'
 export default {
   /*
    ** Nuxt rendering mode
@@ -61,7 +60,14 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
-    '@nuxtjs/pwa',
+    [
+      '@nuxtjs/pwa',
+      {
+        workbox: {
+          clientsClaim: false,
+        },
+      },
+    ],
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
   ],
