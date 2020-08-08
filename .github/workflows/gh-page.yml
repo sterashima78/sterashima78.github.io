@@ -28,7 +28,7 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: lighthouse
-          path: report/
+          path: ./reports/
       - name: Deploy
         if: success()
         uses: crazy-max/ghaction-github-pages@v2
