@@ -53,13 +53,14 @@
         <nuxt />
       </div>
       <div class="p-0 w-100 mb-16 sm:mb-0">
-        <div class="w-100 text-white bg-indigo-500 text-center">
+        <div class="w-100 text-white bg-indigo-600 text-center">
           <div class="flex content-center justify-center p-2 pt-4">
             <a
-              icon
               target="_blank"
+              rel="noreferrer"
               href="https://github.com/sterashima78"
               class="bg-white"
+              title="github"
             >
               <span role="img">
                 <svg height="24px" width="24px">
@@ -68,11 +69,12 @@
               </span>
             </a>
             <a
+              rel="noreferrer"
               href="https://qiita.com/sterashima78"
               target="_blank"
               class="block"
             >
-              <img style="width: auto; height: 24px;" src="/qiita.png" />
+              <img alt="qiita" height="24" width="64" src="/qiita.png" />
             </a>
           </div>
 

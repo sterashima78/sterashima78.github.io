@@ -24,7 +24,11 @@ jobs:
       - name: install
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci
-      - run: npm run build
+      - run: npm run lighthouse
+      - uses: actions/upload-artifact@v2
+        with:
+          name: lighthouse
+          path: report/
       - name: Deploy
         if: success()
         uses: crazy-max/ghaction-github-pages@v2

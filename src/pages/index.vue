@@ -3,10 +3,10 @@
     <div
       class="rounded-full border-grey border m-2 bg-contain bg-center avatar"
     ></div>
-    <div class="text-center">
+    <h1 class="text-center">
       <p class="font-bold leading-none mb-1 text-xl">sterashima78</p>
       <p class="leading-none text-sm">Frontend Engineer</p>
-    </div>
+    </h1>
     <div class="mt-4">
       <div class="flex content-center justify-center">
         <nuxt-link to="/blog/">
@@ -33,15 +33,25 @@
     </div>
     <div class="mt-4">
       <div class="flex content-center justify-center">
-        <a icon target="_blank" href="https://github.com/sterashima78">
+        <a
+          rel="noreferrer"
+          target="_blank"
+          href="https://github.com/sterashima78"
+          title="link to github"
+        >
           <span role="img">
             <svg height="24px" width="24px">
               <path :d="mdiGithub" />
             </svg>
           </span>
         </a>
-        <a href="https://qiita.com/sterashima78" target="_blank" class="block">
-          <img style="width: auto; height: 24px;" src="/qiita.png" />
+        <a
+          rel="noreferrer"
+          href="https://qiita.com/sterashima78"
+          target="_blank"
+          class="block"
+        >
+          <img height="24" width="64" alt="qiita" src="/qiita.png" />
         </a>
       </div>
     </div>
