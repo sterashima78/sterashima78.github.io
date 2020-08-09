@@ -23,6 +23,17 @@ export default defineComponent({
       })),
     }
   },
+  mounted() {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          this.loaded = true
+          io.unobserve(entry.target)
+        }
+      })
+    })
+    io.observe(this.$el)
+  },
 })
 </script>
 <style lang="scss" scoped>

@@ -1,64 +1,27 @@
 <template>
-  <div class="flex justify-center items-center flex-col h-full flex-grow">
-    <div
-      class="rounded-full border-grey border m-2 bg-contain bg-center avatar"
-    ></div>
-    <h1 class="text-center">
-      <p class="font-bold leading-none mb-1 text-xl">sterashima78</p>
-      <p class="leading-none text-sm">Frontend Engineer</p>
+  <div class="home-wrapper">
+    <h1 class="title">
+      <t-avatar size="128px" />
+      <p class="main">sterashima78</p>
+      <p class="sub">Frontend Engineer</p>
     </h1>
-    <div class="mt-4">
-      <div class="flex content-center justify-center">
-        <nuxt-link to="/blog/">
-          <div class="flex content-center flex-col justify-center text-center">
-            <div class="flex justify-center">
-              <svg height="24px" width="24px">
-                <path :d="mdiPost" />
-              </svg>
-            </div>
-            <span>Blog</span>
-          </div>
-        </nuxt-link>
-        <nuxt-link to="/about/">
-          <div class="flex content-center flex-col justify-center text-center">
-            <div class="flex justify-center">
-              <svg height="24px" width="24px">
-                <path :d="mdiAccount" />
-              </svg>
-            </div>
-            <span>About</span>
-          </div>
-        </nuxt-link>
-      </div>
+    <div class="section">
+      <t-icon-link to="/blog/" :icon="mdiPost">Blog</t-icon-link>
+      <t-icon-link to="/about/" :icon="mdiAccount">About</t-icon-link>
     </div>
-    <div class="mt-4">
-      <div class="flex content-center justify-center">
-        <a
-          rel="noreferrer"
-          target="_blank"
-          href="https://github.com/sterashima78"
-          title="link to github"
-        >
-          <span role="img">
-            <svg height="24px" width="24px">
-              <path :d="mdiGithub" />
-            </svg>
-          </span>
-        </a>
-        <a
-          rel="noreferrer"
-          href="https://qiita.com/sterashima78"
-          target="_blank"
-          class="block"
-        >
-          <img
-            height="24"
-            width="63"
-            alt="qiita"
-            src="https://res.cloudinary.com/sterashima78/image/upload/c_scale,w_63,h_24/v1596864705/blog/qiita.png"
-          />
-        </a>
-      </div>
+    <div class="section">
+      <t-icon-link
+        title="link to github"
+        link="https://github.com/sterashima78"
+        :icon="mdiGithub"
+      />
+      <t-img-link
+        height="24px"
+        width="63px"
+        alt="qiita"
+        link="https://qiita.com/sterashima78"
+        img="https://res.cloudinary.com/sterashima78/image/upload/c_scale,w_63,h_24/v1596864705/blog/qiita.png"
+      />
     </div>
   </div>
 </template>
@@ -77,14 +40,31 @@ export default Vue.extend({
   },
 })
 </script>
-<style>
-.avatar {
-  height: 128px;
-  width: 128px;
-  background-image: url(https://avatars2.githubusercontent.com/u/45279563);
-}
-a {
-  margin: 0 0.5rem;
-  text-decoration: none;
+<style lang="scss" scoped>
+.home-wrapper {
+  @apply flex;
+  @apply justify-center;
+  @apply items-center;
+  @apply flex-col;
+  @apply h-full;
+  @apply flex-grow;
+  > .section {
+    @apply mt-4;
+    @apply flex;
+    @apply content-center;
+    @apply justify-center;
+  }
+  > .title {
+    @apply text-center;
+    @apply leading-none;
+    > .main {
+      @apply font-bold;
+      @apply mb-1;
+      @apply text-xl;
+    }
+    > .sub {
+      @apply text-sm;
+    }
+  }
 }
 </style>
