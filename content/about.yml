@@ -8,6 +8,6 @@ product:
   - name: Vue 3 マインスイーパ
     link: https://github.com/sterashima78/vue3-minesweeper
     src: https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_240,w_240/v1596863191/blog/mine-sweeper.gif
-  - name: F# で解いた AtCoderr
+  - name: F# で解いた AtCoder
     link: https://github.com/sterashima78/atcoder-f-sharp
     src: https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_240,w_240/v1596859521/blog/fsharp.png
