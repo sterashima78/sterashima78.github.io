@@ -55,6 +55,12 @@ export default {
     '@nuxtjs/stylelint-module',
     '@nuxtjs/tailwindcss',
     'nuxt-composition-api',
+    [
+      '@nuxtjs/google-analytics',
+      {
+        id: 'UA-96186429-4',
+      },
+    ],
   ],
   /*
    ** Nuxt.js modules
