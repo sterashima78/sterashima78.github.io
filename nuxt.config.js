@@ -1,4 +1,20 @@
 import path from 'path'
+const routes = async () => {
+  const { $content } = require('@nuxt/content')
+  const files = await $content('blog').only(['path', 'tags']).fetch()
+  const tags = files
+    .flatMap((file) => file.tags)
+    .filter((v, i, arr) => arr.indexOf(v) <= i)
+    .map((i) => `/blog/tags/${i}`)
+  return files
+    .map((file) =>
+      file.path === '/index'
+        ? '/'
+        : file.path.replace(/\//g, '-').replace('-blog-', '/blog/')
+    )
+    .concat(tags)
+}
+
 export default {
   /*
    ** Nuxt rendering mode
@@ -80,6 +96,7 @@ export default {
     ],
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
+    '@nuxtjs/sitemap',
   ],
   /*
    ** Content module configuration
@@ -94,21 +111,12 @@ export default {
    */
   build: {},
   generate: {
-    interval: 2000,
-    async routes() {
-      const { $content } = require('@nuxt/content')
-      const files = await $content('blog').only(['path', 'tags']).fetch()
-      const tags = files
-        .flatMap((file) => file.tags)
-        .filter((v, i, arr) => arr.indexOf(v) <= i)
-        .map((i) => `/blog/tags/${i}`)
-      return files
-        .map((file) =>
-          file.path === '/index'
-            ? '/'
-            : file.path.replace(/\//g, '-').replace('-blog-', '/blog/')
-        )
-        .concat(tags)
-    },
+    routes,
+  },
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://sterashima78.github.io',
+    exclude: ['/components'],
+    routes,
   },
 }
