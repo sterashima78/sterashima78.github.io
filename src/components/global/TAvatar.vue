@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="rounded-full border-grey border m-2 bg-contain bg-center avatar"
-    :style="sizeStyle"
-  ></div>
+  <div class="avatar" :style="sizeStyle"></div>
 </template>
 <script lang="ts">
 // eslint-disable-next-line
@@ -39,5 +36,11 @@ export default defineComponent({
 <style lang="scss" scoped>
 .avatar {
   background-image: url('https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_128,w_128/v1596863610/blog/github-user-image.png');
+  @apply rounded-full;
+  @apply border-gray-100;
+  @apply border;
+  @apply m-2;
+  @apply bg-contain;
+  @apply bg-center;
 }
 </style>

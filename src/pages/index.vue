@@ -31,7 +31,7 @@ import { mdiPost, mdiAccount, mdiGithub } from '@mdi/js'
 import Vue from 'vue'
 export default Vue.extend({
   layout: 'plain',
-  asyncData() {
+  data() {
     return {
       mdiPost,
       mdiAccount,
