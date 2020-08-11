@@ -48,7 +48,7 @@
       </div>
     </div>
 
-    <main class="flex-grow flex flex-col justify-between">
+    <main class="flex-grow flex flex-col justify-between overflow-x-hidden">
       <div class="p-2">
         <nuxt />
       </div>
@@ -131,6 +131,20 @@
           <span class="text-black">About</span>
         </div>
       </nuxt-link>
+      <!-- <nuxt-link
+        to="/components/"
+        style="text-align: center;"
+        class="inline-block"
+      >
+        <div class="flex content-center flex-col justify-center text-center">
+          <div class="flex justify-center">
+            <svg height="24px" width="24px">
+              <path :d="mdiCodeTags" />
+            </svg>
+          </div>
+          <span class="text-black">Components</span>
+        </div>
+      </nuxt-link> -->
     </div>
   </div>
 </template>

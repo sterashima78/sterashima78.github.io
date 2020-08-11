@@ -4,24 +4,15 @@
 
 ### Chip
 
-<t-chip>default</t-chip>
-
-<t-chip color="blue" text-color="white">colored</t-chip>
-<t-chip color="teal" text-color="white">colored</t-chip>
-
-<t-chip to="http://github.com" color="red" text-color="white">link to github</t-chip>
+<t-chip>Chip</t-chip>
 
 ```html
-<t-chip>default</t-chip>
-
-<t-chip color="blue" text-color="white">colored</t-chip>
-<t-chip color="teal" text-color="white">colored</t-chip>
-
-<t-chip to="http://github.com" color="red" text-color="white"
-  >link to github
-</t-chip>
+<t-chip>Chip</t-chip>
 ```
 
-### Card
+### ImageCard
 
-<t-card style="width: 200px;height: 200px"></t-card>
+<t-image-card img="https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_128,w_128/v1596863610/blog/github-user-image.png">
+  <span #title>Hoge</span>
+  foo bar
+</t-image-card>

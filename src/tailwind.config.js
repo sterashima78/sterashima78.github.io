@@ -30,6 +30,7 @@ module.exports = {
         'bg-teal-600',
         'bg-blue-700',
         'bg-blue-600',
+        'bg-grey-600',
       ],
     },
   },

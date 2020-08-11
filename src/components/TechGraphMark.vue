@@ -1,8 +1,6 @@
 <template>
   <div class="mark" :style="{ left: `${x}%`, top: `${100 - y}%` }">
-    <t-chip style="font-size: 0.5rem;" color="teal" text-color="white">{{
-      text
-    }}</t-chip>
+    <t-chip class="chip">{{ text }}</t-chip>
   </div>
 </template>
 <script lang="ts">
@@ -26,6 +24,11 @@ export default Vue.extend({
 </script>
 <style lang="scss" scoped>
 .mark {
-  position: absolute;
+  @apply absolute;
+  > .chip {
+    @apply text-xs;
+    @apply bg-teal-700;
+    @apply text-white;
+  }
 }
 </style>

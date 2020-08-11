@@ -2,7 +2,7 @@
   <div class="divide-y divide-gray-400">
     <div class="relative bg-no-repeat bg-center" :style="style">
       <div
-        class="bg-black bg-opacity-75 p-2 text-white text-center absolute bottom-0 inset-x-0"
+        class="bg-black bg-opacity-75 m-2 text-white text-center absolute bottom-0 inset-x-0"
       >
         <h1 class="text-2xl font-bold">
           {{ post.title }}
@@ -20,8 +20,7 @@
           v-for="tag in post.tags"
           :key="tag"
           :to="`/blog/tags/${tag}`"
-          color="teal"
-          text-color="white"
+          class="bg-teal-600 text-white"
           v-text="tag"
         />
       </div>

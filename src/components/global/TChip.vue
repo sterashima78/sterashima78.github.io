@@ -1,5 +1,5 @@
 <template>
-  <components :is="tag" v-bind="attrs" :class="classes"><slot /></components>
+  <components :is="tag" v-bind="attrs" class="t-chip"><slot /></components>
 </template>
 <script lang="ts">
 // eslint-disable-next-line
@@ -12,27 +12,11 @@ export default defineComponent({
       type: String as PropType<string>,
       default: '',
     },
-    color: {
-      type: String as PropType<string>,
-      default: '',
-    },
-    textColor: {
-      type: String as PropType<string>,
-      default: '',
-    },
   },
   setup(props) {
     const tag = computed(() =>
       props.to === '' ? 'span' : props.to.startsWith('http') ? 'a' : 'nuxt-link'
     )
-    const classes = computed(() => {
-      const color = props.color || 'white'
-      const textColor = props.textColor || 'black'
-      return 'shadow rounded-full border-black leading-relax inline-block px-2 font-bold '.concat(
-        `bg-${color}-700 `,
-        `text-${textColor}`
-      )
-    })
     const attrs = computed(() => {
       switch (tag.value) {
         case 'span':
@@ -49,9 +33,19 @@ export default defineComponent({
     })
     return {
       tag,
-      classes,
       attrs,
     }
   },
 })
 </script>
+<style lang="scss" scoped>
+.t-chip {
+  @apply shadow;
+  @apply rounded-full;
+  @apply border-black;
+  @apply inline-block;
+  @apply px-2;
+  @apply font-bold;
+  @apply mx-1;
+}
+</style>

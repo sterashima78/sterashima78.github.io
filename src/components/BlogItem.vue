@@ -16,8 +16,7 @@
           v-for="tag in post.tags"
           :key="tag"
           :to="`/blog/tags/${tag}`"
-          color="teal"
-          text-color="white"
+          class="bg-teal-700 text-white"
           v-text="tag"
         />
       </div>
