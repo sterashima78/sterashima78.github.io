@@ -45,7 +45,13 @@
 
 <script>
 import Vue from 'vue'
+import { hydrateSsrOnly, hydrateWhenIdle } from 'vue-lazy-hydration'
+
 export default Vue.extend({
+  components: {
+    TImageCard: hydrateWhenIdle(() => import('~/components/TImageCard.vue')),
+    TChip: hydrateSsrOnly(() => import('~/components/TChip.vue')),
+  },
   async asyncData({ $content, params }) {
     const post = await $content(`blog`, { deep: true })
       .where({
