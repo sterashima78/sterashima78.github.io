@@ -1,12 +1,22 @@
 <template>
   <t-link :to="to" :title="title" :link="link">
-    <t-img :height="height" :width="width" :alt="alt" :img="img"></t-img>
+    <t-img
+      :height="height"
+      :width="width"
+      :alt="alt"
+      :img="img"
+      :lazy="lazy"
+    ></t-img>
   </t-link>
 </template>
 <script lang="ts">
 import { defineComponent, PropType } from 'nuxt-composition-api'
 export default defineComponent({
   name: 'img-link',
+  components: {
+    TLink: () => import('~/components/TLink/index.vue'),
+    TImg: () => import('~/components/TImg.vue'),
+  },
   props: {
     alt: {
       type: String as PropType<string>,
@@ -36,6 +46,10 @@ export default defineComponent({
     link: {
       type: String as PropType<string>,
       default: '',
+    },
+    lazy: {
+      type: Boolean as PropType<boolean>,
+      default: true,
     },
   },
 })

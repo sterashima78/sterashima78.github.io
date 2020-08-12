@@ -1,7 +1,7 @@
 <template>
   <aside :class="$style.sidebar">
     <div :class="$style.avatar">
-      <t-avatar size="64px" />
+      <t-avatar :lazy="false" size="64px" />
       <div>
         <p :class="$style['avatar-main']">sterashima78</p>
         <p :class="$style['avatar-sub']">Frontend Engineer</p>
@@ -34,9 +34,12 @@
 <script lang="ts">
 import { defineComponent } from 'nuxt-composition-api'
 import { mdiPost, mdiAccount, mdiGithub, mdiHome } from '@mdi/js'
+import { hydrateSsrOnly } from 'vue-lazy-hydration'
 export default defineComponent({
+  components: {
+    TAvatar: hydrateSsrOnly(() => import('~/components/TAvatar.vue')),
+  },
   name: 't-sidebar',
-  props: {},
   setup() {
     return {
       mdiPost,

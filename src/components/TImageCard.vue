@@ -1,12 +1,6 @@
 <template>
-  <t-link
-    :title="title"
-    :link="link"
-    :to="to"
-    :class="$style.card"
-    :lazy="lazy"
-  >
-    <t-img :img="img" :height="height" :width="width" :alt="title">
+  <t-link :title="title" :link="link" :to="to" :class="$style.card">
+    <t-img :lazy="lazy" :img="img" :height="height" :width="width" :alt="title">
       <p :class="$style.title">
         <slot name="title" />
       </p>
@@ -18,6 +12,10 @@
 import { defineComponent, PropType } from 'nuxt-composition-api'
 export default defineComponent({
   name: 't-image-card',
+  components: {
+    TLink: () => import('~/components/TLink/index.vue'),
+    TImg: () => import('~/components/TImg.vue'),
+  },
   props: {
     img: {
       type: String as PropType<string>,

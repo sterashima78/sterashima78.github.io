@@ -2,9 +2,7 @@
   <div>
     <h1 :class="$style.h1">About me</h1>
     <div :class="$style.avatar">
-      <LazyHydrate ssr-only>
-        <t-avatar size="64px" />
-      </LazyHydrate>
+      <t-avatar :lazy="false" size="64px" />
       <div :class="$style.wrapper">
         <p :class="$style.main">sterashima78</p>
         <p :class="$style.sub">Frontend Engineer</p>
@@ -13,37 +11,34 @@
     <h2 :class="$style.h2">スキル</h2>
     <p>言語もライブラリもツールもごちゃまぜ</p>
     <div :class="$style.graph_wrapper">
-      <LazyHydrate ssr-only>
-        <TechGraph :items="techs" />
-      </LazyHydrate>
+      <TechGraph :items="techs" />
     </div>
     <h2 :class="$style.h2">作ったもの</h2>
     <div :class="$style.item_wrapper">
-      <LazyHydrate when-visible>
-        <PortfolioItem
-          v-for="a in product"
-          :key="a.name"
-          :link="a.link"
-          :img-src="a.src"
-          :title="a.name"
-        />
-      </LazyHydrate>
+      <PortfolioItem
+        v-for="a in product"
+        :key="a.name"
+        :link="a.link"
+        :img-src="a.src"
+        :title="a.name"
+      />
     </div>
     <h2 :class="$style.h2">経歴</h2>
-    <LazyHydrate ssr-only>
-      <t-timeline :timelines="career"></t-timeline>
-    </LazyHydrate>
+    <t-timeline :timelines="career"></t-timeline>
   </div>
 </template>
 
 <script>
 import Vue from 'vue'
+import { hydrateSsrOnly, hydrateWhenVisible } from 'vue-lazy-hydration'
 export default Vue.extend({
   components: {
-    PortfolioItem: () => import('../components/PortfolioItem.vue'),
-    TechGraph: () => import('../components/TechGraph.vue'),
-    TTimeline: () => import('../components/global/TTImeline/index'),
-    LazyHydrate: () => import('vue-lazy-hydration'),
+    TAvatar: hydrateSsrOnly(() => import('~/components/TAvatar.vue')),
+    PortfolioItem: hydrateWhenVisible(() =>
+      import('~/components/PortfolioItem.vue')
+    ),
+    TechGraph: hydrateSsrOnly(() => import('~/components/TechGraph.vue')),
+    TTimeline: hydrateSsrOnly(() => import('~/components/TTImeline/index')),
   },
   metaInfo: {
     title: 'About me',

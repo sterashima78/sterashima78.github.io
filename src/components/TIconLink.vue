@@ -12,6 +12,9 @@
 import { defineComponent, PropType } from 'nuxt-composition-api'
 export default defineComponent({
   name: 't-icon-link',
+  components: {
+    TLink: () => import('~/components/TLink/index.vue'),
+  },
   props: {
     icon: {
       type: String as PropType<string>,

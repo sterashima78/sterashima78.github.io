@@ -1,9 +1,7 @@
 <template>
   <div :class="$style['home-wrapper']">
     <h1 :class="$style['title']">
-      <LazyHydrate ssr-only>
-        <t-avatar size="128px" />
-      </LazyHydrate>
+      <t-avatar size="128px" :lazy="false" />
       <p :class="$style['main']">sterashima78</p>
       <p :class="$style['sub']">Frontend Engineer</p>
     </h1>
@@ -12,14 +10,13 @@
       <t-icon-link to="/about/" :icon="mdiAccount">About</t-icon-link>
     </div>
     <div :class="$style['section']">
-      <LazyHydrate ssr-only>
-        <t-icon-link
-          title="link to github"
-          link="https://github.com/sterashima78"
-          :icon="mdiGithub"
-        />
-      </LazyHydrate>
+      <t-icon-link
+        title="link to github"
+        link="https://github.com/sterashima78"
+        :icon="mdiGithub"
+      />
       <t-img-link
+        :lazy="false"
         height="24px"
         width="63px"
         alt="qiita"
@@ -32,11 +29,14 @@
 
 <script lang="ts">
 import { mdiPost, mdiAccount, mdiGithub } from '@mdi/js'
+import { hydrateSsrOnly, hydrateWhenIdle } from 'vue-lazy-hydration'
 import Vue from 'vue'
 export default Vue.extend({
   layout: 'plain',
   components: {
-    LazyHydrate: () => import('vue-lazy-hydration'),
+    TImgLink: hydrateSsrOnly(() => import('~/components/TImgLink.vue')),
+    TIconLink: hydrateWhenIdle(() => import('~/components/TIconLink.vue')),
+    TAvatar: hydrateSsrOnly(() => import('~/components/TAvatar.vue')),
   },
   data() {
     return {

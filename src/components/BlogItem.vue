@@ -29,7 +29,12 @@
 </template>
 <script lang="ts">
 import Vue, { PropType } from 'vue'
+import { hydrateSsrOnly, hydrateWhenIdle } from 'vue-lazy-hydration'
 export default Vue.extend({
+  components: {
+    TImageCard: hydrateWhenIdle(() => import('~/components/TImageCard.vue')),
+    TChip: hydrateSsrOnly(() => import('~/components/TChip.vue')),
+  },
   props: {
     post: {
       // eslint-disable-next-line

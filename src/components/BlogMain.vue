@@ -2,15 +2,24 @@
   <div :class="$style.main">
     <h1 :class="$style.title"><slot>Blog</slot></h1>
     <div :class="$style.container">
-      <BlogItem v-for="post in posts" :key="post.id" :post="post" />
+      <template v-for="(post, index) in posts">
+        <LazyHydrate v-if="index <= 1" :key="post.id" ssr-only>
+          <BlogItem :post="post" />
+        </LazyHydrate>
+        <LazyHydrate v-else :key="post.id" when-visible>
+          <BlogItem :post="post" />
+        </LazyHydrate>
+      </template>
     </div>
   </div>
 </template>
 <script lang="ts">
 import Vue, { PropType } from 'vue'
+import LazyHydrate from 'vue-lazy-hydration'
 export default Vue.extend({
   components: {
     BlogItem: () => import('./BlogItem.vue'),
+    LazyHydrate,
   },
   props: {
     posts: {

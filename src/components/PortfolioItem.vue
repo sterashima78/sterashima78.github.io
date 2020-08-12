@@ -14,6 +14,9 @@
 <script lang="ts">
 import Vue, { PropType } from 'vue'
 export default Vue.extend({
+  components: {
+    TImageCard: () => import('~/components/TImageCard.vue'),
+  },
   props: {
     link: {
       type: String as PropType<string>,

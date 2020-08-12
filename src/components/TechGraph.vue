@@ -17,6 +17,9 @@
 import Vue from 'vue'
 import { PropType } from 'nuxt-composition-api'
 export default Vue.extend({
+  components: {
+    TChip: () => import('~/components/TChip.vue'),
+  },
   props: {
     items: {
       type: Array as PropType<{ x: number; y: number; text: string }[]>,

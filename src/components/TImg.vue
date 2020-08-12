@@ -1,5 +1,11 @@
 <template>
-  <div role="img" :class="$style.img" :aria-label="alt" :style="style">
+  <div
+    ref="canvas"
+    role="img"
+    :class="$style.img"
+    :aria-label="alt"
+    :style="style"
+  >
     <slot />
   </div>
 </template>
@@ -41,6 +47,7 @@ export default defineComponent({
     props: { lazy: boolean; img: string; height: string; width: string },
     { root }
   ) {
+    const canvas = ref<HTMLElement | undefined>(undefined)
     if (props.lazy) {
       onMounted(() => {
         const io = new IntersectionObserver((entries) => {
@@ -55,12 +62,17 @@ export default defineComponent({
             }
           })
         })
-        io.observe(root.$el)
+        root.$nextTick(() => {
+          if (canvas.value) {
+            io.observe(canvas.value)
+          }
+        })
       })
     }
     const loaded = ref(!props.lazy)
     return {
       loaded,
+      canvas,
       style: computed(() => {
         const bg = loaded.value
           ? { 'background-image': `url(${props.img})` }

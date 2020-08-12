@@ -1,7 +1,6 @@
 <template>
   <div :class="$style.container">
     <t-sidebar></t-sidebar>
-
     <main :class="$style.main">
       <div :class="$style.wrapper">
         <nuxt />
@@ -49,9 +48,16 @@
 </template>
 <script lang="ts">
 import { mdiPost, mdiAccount, mdiGithub, mdiHome } from '@mdi/js'
+import { hydrateWhenVisible, hydrateWhenIdle } from 'vue-lazy-hydration'
 
 import Vue from 'vue'
 export default Vue.extend({
+  components: {
+    TAvatar: hydrateWhenVisible(() => import('~/components/TAvatar.vue')),
+    TIconLink: hydrateWhenIdle(() => import('~/components/TIconLink.vue')),
+    TImgLink: hydrateWhenVisible(() => import('~/components/TImgLink.vue')),
+    TSidebar: hydrateWhenIdle(() => import('~/components/TSidebar.vue')),
+  },
   data: () => ({
     mdiHome,
     mdiPost,
