@@ -1,6 +1,6 @@
 <template>
   <div>
-    <t-image-card width="100%" height="15em" :img="post.image">
+    <t-image-card width="100%" height="15em" :img="post.image" :lazy="false">
       <template #title>
         <h1 :class="$style.h1">
           {{ post.title }}
