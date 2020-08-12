@@ -1,32 +1,30 @@
 <template>
-  <div class="divide-y divide-gray-400">
-    <div class="relative bg-no-repeat bg-center" :style="style">
-      <div
-        class="bg-black bg-opacity-75 m-2 text-white text-center absolute bottom-0 inset-x-0"
-      >
-        <h1 class="text-2xl font-bold">
+  <div>
+    <t-image-card width="100%" height="15em" :img="post.image">
+      <template #title>
+        <h1 :class="$style.h1">
           {{ post.title }}
         </h1>
-        <h4 class="text-sm">
+        <p class="text-sm">
           {{ post.description }} <br />
           <small>{{ post.date }}</small>
-        </h4>
-      </div>
-    </div>
-    <div class="contents">
+        </p>
+      </template>
+    </t-image-card>
+    <div :class="$style.contents">
       <div class="tags">
         Tags:
         <t-chip
           v-for="tag in post.tags"
           :key="tag"
           :to="`/blog/tags/${tag}`"
-          class="bg-teal-600 text-white"
+          :class="$style.tag"
           v-text="tag"
         />
       </div>
       <nuxt-content :document="post" />
     </div>
-    <div class="flex pt-8" style="justify-content: space-around;">
+    <div :class="$style.pager">
       <div>
         <nuxt-link
           v-if="!!next"
@@ -65,19 +63,28 @@ export default Vue.extend({
       post: post[0],
       prev,
       next,
-      style: {
-        height: '15em',
-        'background-image': `url(${post[0].image})`,
-      },
     }
   },
 })
 </script>
-<style lang="scss">
+<style lang="scss" module>
+.h1 {
+  @apply text-3xl;
+  @apply font-bold;
+}
+.tags {
+  @apply my-4;
+}
+.tag {
+  @apply bg-teal-600;
+  @apply text-white;
+}
+.pager {
+  @apply flex;
+  @apply pt-8;
+  @apply justify-between;
+}
 .contents {
-  > .tags {
-    margin: 1em 0;
-  }
   ul,
   ol {
     margin-bottom: 1em;

@@ -1,7 +1,13 @@
 <template>
-  <t-image-card :link="link" :img="imgSrc" width="15em" height="15em">
+  <t-image-card
+    :title="title"
+    :link="link"
+    :img="imgSrc"
+    width="15em"
+    height="15em"
+  >
     <template #title>
-      <h3><slot /></h3>
+      <h3 v-text="title" />
     </template>
   </t-image-card>
 </template>
@@ -17,15 +23,10 @@ export default Vue.extend({
       type: String as PropType<string>,
       default: '',
     },
+    title: {
+      type: String as PropType<string>,
+      default: '',
+    },
   },
 })
 </script>
-<style lang="scss" scoped>
-.portfolio-item {
-  width: 15em;
-  margin: 1em;
-  > .img {
-    width: 15em;
-  }
-}
-</style>

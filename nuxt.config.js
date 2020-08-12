@@ -109,7 +109,15 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {},
+  build: {
+    loaders: {
+      cssModules: {
+        modules: {
+          localIdentName: '[hash:base64:4]',
+        },
+      },
+    },
+  },
   generate: {
     routes,
   },

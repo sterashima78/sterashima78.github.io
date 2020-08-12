@@ -1,22 +1,16 @@
 <template>
-  <div class="blog-main">
-    <h1 class="text-3xl font-bold"><slot>Blog</slot></h1>
-    <div class="container">
-      <BlogItem
-        v-for="post in posts"
-        :key="post.id"
-        class="blog-item"
-        :post="post"
-      />
+  <div :class="$style.main">
+    <h1 :class="$style.title"><slot>Blog</slot></h1>
+    <div :class="$style.container">
+      <BlogItem v-for="post in posts" :key="post.id" :post="post" />
     </div>
   </div>
 </template>
 <script lang="ts">
 import Vue, { PropType } from 'vue'
-import BlogItem from './BlogItem.vue'
 export default Vue.extend({
   components: {
-    BlogItem,
+    BlogItem: () => import('./BlogItem.vue'),
   },
   props: {
     posts: {
@@ -28,19 +22,19 @@ export default Vue.extend({
   },
 })
 </script>
-<style lang="scss" scoped>
-.blog-main {
-  width: 100%;
-  height: 100%;
-
-  > .container {
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
+<style lang="scss" module>
+.main {
+  @apply w-full;
+  @apply h-full;
 }
-.blog-item {
-  margin-bottom: 15px;
+.title {
+  @apply text-3xl;
+  @apply font-bold;
+}
+.container {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 </style>

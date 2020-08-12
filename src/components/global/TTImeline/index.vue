@@ -1,40 +1,41 @@
 <template>
-  <div class="t-timeline">
-    <div v-for="(timeline, index) in timelines" :key="index" class="item">
+  <div :class="$style.timeline">
+    <div
+      v-for="(timeline, index) in timelines"
+      :key="index"
+      :class="$style.item"
+    >
       <div
-        class="time-point"
-        :class="`bg-${typeToColor(timeline.type)}-700`"
+        :class="[$style.point, `bg-${typeToColor(timeline.type)}-700`]"
       ></div>
-      <div class="time-contents">
+      <div :class="$style.contents">
         <p>
-          <span class="font-bold">{{ timeline.time }}</span>
+          <span :class="$style['tags-title']">{{ timeline.time }}</span>
           <t-chip
-            :class="`text-xs font-light bg-${typeToColor(
-              timeline.type
-            )}-700 text-white`"
+            :class="[$style.type, `bg-${typeToColor(timeline.type)}-700`]"
             >{{ timeline.type }}</t-chip
           >
         </p>
         <p
           v-if="timeline.title"
-          class="text-lg font-bold my-2"
+          :class="$style.title"
           v-text="timeline.title"
         />
-        <p v-if="timeline.technique" class="text-xs my-2">
-          <span class="font-bold">使用技術</span>:
+        <p v-if="timeline.technique" :class="$style.tags">
+          <span :class="$style['tags-title']">使用技術</span>:
           <t-chip
             v-for="tech in timeline.technique"
             :key="tech"
-            class="bg-gray-300"
+            :class="$style.tag"
             >{{ tech }}</t-chip
           >
         </p>
-        <p v-if="timeline.phase" class="text-xs my-2">
-          <span class="font-bold">担当作業</span>:
+        <p v-if="timeline.phase" :class="$style.tags">
+          <span :class="$style['tags-title']">担当作業</span>:
           <t-chip
             v-for="phase in timeline.phase"
             :key="phase"
-            class="bg-gray-300"
+            :class="$style.tag"
             >{{ phase }}</t-chip
           >
         </p>
@@ -61,8 +62,8 @@ export default defineComponent({
   },
 })
 </script>
-<style lang="scss" scoped>
-.t-timeline {
+<style lang="scss" module>
+.timeline {
   position: relative;
   &::before {
     content: '';
@@ -73,51 +74,70 @@ export default defineComponent({
     width: 2px;
     background: grey;
   }
-  > .item {
-    position: relative;
-    @apply flex;
-    @apply justify-end;
-    @apply my-4;
-    > .time-point {
-      position: absolute;
-      left: 5px;
-      top: 10px;
-      width: 30px;
-      height: 30px;
-      @apply rounded-full;
-      @apply border-white;
-      @apply border-4;
-      @apply shadow-lg;
-    }
-    > .time-contents {
-      width: calc(100% - 48px);
-      border-width: 1px;
-      @apply rounded-lg;
-      @apply border-black;
-      @apply shadow-lg;
-      @apply p-4;
-      @apply relative;
-      @apply border-opacity-25;
+}
+.item {
+  position: relative;
+  @apply flex;
+  @apply justify-end;
+  @apply my-4;
+}
+.point {
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  @apply rounded-full;
+  @apply border-white;
+  @apply border-4;
+  @apply shadow-lg;
+}
+.contents {
+  width: calc(100% - 48px);
+  border-width: 1px;
+  @apply rounded-lg;
+  @apply border-black;
+  @apply shadow-lg;
+  @apply p-4;
+  @apply relative;
+  @apply border-opacity-25;
 
-      &::after,
-      &::before {
-        content: '';
-        position: absolute;
-        border-top: 10px solid transparent;
-        border-bottom: 10px solid transparent;
-        top: 12px;
-      }
-      &::after {
-        border-right: 10px solid white;
-        left: -8px;
-        @apply shadow-lg;
-      }
-
-      &::before {
-        border-right: 10px solid rgba(0, 0, 0, 0.25);
-        left: -10px;
-      }
-    }
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    top: 12px;
   }
+  &::after {
+    border-right: 10px solid white;
+    left: -8px;
+    @apply shadow-lg;
+  }
+
+  &::before {
+    border-right: 10px solid rgba(0, 0, 0, 0.25);
+    left: -10px;
+  }
+}
+
+.type {
+  @apply text-xs font-bold text-white;
+}
+
+.tags {
+  @apply text-xs my-2;
+  &-title {
+    @apply font-bold;
+  }
+}
+
+.tag {
+  @apply bg-gray-300;
+}
+
+.title {
+  @apply text-lg font-bold my-2;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div role="img" class="t-img" :aria-label="alt" :style="style">
+  <div role="img" :class="$style.img" :aria-label="alt" :style="style">
     <slot />
   </div>
 </template>
@@ -32,24 +32,33 @@ export default defineComponent({
       type: String as PropType<string>,
       default: '200px',
     },
+    lazy: {
+      type: Boolean as PropType<boolean>,
+      default: true,
+    },
   },
-  setup(props: { img: string; height: string; width: string }, { root }) {
-    onMounted(() => {
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = new Image()
-            img.onload = () => {
-              loaded.value = true
-              io.unobserve(entry.target)
+  setup(
+    props: { lazy: boolean; img: string; height: string; width: string },
+    { root }
+  ) {
+    if (props.lazy) {
+      onMounted(() => {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const img = new Image()
+              img.onload = () => {
+                loaded.value = true
+                io.unobserve(entry.target)
+              }
+              img.src = props.img
             }
-            img.src = props.img
-          }
+          })
         })
+        io.observe(root.$el)
       })
-      io.observe(root.$el)
-    })
-    const loaded = ref(false)
+    }
+    const loaded = ref(!props.lazy)
     return {
       loaded,
       style: computed(() => {
@@ -69,8 +78,8 @@ export default defineComponent({
   },
 })
 </script>
-<style lang="scss" scoped>
-.t-img {
+<style lang="scss" module>
+.img {
   @apply relative;
   @apply bg-no-repeat;
   @apply bg-center;

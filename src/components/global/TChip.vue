@@ -1,8 +1,9 @@
 <template>
-  <components :is="tag" v-bind="attrs" class="t-chip"><slot /></components>
+  <components :is="tag" v-bind="attrs" :class="$style.chip"
+    ><slot
+  /></components>
 </template>
 <script lang="ts">
-// eslint-disable-next-line
 import { defineComponent, computed, PropType } from 'nuxt-composition-api'
 
 export default defineComponent({
@@ -38,8 +39,8 @@ export default defineComponent({
   },
 })
 </script>
-<style lang="scss" scoped>
-.t-chip {
+<style lang="scss" module>
+.chip {
   @apply shadow;
   @apply rounded-full;
   @apply border-black;

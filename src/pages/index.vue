@@ -1,20 +1,24 @@
 <template>
-  <div class="home-wrapper">
-    <h1 class="title">
-      <t-avatar size="128px" />
-      <p class="main">sterashima78</p>
-      <p class="sub">Frontend Engineer</p>
+  <div :class="$style['home-wrapper']">
+    <h1 :class="$style['title']">
+      <LazyHydrate ssr-only>
+        <t-avatar size="128px" />
+      </LazyHydrate>
+      <p :class="$style['main']">sterashima78</p>
+      <p :class="$style['sub']">Frontend Engineer</p>
     </h1>
-    <div class="section">
+    <div :class="$style['section']">
       <t-icon-link to="/blog/" :icon="mdiPost">Blog</t-icon-link>
       <t-icon-link to="/about/" :icon="mdiAccount">About</t-icon-link>
     </div>
-    <div class="section">
-      <t-icon-link
-        title="link to github"
-        link="https://github.com/sterashima78"
-        :icon="mdiGithub"
-      />
+    <div :class="$style['section']">
+      <LazyHydrate ssr-only>
+        <t-icon-link
+          title="link to github"
+          link="https://github.com/sterashima78"
+          :icon="mdiGithub"
+        />
+      </LazyHydrate>
       <t-img-link
         height="24px"
         width="63px"
@@ -31,6 +35,9 @@ import { mdiPost, mdiAccount, mdiGithub } from '@mdi/js'
 import Vue from 'vue'
 export default Vue.extend({
   layout: 'plain',
+  components: {
+    LazyHydrate: () => import('vue-lazy-hydration'),
+  },
   data() {
     return {
       mdiPost,
@@ -40,7 +47,7 @@ export default Vue.extend({
   },
 })
 </script>
-<style lang="scss" scoped>
+<style module lang="scss">
 .home-wrapper {
   @apply flex;
   @apply justify-center;
@@ -48,23 +55,23 @@ export default Vue.extend({
   @apply flex-col;
   @apply h-full;
   @apply flex-grow;
-  > .section {
-    @apply mt-4;
-    @apply flex;
-    @apply content-center;
-    @apply justify-center;
-  }
-  > .title {
-    @apply text-center;
-    @apply leading-none;
-    > .main {
-      @apply font-bold;
-      @apply mb-1;
-      @apply text-xl;
-    }
-    > .sub {
-      @apply text-sm;
-    }
-  }
+}
+.section {
+  @apply mt-4;
+  @apply flex;
+  @apply content-center;
+  @apply justify-center;
+}
+.title {
+  @apply text-center;
+  @apply leading-none;
+}
+.main {
+  @apply font-bold;
+  @apply mb-1;
+  @apply text-xl;
+}
+.sub {
+  @apply text-sm;
 }
 </style>

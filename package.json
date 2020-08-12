@@ -30,7 +30,8 @@
     "@nuxtjs/pwa": "^3.0.0-beta.20",
     "@nuxtjs/sitemap": "^2.4.0",
     "nuxt": "^2.14.0",
-    "nuxt-composition-api": "^0.11.0"
+    "nuxt-composition-api": "^0.11.0",
+    "vue-lazy-hydration": "^1.0.0-beta.14"
   },
   "devDependencies": {
     "@nuxt/types": "^2.14.0",

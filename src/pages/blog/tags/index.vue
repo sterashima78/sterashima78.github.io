@@ -1,11 +1,11 @@
 <template>
   <div>
-    <h1 class="text-2xl font-bold">Tags</h1>
+    <h1 :class="$style.title">Tags</h1>
     <t-chip
       v-for="tag in tags"
       :key="tag"
       :to="`/blog/tags/${tag}`"
-      class="bg-teal-700 text-white"
+      :class="$style.tag"
       v-text="tag"
     />
   </div>
@@ -25,3 +25,13 @@ export default Vue.extend({
   },
 })
 </script>
+<style lang="scss" module>
+.title {
+  @apply text-2xl;
+  @apply font-bold;
+}
+.tag {
+  @apply bg-teal-700;
+  @apply text-white;
+}
+</style>

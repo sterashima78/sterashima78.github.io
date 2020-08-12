@@ -1,7 +1,13 @@
 <template>
-  <t-link :title="title" :link="link" :to="to" class="t-image-card">
+  <t-link
+    :title="title"
+    :link="link"
+    :to="to"
+    :class="$style.card"
+    :lazy="lazy"
+  >
     <t-img :img="img" :height="height" :width="width" :alt="title">
-      <p class="title">
+      <p :class="$style.title">
         <slot name="title" />
       </p>
     </t-img>
@@ -37,27 +43,31 @@ export default defineComponent({
       type: String as PropType<string>,
       default: '',
     },
+    lazy: {
+      type: Boolean as PropType<boolean>,
+      default: true,
+    },
   },
 })
 </script>
-<style lang="scss" scoped>
-.t-image-card {
+<style lang="scss" module>
+.card {
   @apply shadow-xl;
   @apply m-2;
   &:hover {
     @apply shadow-2xl;
   }
-  .title {
-    @apply absolute;
-    @apply bottom-0;
-    @apply inset-x-0;
-    @apply font-bold;
-    @apply text-xl;
-    @apply text-white;
-    @apply leading-relaxed;
-    @apply bg-black;
-    @apply bg-opacity-75;
-    @apply p-2;
-  }
+}
+.title {
+  @apply absolute;
+  @apply bottom-0;
+  @apply inset-x-0;
+  @apply font-bold;
+  @apply text-xl;
+  @apply text-white;
+  @apply leading-relaxed;
+  @apply bg-black;
+  @apply bg-opacity-75;
+  @apply p-2;
 }
 </style>

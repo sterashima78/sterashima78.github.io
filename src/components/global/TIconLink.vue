@@ -1,6 +1,6 @@
 <template>
-  <t-link :to="to" :title="title" :href="link" class="icon-link-wrapper">
-    <div class="icon">
+  <t-link :to="to" :title="title" :href="link" :class="$style.wrapper">
+    <div :class="$style.icon">
       <svg :height="size" :width="size">
         <path :d="icon" />
       </svg>
@@ -36,17 +36,17 @@ export default defineComponent({
   },
 })
 </script>
-<style lang="scss" scoped>
-.icon-link-wrapper {
+<style lang="scss" module>
+.wrapper {
   @apply flex;
   @apply justify-center;
   @apply content-center;
   @apply flex-col;
   @apply text-center;
   @apply mx-1;
-  > .icon {
-    @apply flex;
-    @apply justify-center;
-  }
+}
+.icon {
+  @apply flex;
+  @apply justify-center;
 }
 </style>
