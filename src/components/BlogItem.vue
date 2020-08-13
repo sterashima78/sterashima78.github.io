@@ -8,7 +8,7 @@
     width="20em"
   >
     <template #title>
-      {{ post.title }}
+      <span role="heading" aria-level="2" v-text="post.title" />
     </template>
     <div :class="$style.contents">
       <div :class="$style.section">

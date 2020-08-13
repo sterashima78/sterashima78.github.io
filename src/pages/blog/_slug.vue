@@ -2,13 +2,16 @@
   <div>
     <t-image-card width="100%" height="15em" :img="post.image" :lazy="false">
       <template #title>
-        <h1 :class="$style.h1">
-          {{ post.title }}
-        </h1>
-        <p class="text-sm">
+        <span
+          role="heading"
+          aria-level="1"
+          :class="$style.h1"
+          v-text="post.title"
+        />
+        <span class="text-sm">
           {{ post.description }} <br />
           <small>{{ post.date }}</small>
-        </p>
+        </span>
       </template>
     </t-image-card>
     <div :class="$style.contents">
@@ -45,11 +48,11 @@
 
 <script>
 import Vue from 'vue'
-import { hydrateSsrOnly, hydrateWhenIdle } from 'vue-lazy-hydration'
+import { hydrateSsrOnly } from 'vue-lazy-hydration'
 
 export default Vue.extend({
   components: {
-    TImageCard: hydrateWhenIdle(() => import('~/components/TImageCard.vue')),
+    TImageCard: hydrateSsrOnly(() => import('~/components/TImageCard.vue')),
     TChip: hydrateSsrOnly(() => import('~/components/TChip.vue')),
   },
   async asyncData({ $content, params }) {
