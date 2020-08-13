@@ -10,11 +10,13 @@
 </template>
 <script lang="ts">
 import { defineComponent, PropType } from 'nuxt-composition-api'
+import TLink from '~/components/TLink/index.vue'
+import TImg from '~/components/TImg.vue'
 export default defineComponent({
   name: 't-image-card',
   components: {
-    TLink: () => import('~/components/TLink/index.vue'),
-    TImg: () => import('~/components/TImg.vue'),
+    TLink,
+    TImg,
   },
   props: {
     img: {

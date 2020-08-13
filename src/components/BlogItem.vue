@@ -8,14 +8,13 @@
     width="20em"
   >
     <template #title>
-      <h2 v-text="post.title" />
+      {{ post.title }}
     </template>
     <div :class="$style.contents">
       <div :class="$style.section">
         <t-chip
           v-for="tag in post.tags"
           :key="tag"
-          :to="`/blog/tags/${tag}`"
           :class="$style.tag"
           v-text="tag"
         />

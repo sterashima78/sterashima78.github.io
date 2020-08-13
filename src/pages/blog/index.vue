@@ -10,7 +10,7 @@ export default Vue.extend({
   },
   async asyncData({ $content }) {
     const posts = await $content('blog', { deep: true })
-      .only(['title', 'path', 'description', 'tags', 'image'])
+      .only(['title', 'path', 'description', 'tags', 'image', 'date'])
       .sortBy('date', 'desc')
       .fetch()
     return {

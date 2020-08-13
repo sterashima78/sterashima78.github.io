@@ -4,7 +4,7 @@
     <div :class="$style.container">
       <template v-for="(post, index) in posts">
         <LazyHydrate v-if="index <= 1" :key="post.id" ssr-only>
-          <BlogItem :post="post" />
+          <BlogItem :post="post" :lazy="false" />
         </LazyHydrate>
         <LazyHydrate v-else :key="post.id" when-visible>
           <BlogItem :post="post" />
