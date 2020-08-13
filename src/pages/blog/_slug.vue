@@ -8,6 +8,7 @@
           :class="$style.h1"
           v-text="post.title"
         />
+        <br />
         <span class="text-sm">
           {{ post.description }} <br />
           <small>{{ post.date }}</small>
@@ -48,12 +49,12 @@
 
 <script>
 import Vue from 'vue'
-import { hydrateSsrOnly } from 'vue-lazy-hydration'
+import { hydrateSsrOnly, hydrateWhenIdle } from 'vue-lazy-hydration'
 
 export default Vue.extend({
   components: {
     TImageCard: hydrateSsrOnly(() => import('~/components/TImageCard.vue')),
-    TChip: hydrateSsrOnly(() => import('~/components/TChip.vue')),
+    TChip: hydrateWhenIdle(() => import('~/components/TChip.vue')),
   },
   async asyncData({ $content, params }) {
     const post = await $content(`blog`, { deep: true })
@@ -97,6 +98,13 @@ export default Vue.extend({
   ul,
   ol {
     margin-bottom: 1em;
+    margin-left: 2em;
+  }
+  ol {
+    list-style-type: decimal;
+  }
+  ul {
+    list-style-type: square;
   }
   code {
     @apply text-red-400;
