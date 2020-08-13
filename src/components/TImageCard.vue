@@ -1,15 +1,21 @@
 <template>
-  <t-link :title="title" :link="link" :to="to" :class="$style.card">
+  <components
+    :is="tag"
+    :title="title"
+    :link="link"
+    :to="to"
+    :class="$style.card"
+  >
     <t-img :lazy="lazy" :img="img" :height="height" :width="width" :alt="title">
       <p :class="$style.title">
         <slot name="title" />
       </p>
     </t-img>
     <slot />
-  </t-link>
+  </components>
 </template>
 <script lang="ts">
-import { defineComponent, PropType } from 'nuxt-composition-api'
+import { defineComponent, PropType, computed } from 'nuxt-composition-api'
 import TLink from '~/components/TLink/index.vue'
 import TImg from '~/components/TImg.vue'
 export default defineComponent({
@@ -18,6 +24,7 @@ export default defineComponent({
     TLink,
     TImg,
   },
+
   props: {
     img: {
       type: String as PropType<string>,
@@ -47,6 +54,13 @@ export default defineComponent({
       type: Boolean as PropType<boolean>,
       default: true,
     },
+  },
+  setup(props: { to: string; link: string }) {
+    return {
+      tag: computed(() =>
+        props.to === '' && props.link === '' ? 'div' : 't-link'
+      ),
+    }
   },
 })
 </script>
