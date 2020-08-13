@@ -48,6 +48,17 @@ export default {
         name: 'google-site-verification',
         content: 'fsOFxslrl8neWDCjwLWOeY--WAzqz8ktDkvhCiJt20Y',
       },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content: '',
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content:
+          'https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_128,w_128/v1596863610/blog/github-user-image.png',
+      },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
