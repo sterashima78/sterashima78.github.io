@@ -1,5 +1,15 @@
 <template>
+  <amp-img
+    v-if="$isAMP"
+    alt="it's me"
+    src="https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_128,w_128/v1596863610/blog/github-user-image.png"
+    width="128"
+    height="128"
+    :class="$style.avatar"
+  >
+  </amp-img>
   <t-img
+    v-else
     alt="it's me"
     :class="$style.avatar"
     :lazy="lazy"

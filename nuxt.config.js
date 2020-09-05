@@ -92,6 +92,12 @@ export default {
         id: 'UA-96186429-4',
       },
     ],
+    [
+      '@nuxtjs/amp',
+      {
+        origin: 'https://sterashima78.github.io',
+      },
+    ],
   ],
   /*
    ** Nuxt.js modules

@@ -24,15 +24,16 @@ export default defineComponent({
   },
   setup(props: Props) {
     return {
-      tag: computed(() => (props.to !== '' ? 'nuxt-link' : 'a')),
+      tag: computed(() => (props.to === '' ? 'a' : 'nuxt-link')),
       attrs: computed(() =>
         props.to !== ''
           ? { to: props.to, title: props.title }
           : {
               href: props.link,
               title: props.title,
-              rel: 'noreferrer',
-              target: '_blank',
+              ...(props.link.startsWith('http')
+                ? { rel: 'noreferrer', target: '_blank' }
+                : {}),
             }
       ),
     }

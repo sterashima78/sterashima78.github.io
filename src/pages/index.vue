@@ -6,8 +6,10 @@
       <p :class="$style['sub']">Frontend Engineer</p>
     </h1>
     <div :class="$style['section']">
-      <t-icon-link to="/blog/" :icon="mdiPost">Blog</t-icon-link>
-      <t-icon-link to="/about/" :icon="mdiAccount">About</t-icon-link>
+      <t-icon-link link="/blog/" :icon="mdiPost" title="blog">Blog</t-icon-link>
+      <t-icon-link link="/about/" :icon="mdiAccount" title="about"
+        >About</t-icon-link
+      >
     </div>
     <div :class="$style['section']">
       <t-icon-link
@@ -19,6 +21,7 @@
         :lazy="false"
         height="24px"
         width="63px"
+        title="qiita"
         alt="qiita"
         link="https://qiita.com/sterashima78"
         img="https://res.cloudinary.com/sterashima78/image/upload/c_scale,w_63,h_24/v1596864705/blog/qiita.png"
@@ -29,13 +32,17 @@
 
 <script lang="ts">
 import { mdiPost, mdiAccount, mdiGithub } from '@mdi/js'
-import { hydrateSsrOnly, hydrateWhenIdle } from 'vue-lazy-hydration'
+import { hydrateSsrOnly } from 'vue-lazy-hydration'
 import Vue from 'vue'
 export default Vue.extend({
+  // @ts-ignore
+  ampLayout: 'default.amp',
+  // @ts-ignore
+  amp: 'only',
   layout: 'plain',
   components: {
     TImgLink: hydrateSsrOnly(() => import('~/components/TImgLink.vue')),
-    TIconLink: hydrateWhenIdle(() => import('~/components/TIconLink.vue')),
+    TIconLink: hydrateSsrOnly(() => import('~/components/TIconLink.vue')),
     TAvatar: hydrateSsrOnly(() => import('~/components/TAvatar.vue')),
   },
   data() {
