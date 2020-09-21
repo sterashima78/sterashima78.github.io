@@ -8,7 +8,7 @@ image: https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_200,w_320,y_
 
 9/6 (日) - 9/12 (土) の期間の振り返り
 
-## 2020/09 1 週の目標
+## 2020/09 2 週の目標
 
 - B 問題を 30 問解く
 - 飲酒は一日以内
