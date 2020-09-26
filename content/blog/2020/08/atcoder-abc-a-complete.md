@@ -8,7 +8,7 @@ image: https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_200,w_320/v1
 
 # はじめに
 
-今月の目標で AtCoder の過去問全部埋めるのを含めていたけど終わった。
+今月の目標で AtCoder の A 問題過去問全部埋めるのを含めていたけど終わった。
 
 あたりまえだけど簡単な問題が多かった。その中でも学びがあったので書いておく
 
