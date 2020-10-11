@@ -13,11 +13,13 @@
     </div>
     <div :class="$style['section']">
       <t-icon-link
+        :class="$style.link"
         title="link to github"
         link="https://github.com/sterashima78"
         :icon="mdiGithub"
       />
       <t-img-link
+        :class="$style.link"
         :lazy="false"
         height="24px"
         width="63px"
@@ -25,6 +27,26 @@
         alt="qiita"
         link="https://qiita.com/sterashima78"
         img="https://res.cloudinary.com/sterashima78/image/upload/c_scale,w_63,h_24/v1596864705/blog/qiita.png"
+      />
+      <t-img-link
+        :class="$style.link"
+        :lazy="false"
+        height="20px"
+        width="84px"
+        title="zenn"
+        alt="zenn"
+        link="https://zenn.dev/sterashima78"
+        img="https://res.cloudinary.com/sterashima78/image/upload/c_scale,h_20/v1602381944/blog/logo_kdbkvg.png"
+      />
+      <t-img-link
+        :class="$style.link"
+        :lazy="false"
+        height="24px"
+        width="28px"
+        title="AtCoder"
+        alt="AtCoder"
+        link="https://atcoder.jp/users/sterashima"
+        img="https://res.cloudinary.com/sterashima78/image/upload/c_scale,h_24/v1602382418/blog/atcoder_ktk6r5.svg"
       />
     </div>
   </div>
@@ -80,5 +102,9 @@ export default Vue.extend({
 }
 .sub {
   @apply text-sm;
+}
+
+.link {
+  @apply mx-1;
 }
 </style>
