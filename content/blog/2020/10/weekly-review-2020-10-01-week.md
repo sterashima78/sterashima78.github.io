@@ -6,7 +6,7 @@ tags: ['目標', '生活']
 image: https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_200,w_320,y_0/v1596859495/blog/challenge_mokuhyou_businessman_lrw2fq
 ---
 
-## 2020/10 の目標
+## 2020/10 一週目の目標
 
 - C 問題を 20 問解く
 - タスクログアプリをとりあえず動くところまで実装する
