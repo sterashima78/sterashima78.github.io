@@ -5,7 +5,7 @@
       <t-avatar :lazy="false" size="64px" />
       <div :class="$style.wrapper">
         <p :class="$style.main">sterashima78</p>
-        <p :class="$style.sub">Frontend Engineer</p>
+        <p :class="$style.sub">Web Frontend Engineer</p>
       </div>
     </div>
     <h2 :class="$style.h2">スキル</h2>

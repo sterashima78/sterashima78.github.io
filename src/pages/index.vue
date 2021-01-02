@@ -3,7 +3,7 @@
     <h1 :class="$style['title']">
       <t-avatar size="128px" :lazy="false" />
       <p :class="$style['main']">sterashima78</p>
-      <p :class="$style['sub']">Frontend Engineer</p>
+      <p :class="$style['sub']">Web Frontend Engineer</p>
     </h1>
     <div :class="$style['section']">
       <t-icon-link link="/blog/" :icon="mdiPost" title="blog">Blog</t-icon-link>

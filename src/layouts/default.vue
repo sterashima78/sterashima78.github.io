@@ -47,7 +47,7 @@
           <t-avatar size="64px" />
           <div>
             <p :class="$style['avatar-main']">sterashima78</p>
-            <p :class="$style['avatar-sub']">Frontend Engineer</p>
+            <p :class="$style['avatar-sub']">Web Frontend Engineer</p>
           </div>
         </div>
 
