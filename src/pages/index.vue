@@ -11,7 +11,7 @@
         >About</t-icon-link
       >
     </div>
-    <div :class="$style['section']">
+    <div :class="$style.section">
       <t-icon-link
         :class="$style.link"
         title="link to github"
@@ -22,22 +22,23 @@
         :class="$style.link"
         :lazy="false"
         height="24px"
-        width="63px"
-        title="qiita"
+        width="24px"
+        title="link to qiita"
         alt="qiita"
         link="https://qiita.com/sterashima78"
-        img="https://res.cloudinary.com/sterashima78/image/upload/c_scale,w_63,h_24/v1596864705/blog/qiita.png"
+        img="https://res.cloudinary.com/sterashima78/image/upload/c_scale,h_24/v1610349329/blog/qiita-favicon.png"
       />
       <t-img-link
         :class="$style.link"
         :lazy="false"
-        height="20px"
-        width="84px"
-        title="zenn"
+        height="24px"
+        width="24px"
+        title="link to zenn"
         alt="zenn"
         link="https://zenn.dev/sterashima78"
-        img="https://res.cloudinary.com/sterashima78/image/upload/c_scale,h_20/v1602381944/blog/logo_kdbkvg.png"
+        img="https://res.cloudinary.com/sterashima78/image/upload/c_scale,h_24/v1610349650/blog/zenn.png"
       />
+
       <t-img-link
         :class="$style.link"
         :lazy="false"
@@ -106,5 +107,6 @@ export default Vue.extend({
 
 .link {
   @apply mx-1;
+  @apply p-2;
 }
 </style>

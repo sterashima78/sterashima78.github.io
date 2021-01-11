@@ -8,32 +8,35 @@
       <div :class="$style.footer">
         <div :class="$style.links">
           <t-icon-link
+            :class="$style.link"
+            title="link to github"
             link="https://github.com/sterashima78"
             :icon="mdiGithub"
-            title="github"
-            :class="$style.link"
-          ></t-icon-link>
+          />
           <t-img-link
             :class="$style.link"
+            :lazy="false"
             height="24px"
-            width="63px"
+            width="24px"
+            title="link to qiita"
             alt="qiita"
             link="https://qiita.com/sterashima78"
-            img="https://res.cloudinary.com/sterashima78/image/upload/c_scale,w_63,h_24/v1596864705/blog/qiita.png"
+            img="https://res.cloudinary.com/sterashima78/image/upload/c_scale,h_24/v1610349329/blog/qiita-favicon.png"
           />
           <t-img-link
-            :lazy="false"
             :class="$style.link"
-            height="20px"
-            width="84px"
-            title="zenn"
+            :lazy="false"
+            height="24px"
+            width="24px"
+            title="link to zenn"
             alt="zenn"
             link="https://zenn.dev/sterashima78"
-            img="https://res.cloudinary.com/sterashima78/image/upload/c_scale,h_20/v1602381944/blog/logo_kdbkvg.png"
+            img="https://res.cloudinary.com/sterashima78/image/upload/c_scale,h_24/v1610349650/blog/zenn.png"
           />
+
           <t-img-link
-            :lazy="false"
             :class="$style.link"
+            :lazy="false"
             height="24px"
             width="28px"
             title="AtCoder"
@@ -53,7 +56,7 @@
 
         <hr />
         <div class="text-white w-full p-2">
-          &copy; 2020 — <strong>Terashima Shin</strong>
+          &copy; 2020 - 2021 — <strong>Terashima Shin</strong>
         </div>
       </div>
     </main>
@@ -141,7 +144,7 @@ export default Vue.extend({
 
 .link {
   @apply bg-white;
-  @apply mx-2;
+  @apply m-2;
 }
 .links {
   @apply flex content-center justify-center p-2 pt-4;
