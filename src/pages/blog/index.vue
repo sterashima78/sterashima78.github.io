@@ -25,12 +25,26 @@ export default Vue.extend({
           created: d.created_at,
         }))
       )
+    const zennPosts = await fetch(
+      'https://api.zenn.dev/articles?username=sterashima78&count=1000&order=latest'
+    )
+      .then((res) => res.json())
+      .then(({ articles }) =>
+        articles.map((article) => ({
+          type: 'zenn',
+          title: article.title,
+          url: `https://zenn.dev/sterashima78/articles/${article.slug}`,
+          created: article.published_at,
+        }))
+      )
     const newPosts = (Array.isArray(posts) ? posts : [posts])
       .concat(qiitaPosts)
+      .concat(zennPosts)
       .sort(
         (a, b) =>
           Date.parse(b.date || b.created) - Date.parse(a.date || a.created)
       )
+
     return {
       posts: newPosts,
     }

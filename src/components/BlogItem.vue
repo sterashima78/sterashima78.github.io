@@ -3,7 +3,7 @@
     v-if="post.type === 'qiita'"
     :lazy="lazy"
     :title="post.title"
-    img="https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_200,w_320,y_0/v1610349329/blog/qiita-favicon.png"
+    img="https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_200,w_320,y_0/v1596864705/blog/qiita.png"
     :link="post.url"
     height="200px"
     width="20em"
@@ -14,6 +14,27 @@
     <div :class="$style.contents">
       <div :class="$style.section">
         <t-chip :class="$style.category" v-text="'Qiita'" />
+      </div>
+      <div :class="$style.section">
+        <small v-text="post.created" />
+      </div>
+    </div>
+  </t-image-card>
+  <t-image-card
+    v-else-if="post.type === 'zenn'"
+    :lazy="lazy"
+    :title="post.title"
+    img="https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_200,w_320,y_0/v1602381944/blog/logo_kdbkvg.png"
+    :link="post.url"
+    height="200px"
+    width="20em"
+  >
+    <template #title>
+      <span role="heading" aria-level="2" v-text="post.title" />
+    </template>
+    <div :class="$style.contents">
+      <div :class="$style.section">
+        <t-chip :class="$style.category" v-text="'Zenn'" />
       </div>
       <div :class="$style.section">
         <small v-text="post.created" />
