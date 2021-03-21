@@ -48,6 +48,8 @@ image: https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_200,w_320,y_
 
 点数はまだわからない。
 
+追記: スコアは 929 だった
+
 ## 感想
 
 おかげで、AWS の各サービスのいくつかについては名称と、その役割が紐づくようになった。
