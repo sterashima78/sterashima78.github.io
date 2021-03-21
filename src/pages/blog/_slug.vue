@@ -15,7 +15,7 @@
         </span>
       </template>
     </t-image-card>
-    <div :class="$style.contents">
+    <div>
       <div class="tags">
         Tags:
         <t-chip
@@ -26,7 +26,7 @@
           v-text="tag"
         />
       </div>
-      <nuxt-content :document="post" />
+      <nuxt-content :document="post" :class="$style.contents" />
     </div>
     <div :class="$style.pager">
       <div>
@@ -146,6 +146,10 @@ export default Vue.extend({
   }
   h3 {
     @apply text-xl;
+  }
+  a {
+    @apply underline;
+    @apply text-blue-600;
   }
 }
 </style>

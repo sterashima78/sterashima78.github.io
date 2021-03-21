@@ -13,6 +13,9 @@ product:
     src: https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_240,w_240/v1596859521/blog/fsharp.png
 
 career:
+  - time: 2921/03
+    type: 資格
+    contents: AWS 認定 クラウドプラクティショナー
   - time: 2020/05 - 現在
     type: 業務
     title: LPサイトのフロントエンド構築
