@@ -13,7 +13,7 @@ product:
     src: https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_240,w_240/v1596859521/blog/fsharp.png
 
 career:
-  - time: 2921/03
+  - time: 2021/03
     type: 資格
     contents: AWS 認定 クラウドプラクティショナー
   - time: 2020/05 - 現在
@@ -154,6 +154,9 @@ career:
       平衡業務がいくつかあったため、短時間で少ない誤りでアプリケーションを構築する必要があった。
       そのために早い段階でプロトタイプを提⽰し、お客様との認識の齟齬を減らすように努めた。
       加えて、誤りの混⼊を最⼩限にするために、静的型付き⾔語を利⽤し、開発はTDD で進めた。
+  - time: 2018/05
+    type: 資格
+    contents: LPIC2
   - time: 2018/01 - 2018/03
     type: 業務
     title: 大学の研究で構築した遺伝子データベースの機能拡張(2)
@@ -216,10 +219,7 @@ career:
       - 単体テスト
     contents: |
       既存コードの再利用を求められたが、ユニットテストコードなどはなかったので、テストコードを実装しながらリファクタリングと修正を進めた。
-  - time: 2018/03
-    type: 資格
-    contents: LPIC2
-  - time: 2017/03
+  - time: 2017/10
     type: 資格
     contents: ネットワークスペシャリスト
   - time: 2017/04 - 2017/09
@@ -229,7 +229,7 @@ career:
   - time: 2017/03
     type: 資格
     contents: LPIC1
-  - time: 2017/04
+  - time: 2017/07
     type: 資格
     contents: 応用情報技術者
   - time: 2017/07
