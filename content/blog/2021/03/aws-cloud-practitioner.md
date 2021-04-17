@@ -22,7 +22,7 @@ image: https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_200,w_320,y_
 
 <a href="https://www.amazon.co.jp/AWS%E8%AA%8D%E5%AE%9A%E8%B3%87%E6%A0%BC%E8%A9%A6%E9%A8%93%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88-AWS%E8%AA%8D%E5%AE%9A-%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%89%E3%83%97%E3%83%A9%E3%82%AF%E3%83%86%E3%82%A3%E3%82%B7%E3%83%A7%E3%83%8A%E3%83%BC-%E5%B1%B1%E4%B8%8B-%E5%85%89%E6%B4%8B/dp/4797397403?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&dchild=1&keywords=AWS&qid=1616283629&sr=8-9&linkCode=li3&tag=yarishin-22&linkId=4af52d321424e28d9391f00c2b706d00&language=ja_JP&ref_=as_li_ss_il" target="_blank"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=4797397403&Format=_SL250_&ID=AsinImage&MarketPlace=JP&ServiceVersion=20070822&WS=1&tag=yarishin-22&language=ja_JP" ></a><img src="https://ir-jp.amazon-adsystem.com/e/ir?t=yarishin-22&language=ja_JP&l=li3&o=9&a=4797397403" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
 
-ということで次に呼んだのはソリューションアーキテクトアソシエイトの本。試験の立て付け的にクラウドプラクティショナーの上位の試験なのでこっちを読むことでより広い情報が得られたと思う。
+ということで次に読んだのはソリューションアーキテクトアソシエイトの本。試験の立て付け的にクラウドプラクティショナーの上位の試験なのでこっちを読むことでより広い情報が得られたと思う。
 
 後、こちらの本のほうが新しいので、比較的最近出たサービスなどの情報も含まれていたのが単によかった。
 
