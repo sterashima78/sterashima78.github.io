@@ -15,7 +15,7 @@
   </components>
 </template>
 <script lang="ts">
-import { defineComponent, PropType, computed } from 'nuxt-composition-api'
+import { defineComponent, PropType, computed } from '@nuxtjs/composition-api'
 import TLink from '~/components/TLink/index.vue'
 import TImg from '~/components/TImg.vue'
 export default defineComponent({

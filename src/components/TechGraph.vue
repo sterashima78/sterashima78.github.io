@@ -15,7 +15,7 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
-import { PropType } from 'nuxt-composition-api'
+import { PropType } from '@nuxtjs/composition-api'
 export default Vue.extend({
   components: {
     TChip: () => import('~/components/TChip.vue'),

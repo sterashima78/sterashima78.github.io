@@ -32,7 +32,7 @@
   </aside>
 </template>
 <script lang="ts">
-import { defineComponent } from 'nuxt-composition-api'
+import { defineComponent } from '@nuxtjs/composition-api'
 import { mdiPost, mdiAccount, mdiGithub, mdiHome } from '@mdi/js'
 import { hydrateSsrOnly } from 'vue-lazy-hydration'
 export default defineComponent({

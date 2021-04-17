@@ -4,7 +4,7 @@
   </components>
 </template>
 <script lang="ts">
-import { defineComponent, computed, PropType } from 'nuxt-composition-api'
+import { defineComponent, computed, PropType } from '@nuxtjs/composition-api'
 import { Props } from './types'
 export default defineComponent({
   name: 't-link',

@@ -9,7 +9,7 @@
   </t-link>
 </template>
 <script lang="ts">
-import { defineComponent, PropType } from 'nuxt-composition-api'
+import { defineComponent, PropType } from '@nuxtjs/composition-api'
 export default defineComponent({
   name: 't-icon-link',
   components: {

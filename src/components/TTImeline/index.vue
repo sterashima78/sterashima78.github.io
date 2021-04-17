@@ -45,7 +45,7 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, PropType } from 'nuxt-composition-api'
+import { defineComponent, PropType } from '@nuxtjs/composition-api'
 import { TimeLineItem, typeToColor } from './types'
 export default defineComponent({
   name: 't-timeline',
