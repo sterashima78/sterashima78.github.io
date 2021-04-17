@@ -19,7 +19,7 @@ import { defineComponent, PropType, computed } from '@nuxtjs/composition-api'
 import TLink from '~/components/TLink/index.vue'
 import TImg from '~/components/TImg.vue'
 export default defineComponent({
-  name: 't-image-card',
+  name: 'TImageCard',
   components: {
     TLink,
     TImg,

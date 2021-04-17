@@ -48,7 +48,7 @@
 import { defineComponent, PropType } from '@nuxtjs/composition-api'
 import { TimeLineItem, typeToColor } from './types'
 export default defineComponent({
-  name: 't-timeline',
+  name: 'TTimeline',
   components: {
     TChip: () => import('~/components/TChip.vue'),
   },

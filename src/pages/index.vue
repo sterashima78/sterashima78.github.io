@@ -58,16 +58,16 @@ import { mdiPost, mdiAccount, mdiGithub } from '@mdi/js'
 import { hydrateSsrOnly } from 'vue-lazy-hydration'
 import Vue from 'vue'
 export default Vue.extend({
-  // @ts-ignore
-  ampLayout: 'default.amp',
-  // @ts-ignore
-  amp: 'only',
-  layout: 'plain',
   components: {
     TImgLink: hydrateSsrOnly(() => import('~/components/TImgLink.vue')),
     TIconLink: hydrateSsrOnly(() => import('~/components/TIconLink.vue')),
     TAvatar: hydrateSsrOnly(() => import('~/components/TAvatar.vue')),
   },
+  // @ts-ignore
+  ampLayout: 'default.amp',
+  // @ts-ignore
+  amp: 'only',
+  layout: 'plain',
   data() {
     return {
       mdiPost,

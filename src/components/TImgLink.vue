@@ -12,7 +12,7 @@
 <script lang="ts">
 import { defineComponent, PropType } from '@nuxtjs/composition-api'
 export default defineComponent({
-  name: 'img-link',
+  name: 'ImgLink',
   components: {
     TLink: () => import('~/components/TLink/index.vue'),
     TImg: () => import('~/components/TImg.vue'),

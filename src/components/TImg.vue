@@ -18,7 +18,7 @@ import {
   onMounted,
 } from '@nuxtjs/composition-api'
 export default defineComponent({
-  name: 't-img',
+  name: 'TImg',
   props: {
     img: {
       type: String as PropType<string>,
