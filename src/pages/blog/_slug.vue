@@ -86,7 +86,7 @@ export default Vue.extend({
   @apply my-4;
 }
 .tag {
-  @apply bg-teal-600;
+  @apply bg-green-600;
   @apply text-white;
 }
 .pager {

@@ -31,7 +31,7 @@ export default Vue.extend({
   @apply font-bold;
 }
 .tag {
-  @apply bg-teal-700;
+  @apply bg-green-700;
   @apply text-white;
 }
 </style>

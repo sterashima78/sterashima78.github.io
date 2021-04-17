@@ -84,7 +84,7 @@ export default Vue.extend({
   @apply m-2;
 }
 .tag {
-  @apply bg-teal-700;
+  @apply bg-green-700;
   @apply text-white;
 }
 .category {

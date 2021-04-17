@@ -94,6 +94,9 @@ export default {
       },
     ],
   ],
+  tailwindcss: {
+    jit: true
+  },
   /*
    ** Nuxt.js modules
    */
