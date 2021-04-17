@@ -16,8 +16,8 @@
     "lighthouse": "start-server-and-test 'npm run serve' http://localhost:3000 'node ./build/lighthouse.js'"
   },
   "lint-staged": {
-    "*.{js,vue}": "eslint",
-    "*.{css,vue}": "stylelint"
+    "*.{js,ts,vue}": "eslint",
+    "*.{css,sass,vue}": "stylelint"
   },
   "husky": {
     "hooks": {
@@ -50,19 +50,18 @@
     "eslint": "^7.24.0",
     "eslint-config-prettier": "^8.2.0",
     "eslint-plugin-nuxt": "^2.0.0",
-    "eslint-plugin-prettier": "^3.4.0",
     "husky": "^4.2.5",
     "jest": "^26.1.0",
     "lighthouse": "^6.2.0",
     "lint-staged": "^10.2.11",
     "mkdirp": "^1.0.4",
     "node-sass": "^4.14.1",
-    "prettier": "^2.0.5",
+    "prettier": "2.2.1",
     "sass-loader": "^9.0.2",
     "start-server-and-test": "^1.11.2",
-    "stylelint": "^13.6.1",
+    "stylelint": "^13.12.0",
     "stylelint-config-prettier": "^8.0.2",
-    "stylelint-config-standard": "^20.0.0",
+    "stylelint-config-standard": "^21.0.0",
     "ts-jest": "^26.1.3",
     "vue-jest": "^3.0.4"
   }
