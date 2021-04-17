@@ -1,6 +1,6 @@
 ---
 title: 'AWS 認定 ソリューションアーキテクト – アソシエイトをとった'
-date: 2021-03-21 9:00:00
+date: 2021-04-17 14:00:00
 description: 'AWS 認定 ソリューションアーキテクト – アソシエイトをとったので取得までにやったこと'
 tags: ['勉強', 'AWS']
 image: https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_200,w_320,y_0/v1618632140/blog/AWS-SolArchitect-Associate-2020_gpgfqi
@@ -57,6 +57,8 @@ AWS のマネジメントコンソールは情報量が多くて気が付かな�
 この辺を意識するのが大事だと思った (実務的にもそうだと思う)。
 
 点数はまだわからない。
+
+追記: 814 点だった
 
 ## 感想
 
