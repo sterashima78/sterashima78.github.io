@@ -13,7 +13,6 @@ module.exports = {
     enabled: process.env.NODE_ENV === 'production',
     content: [
       'src/components/**/*.vue',
-      'src/components/**/*.ts',
       'src/layouts/**/*.vue',
       'src/pages/**/*.vue',
       'src/plugins/**/*.js',
@@ -22,7 +21,7 @@ module.exports = {
     ],
     options: {
       whitelistPatternsChildren: [/^nuxt-content$/],
-      whitelist: [
+      safelist: [
         'text-black',
         'text-white',
         'bg-red-700',

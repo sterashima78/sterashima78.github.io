@@ -5,16 +5,13 @@
       :key="index"
       :class="$style.item"
     >
-      <div
-        :class="[$style.point, `${typeToColor(timeline.type)}`]"
-      ></div>
+      <div :class="[$style.point, `${typeToColor(timeline.type)}`]"></div>
       <div :class="$style.contents">
         <p>
           <span :class="$style['tags-title']">{{ timeline.time }}</span>
-          <t-chip
-            :class="[$style.type, `${typeToColor(timeline.type)}`]"
-            >{{ timeline.type }}</t-chip
-          >
+          <t-chip :class="[$style.type, `${typeToColor(timeline.type)}`]">{{
+            timeline.type
+          }}</t-chip>
         </p>
         <p
           v-if="timeline.title"
@@ -46,7 +43,7 @@
 </template>
 <script lang="ts">
 import { defineComponent, PropType } from '@nuxtjs/composition-api'
-import { TimeLineItem, typeToColor } from './types'
+import { TimeLineItem, TimeLineEventType } from './types'
 export default defineComponent({
   name: 'TTimeline',
   components: {
@@ -60,7 +57,18 @@ export default defineComponent({
   },
   setup() {
     return {
-      typeToColor,
+      typeToColor: (type: TimeLineEventType) => {
+        switch (type) {
+          case '業務':
+            return 'bg-red-700'
+          case 'イベント':
+            return 'bg-blue-700'
+          case '資格':
+            return 'bg-green-700'
+          default:
+            return 'bg-grey-700'
+        }
+      },
     }
   },
 })
