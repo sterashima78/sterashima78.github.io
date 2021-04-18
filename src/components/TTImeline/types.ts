@@ -20,12 +20,12 @@ export type TimeLineItem = TimeLineEvent | TimeLineCertification | TimeLineWork
 export const typeToColor = (type: TimeLineEventType) => {
   switch (type) {
     case '業務':
-      return 'red'
+      return 'bg-red-700'
     case 'イベント':
-      return 'blue'
+      return 'bg-blue-700'
     case '資格':
-      return 'teal'
+      return 'bg-green-700'
     default:
-      return 'grey'
+      return 'bg-grey-700'
   }
 }

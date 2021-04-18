@@ -6,13 +6,13 @@
       :class="$style.item"
     >
       <div
-        :class="[$style.point, `bg-${typeToColor(timeline.type)}-700`]"
+        :class="[$style.point, `${typeToColor(timeline.type)}`]"
       ></div>
       <div :class="$style.contents">
         <p>
           <span :class="$style['tags-title']">{{ timeline.time }}</span>
           <t-chip
-            :class="[$style.type, `bg-${typeToColor(timeline.type)}-700`]"
+            :class="[$style.type, `${typeToColor(timeline.type)}`]"
             >{{ timeline.type }}</t-chip
           >
         </p>
