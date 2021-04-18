@@ -19,7 +19,7 @@
   ></t-img>
 </template>
 <script lang="ts">
-import { defineComponent, PropType } from 'nuxt-composition-api'
+import { defineComponent, PropType } from '@nuxtjs/composition-api'
 export default defineComponent({
   name: 'TAvatar',
   components: {

@@ -9,7 +9,7 @@ const doLighthouse = async (url, config = null) => {
   }
   const chrome = await chromeLauncher.launch({
     chromeFlags: ['--headless'],
-    enableExtensions: false,
+    enableExtensions: false
   })
   options.port = chrome.port
   try {

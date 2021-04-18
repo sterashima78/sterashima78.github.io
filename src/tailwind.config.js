@@ -13,6 +13,7 @@ module.exports = {
     enabled: process.env.NODE_ENV === 'production',
     content: [
       'src/components/**/*.vue',
+      'src/components/**/*.ts',
       'src/layouts/**/*.vue',
       'src/pages/**/*.vue',
       'src/plugins/**/*.js',
@@ -25,7 +26,7 @@ module.exports = {
         'text-black',
         'text-white',
         'bg-red-700',
-        'bg-teal-700',
+        'bg-green-700',
         'bg-blue-700',
       ],
     },

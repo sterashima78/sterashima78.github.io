@@ -27,11 +27,9 @@ export default Vue.extend({
 </script>
 <style lang="scss" module>
 .title {
-  @apply text-2xl;
-  @apply font-bold;
+  @apply text-2xl font-bold;
 }
 .tag {
-  @apply bg-teal-700;
-  @apply text-white;
+  @apply bg-green-700 text-white;
 }
 </style>

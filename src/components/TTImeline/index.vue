@@ -6,13 +6,13 @@
       :class="$style.item"
     >
       <div
-        :class="[$style.point, `bg-${typeToColor(timeline.type)}-700`]"
+        :class="[$style.point, `${typeToColor(timeline.type)}`]"
       ></div>
       <div :class="$style.contents">
         <p>
           <span :class="$style['tags-title']">{{ timeline.time }}</span>
           <t-chip
-            :class="[$style.type, `bg-${typeToColor(timeline.type)}-700`]"
+            :class="[$style.type, `${typeToColor(timeline.type)}`]"
             >{{ timeline.type }}</t-chip
           >
         </p>
@@ -45,10 +45,10 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent, PropType } from 'nuxt-composition-api'
+import { defineComponent, PropType } from '@nuxtjs/composition-api'
 import { TimeLineItem, typeToColor } from './types'
 export default defineComponent({
-  name: 't-timeline',
+  name: 'TTimeline',
   components: {
     TChip: () => import('~/components/TChip.vue'),
   },

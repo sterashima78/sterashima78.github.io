@@ -15,7 +15,7 @@
 </template>
 <script lang="ts">
 import Vue from 'vue'
-import { PropType } from 'nuxt-composition-api'
+import { PropType } from '@nuxtjs/composition-api'
 export default Vue.extend({
   components: {
     TChip: () => import('~/components/TChip.vue'),
@@ -40,7 +40,7 @@ export default Vue.extend({
 .mark {
   @apply absolute;
   @apply text-xs;
-  @apply bg-teal-700;
+  @apply bg-green-700;
   @apply text-white;
 }
 .axis {

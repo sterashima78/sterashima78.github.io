@@ -17,11 +17,6 @@ const routes = async () => {
 
 export default {
   /*
-   ** Nuxt rendering mode
-   ** See https://nuxtjs.org/api/configuration-mode
-   */
-  mode: 'universal',
-  /*
    ** Nuxt target
    ** See https://nuxtjs.org/api/configuration-target
    */
@@ -81,11 +76,10 @@ export default {
    ** Nuxt.js dev-modules
    */
   buildModules: [
+    '@nuxtjs/composition-api',
     '@nuxt/typescript-build',
-    // Doc: https://github.com/nuxt-community/stylelint-module
     '@nuxtjs/stylelint-module',
     '@nuxtjs/tailwindcss',
-    'nuxt-composition-api',
     [
       '@nuxtjs/google-analytics',
       {
@@ -99,6 +93,9 @@ export default {
       },
     ],
   ],
+  tailwindcss: {
+    jit: true
+  },
   /*
    ** Nuxt.js modules
    */
