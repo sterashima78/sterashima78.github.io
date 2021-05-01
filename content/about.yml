@@ -15,6 +15,9 @@ product:
 career:
   - time: 2021/04
     type: 資格
+    contents: AWS 認定 デベロッパーアソシエイト
+  - time: 2021/04
+    type: 資格
     contents: AWS 認定 ソリューションアーキテクトアソシエイト
   - time: 2021/03
     type: 資格
