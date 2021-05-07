@@ -13,6 +13,9 @@ product:
     src: https://res.cloudinary.com/sterashima78/image/upload/c_fit,h_240,w_240/v1596859521/blog/fsharp.png
 
 career:
+  - time: 2021/05
+    type: 資格
+    contents: AWS 認定 SysOps アドミニストレーターアソシエイト
   - time: 2021/04
     type: 資格
     contents: AWS 認定 デベロッパーアソシエイト
