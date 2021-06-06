@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/blog/tags", {data:[{tags:["vue","gridsome","vuetify","f-sharp","AtCoder","SPA","Bolero","PWA","Typescript","ESLint","読書メモ","VSCode","vue3","fp-ts","monads","fsharp","nuxt","Nuxt","Vue","HTML","目標","生活","AMP","勉強","AWS"]}],fetch:{},mutations:void 0});
