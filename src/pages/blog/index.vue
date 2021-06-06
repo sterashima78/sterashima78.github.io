@@ -26,7 +26,7 @@ export default Vue.extend({
         }))
       )
     const zennPosts = await fetch(
-      'https://api.zenn.dev/articles?username=sterashima78&count=1000&order=latest'
+      'https://zenn.dev/api/articles?username=sterashima78&count=1000&order=latest'
     )
       .then((res) => res.json())
       .then(({ articles }) =>
